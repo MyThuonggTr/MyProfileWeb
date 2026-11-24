@@ -1,0 +1,170 @@
+[
+  {
+    "case": "case3",
+    "key": "dcf_value",
+    "value": "743946255673",
+    "unit": "VND"
+  },
+  {
+    "case": "case3",
+    "key": "dcf_value_rounded",
+    "value": "744000000000",
+    "unit": "VND"
+  },
+  {
+    "case": "case3",
+    "key": "discount_rate",
+    "value": "7.78",
+    "unit": "%"
+  },
+  {
+    "case": "case3",
+    "key": "terminal_growth",
+    "value": "3",
+    "unit": "%"
+  },
+  {
+    "case": "case3",
+    "key": "terminal_value_share",
+    "value": "39",
+    "unit": "% of value"
+  },
+  {
+    "case": "case3",
+    "key": "noi_yield_2025",
+    "value": "4.9",
+    "unit": "%"
+  },
+  {
+    "case": "case3",
+    "key": "gov_bond_10y",
+    "value": "2.96",
+    "unit": "%"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g2.5_r6.78",
+    "value": "885",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g2.5_r7.78",
+    "value": "716",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g2.5_r8.78",
+    "value": "601",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g3_r6.78",
+    "value": "937",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g3_r7.78",
+    "value": "744",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g3_r8.78",
+    "value": "617",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g3.5_r6.78",
+    "value": "1005",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g3.5_r7.78",
+    "value": "778",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case3",
+    "key": "sens_g3.5_r8.78",
+    "value": "636",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case1",
+    "key": "total_investment",
+    "value": "92.26",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case1",
+    "key": "land_cost",
+    "value": "60",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case1",
+    "key": "construction_cost",
+    "value": "21.48",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case1",
+    "key": "equipment_cost",
+    "value": "5.6",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case1",
+    "key": "site_area",
+    "value": "12",
+    "unit": "ha"
+  },
+  {
+    "case": "case1",
+    "key": "plot_revenue",
+    "value": "307.06",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case1",
+    "key": "irr",
+    "value": "[CẦN XÁC NHẬN]",
+    "unit": "%"
+  },
+  {
+    "case": "case1",
+    "key": "npv",
+    "value": "[CẦN XÁC NHẬN]",
+    "unit": "VND bn"
+  },
+  {
+    "case": "case2",
+    "key": "npv",
+    "value": "[CẦN XÁC NHẬN]",
+    "unit": "VND m"
+  },
+  {
+    "case": "about",
+    "key": "gpa",
+    "value": "3.75",
+    "unit": "/4.0"
+  },
+  {
+    "case": "about",
+    "key": "scholarship_semesters",
+    "value": "4",
+    "unit": "semesters"
+  },
+  {
+    "case": "about",
+    "key": "research_award",
+    "value": "Giải B – Nhà nghiên cứu trẻ UEH (2025)",
+    "unit": ""
+  }
+]

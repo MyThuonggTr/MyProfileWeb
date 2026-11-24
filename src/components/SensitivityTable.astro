@@ -1,0 +1,34 @@
+---
+// r × g sensitivity grid built from figures.csv (keys sens_g{g}_r{r}), so the numbers match the source.
+import figures from "../data/figures.json";
+import type { Lang } from "../lib/content";
+import { ui, num } from "../lib/ui";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui(lang);
+const cells = figures.filter((f) => f.key.startsWith("sens_"));
+const parse = (k: string) => k.match(/^sens_g([\d.]+)_r([\d.]+)$/)!.slice(1).map(Number);
+const gs = [...new Set(cells.map((c) => parse(c.key)[0]))].sort((a, b) => a - b);
+const rs = [...new Set(cells.map((c) => parse(c.key)[1]))].sort((a, b) => a - b);
+const value = (g: number, r: number) => Number(cells.find((c) => c.key === `sens_g${g}_r${r}`)!.value);
+const pct = (x: number) => `${num(x, lang, x % 1 ? (String(x).split(".")[1].length) : 0)}%`;
+const base = { g: 3, r: 7.78 };
+---
+<div class="table-box">
+  <table class="data">
+    <caption class="sr">{t.sensCaption}</caption>
+    <thead><tr><th scope="col">g \ r</th>{rs.map((r) => <th scope="col">{pct(r)}</th>)}</tr></thead>
+    <tbody>
+      {gs.map((g) => (
+        <tr>
+          <th scope="row">{pct(g)}</th>
+          {rs.map((r) => <td class={g === base.g && r === base.r ? "base" : undefined}>{num(value(g, r), lang)}</td>)}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+<style>
+  caption.sr { caption-side: bottom; text-align: left; font-size: 14px; color: var(--text-muted); padding-top: 8px; }
+</style>

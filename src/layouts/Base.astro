@@ -1,0 +1,79 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/source-serif-4";
+import "../styles/global.css";
+import { raw, type Lang } from "../lib/content";
+import { ui, otherLangPath, EMAIL } from "../lib/ui";
+
+interface Props { lang: Lang; title: string; description: string; home?: boolean }
+const { lang, title, description, home = false } = Astro.props;
+const t = ui(lang);
+const path = Astro.url.pathname;
+const homeHref = `/${lang}/`;
+const sec = (id: string) => (home ? `#${id}` : `${homeHref}#${id}`);
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <link rel="alternate" hreflang="en" href={otherLangPath(path, "en")} />
+  <link rel="alternate" hreflang="vi" href={otherLangPath(path, "vi")} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip" href="#main">{t.skip}</a>
+  <header class="site-header">
+    <div class="wrap site-header__in">
+      <a href={homeHref} class="brand">
+        <span class="brand__name">{t.name}</span>
+        <span class="brand__role">{t.role}</span>
+      </a>
+      <nav aria-label="Main" class="site-nav">
+        <span class="nav-links">
+          <a href={sec("projects")}>{t.nav.projects}</a>
+          <a href={sec("research")}>{t.nav.research}</a>
+          <a href={sec("skills")}>{t.nav.skills}</a>
+          <a href={sec("contact")}>{t.nav.contact}</a>
+        </span>
+        <div role="group" aria-label={t.langLabel} class="lang">
+          <a href={otherLangPath(path, "en")} lang="en" aria-current={lang === "en" ? "true" : undefined}>EN</a>
+          <a href={otherLangPath(path, "vi")} lang="vi" aria-current={lang === "vi" ? "true" : undefined}>VI</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main"><slot /></main>
+  <footer class="site-footer">
+    <div class="wrap site-footer__in">
+      <span>{raw("disclaimer", "text", lang)}</span>
+      <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+    </div>
+  </footer>
+</body>
+</html>
+
+<style>
+  .site-header { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--border); }
+  .site-header__in { padding-block: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
+  .brand { text-decoration: none; display: flex; flex-direction: column; }
+  .brand__name { font-family: var(--font-head); font-size: 20px; font-weight: 700; color: var(--primary); }
+  .brand__role { font-size: 13px; color: var(--text-muted); }
+  .site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font-size: 15px; font-weight: 500; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .nav-links a { text-decoration: none; padding: 10px 0; }
+  .lang { display: flex; border: 1px solid var(--border-strong); border-radius: 6px; overflow: hidden; font-size: 14px; }
+  .lang a { text-decoration: none; padding: 10px 14px; min-width: 44px; text-align: center; }
+  .lang a[aria-current="true"] { background: var(--primary); color: #fff; font-weight: 600; }
+  .site-footer { background: var(--primary); color: var(--on-primary-muted); font-size: 14px; }
+  .site-footer__in { padding-block: 24px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+  .site-footer a { color: #fff; }
+  @media (max-width: 640px) {
+    .nav-links, .brand__role { display: none; }
+    .site-header__in { flex-wrap: nowrap; padding-block: 10px; }
+    .brand__name { font-size: 18px; }
+  }
+</style>
