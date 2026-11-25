@@ -35,7 +35,7 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
       </nav>
       <ul class="chips">{chips.map((c, i) => <li class={i === 0 ? "chip chip--key" : "chip"}>{c}</li>)}</ul>
       <h1 class="h1" style="max-width:920px;font-size:clamp(30px,4.4vw,50px)">{headline}</h1>
-      <CaseSummary lang={lang} block="case2" excel={false} />
+      <CaseSummary lang={lang} block="case2" />
     </div>
   </section>
 
@@ -52,8 +52,7 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
   <section aria-labelledby="approach-h" class="section">
     <div class="wrap stack">
-      <div class="eyebrow">{t.approach}</div>
-      <h2 id="approach-h" class="h2">{t.modelMap}</h2>
+      <h2 id="approach-h" class="h2">{t.approach}</h2>
       <ol class="grid approach">
         {approach.map((a, i) => (
           <li class="card" style="padding:24px;gap:10px">
@@ -64,7 +63,6 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
       </ol>
       <figure class="chart">
         <img src={`/images/case2-model-map-${lang}.png`} width="1600" height="900" loading="lazy" alt={approach[0]} />
-        <figcaption class="note-small">{t.noExcel}</figcaption>
       </figure>
     </div>
   </section>

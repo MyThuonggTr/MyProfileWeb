@@ -20,7 +20,7 @@ const dir = path.resolve(arg("dir", path.join(root, "dist")));
 // --- terms that must never appear
 const parseCsvLine = (l) => (l.match(/("([^"]|"")*"|[^,]*)(,|$)/g) ?? []).map((c) => c.replace(/,$/, "").replace(/^"|"$/g, "").replace(/""/g, '"'));
 const reals = fs.readFileSync(aliasPath, "utf8").trim().split("\n").slice(1).map((l) => parseCsvLine(l)[0]).filter(Boolean);
-const fixed = ["+84", "18/05/2003", "Bình Đông", "1.100", "1,100", "07/2034", "596bn", "596 tỷ", "596,05", "596.05"];
+const fixed = ["/Users/", "file:///", "+84", "18/05/2003", "Bình Đông", "1.100", "1,100", "07/2034", "596bn", "596 tỷ", "596,05", "596.05"];
 const norm = (s) => s.normalize("NFC");
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const patterns = [...reals, ...fixed].map((term) =>
@@ -34,6 +34,13 @@ const htmlText = (s) => s.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/st
 const sources = [];
 for (const f of files.filter((f) => f.endsWith(".html"))) sources.push({ name: path.relative(dir, f), text: norm(htmlText(fs.readFileSync(f, "utf8"))) });
 for (const f of files.filter((f) => f.endsWith(".pdf"))) sources.push({ name: path.relative(dir, f), text: norm(execFileSync("pdftotext", ["-enc", "UTF-8", f, "-"]).toString()) });
+for (const f of files.filter((f) => f.endsWith(".docx"))) {
+  // body, headers, footers, comments and document properties
+  const parts = execFileSync("unzip", ["-Z1", f]).toString().split("\n").filter((p) => /^(word\/.*\.xml|docProps\/.*\.xml)$/.test(p));
+  const xml = parts.map((p) => execFileSync("unzip", ["-p", f, p]).toString()).join(" ");
+  sources.push({ name: path.relative(dir, f), text: norm(htmlText(xml)) });
+}
+for (const f of files.filter((f) => /\.(R|csv|txt)$/.test(f))) sources.push({ name: path.relative(dir, f), text: norm(fs.readFileSync(f, "utf8")) });
 
 let crosscheckSheet = false;
 for (const f of files.filter((f) => f.endsWith(".xlsx"))) {
@@ -43,9 +50,15 @@ for (const f of files.filter((f) => f.endsWith(".xlsx"))) {
   wb.eachSheet((ws) => {
     if (/cross.?check/i.test(ws.name)) crosscheckSheet = true;
     parts.push(ws.name);
-    ws.eachRow({ includeEmpty: false }, (row) => row.eachCell({ includeEmpty: false }, (c) => parts.push(c.text)));
+    ws.eachRow({ includeEmpty: false }, (row) =>
+      row.eachCell({ includeEmpty: false }, (c) => {
+        try { parts.push(c.text); } catch { parts.push(String(c.result ?? c.formula ?? "")); } // merged cells with an empty master
+      }),
+    );
   });
-  sources.push({ name: path.relative(dir, f), text: norm(parts.filter(Boolean).join("\n")) });
+  // raw package parts too: Excel stores the save folder (absPath) and other metadata outside the cells
+  const raw = execFileSync("unzip", ["-p", f], { maxBuffer: 256 * 1024 * 1024 }).toString("latin1").match(/(?:\/Users\/|file:\/\/\/|[A-Z]:\\\\)[^"<]*/g) ?? [];
+  sources.push({ name: path.relative(dir, f), text: norm([...parts.filter(Boolean), ...raw].join("\n")) });
 }
 
 let leaks = 0;

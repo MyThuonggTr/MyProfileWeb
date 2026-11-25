@@ -35,8 +35,9 @@ const sec = (id: string) => (home ? `#${id}` : `${homeHref}#${id}`);
       <nav aria-label="Main" class="site-nav">
         <span class="nav-links">
           <a href={sec("projects")}>{t.nav.projects}</a>
+          <a href={sec("experience")}>{t.nav.experience}</a>
           <a href={sec("research")}>{t.nav.research}</a>
-          <a href={sec("skills")}>{t.nav.skills}</a>
+          <a href={sec("downloads")}>{t.nav.downloads}</a>
           <a href={sec("contact")}>{t.nav.contact}</a>
         </span>
         <div role="group" aria-label={t.langLabel} class="lang">

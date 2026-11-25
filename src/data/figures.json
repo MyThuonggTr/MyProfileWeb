@@ -193,7 +193,7 @@
     "key": "revenue",
     "value": "3870.09",
     "unit": "VND bn",
-    "on_page": true
+    "on_page": false
   },
   {
     "case": "case2",
@@ -228,14 +228,14 @@
     "key": "npv_tipv",
     "value": "235.65",
     "unit": "VND bn",
-    "on_page": false
+    "on_page": true
   },
   {
     "case": "case2",
     "key": "wacc",
     "value": "13.87",
     "unit": "%",
-    "on_page": false
+    "on_page": true
   },
   {
     "case": "case2",

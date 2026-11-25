@@ -6,18 +6,18 @@
       "rows": [
         {
           "id": "title",
-          "en": "Title: Real Estate Valuation & Investment Analysis Portfolio",
-          "vi": "Tiêu đề: Portfolio Thẩm định giá và Phân tích đầu tư Bất động sản"
+          "en": "Title: Real Estate Valuation and Investment Analysis – Portfolio",
+          "vi": "Tiêu đề: Hồ sơ năng lực – Thẩm định giá và Phân tích đầu tư bất động sản"
         },
         {
           "id": "target",
-          "en": "Target role: Valuation / Investment Analyst – Real Estate",
-          "vi": "Vị trí: Chuyên viên thẩm định giá / phân tích đầu tư bất động sản"
+          "en": "Target role: Real Estate Valuation / Investment Analyst",
+          "vi": "Vị trí ứng tuyển: Chuyên viên Thẩm định giá / Phân tích đầu tư bất động sản"
         },
         {
           "id": "positioning",
-          "en": "Positioning: Real estate graduate (UEH, High Distinction) who builds feasibility models, values income properties under Vietnamese standards and reads project legal files. Aiming at real estate investment and M&A.",
-          "vi": "Câu định vị: Cử nhân Bất động sản UEH (xuất sắc), dựng mô hình FS, định giá bất động sản tạo thu nhập theo chuẩn mực Việt Nam và đọc hồ sơ pháp lý dự án. Hướng tới đầu tư và M&A bất động sản."
+          "en": "Profile: Real Estate graduate (Investment track) with High Distinction from the University of Economics Ho Chi Minh City (UEH). Experienced in building project financial models, valuing income-producing property under Vietnamese Valuation Standards and reviewing project legal documentation. Focus: valuation, investment analysis and real estate M&A.",
+          "vi": "Giới thiệu: Cử nhân Bất động sản chuyên ngành Đầu tư, tốt nghiệp loại Xuất sắc tại Đại học Kinh tế TP. Hồ Chí Minh (UEH). Có kinh nghiệm lập mô hình tài chính dự án, thẩm định giá bất động sản tạo thu nhập theo Tiêu chuẩn thẩm định giá Việt Nam và rà soát hồ sơ pháp lý dự án. Định hướng: thẩm định giá, phân tích đầu tư và M&A bất động sản."
         }
       ]
     },
@@ -27,61 +27,53 @@
       "rows": [
         {
           "id": "key_figures",
-          "en": "Key figures: GPA 3.75/4.0 | Academic scholarship, 4 consecutive semesters | Second Prize, UEH Young Researcher Competition (2025)",
-          "vi": "Con số nổi bật: GPA 3.75/4.0 | Học bổng khuyến khích học tập 4 học kỳ liên tiếp | Giải B – Nhà nghiên cứu trẻ UEH (2025)",
+          "en": "Key figures: First-ranked admission, Faculty of Economics (2022) | GPA 3.75/4.0, top 2 in the program, High Distinction | Second Prize, UEH Young Researcher Competition (2025) | Real Estate Valuation Certificate (2025)",
+          "vi": "Thành tích: Thủ khoa đầu vào Khoa Kinh tế (2022) | GPA 3.75/4.0, top 2 ngành, tốt nghiệp loại Xuất sắc | Giải B – Nhà nghiên cứu trẻ UEH (2025) | Chứng chỉ Định giá Bất động sản (2025)",
           "items": {
             "en": [
               {
-                "value": "3.75/4.0",
-                "label": "GPA, UEH"
+                "value": "Top entrant",
+                "label": "First-ranked admission, Faculty of Economics, UEH (2022)"
               },
               {
-                "value": "4",
-                "label": "Academic scholarship, 4 consecutive semesters"
+                "value": "3.75/4.0",
+                "label": "GPA, top 2 in the program; High Distinction"
               },
               {
                 "value": "Second Prize",
                 "label": "UEH Young Researcher Competition (2025)"
+              },
+              {
+                "value": "Certified",
+                "label": "Real Estate Valuation Certificate, UEH (2025)"
               }
             ],
             "vi": [
               {
-                "value": "3.75/4.0",
-                "label": "GPA, UEH"
+                "value": "Thủ khoa",
+                "label": "Thủ khoa đầu vào Khoa Kinh tế, UEH (2022)"
               },
               {
-                "value": "4",
-                "label": "Học bổng khuyến khích học tập 4 học kỳ liên tiếp"
+                "value": "3.75/4.0",
+                "label": "GPA, top 2 ngành; tốt nghiệp loại Xuất sắc"
               },
               {
                 "value": "Giải B",
                 "label": "Nhà nghiên cứu trẻ UEH (2025)"
+              },
+              {
+                "value": "Chứng chỉ",
+                "label": "Định giá Bất động sản, UEH (2025)"
               }
             ]
           }
-        },
-        {
-          "id": "text",
-          "en": "[CHƯA VIẾT]",
-          "vi": "[CHƯA VIẾT]"
         }
       ]
     },
     {
       "name": "Portfolio map",
       "key": "map",
-      "rows": [
-        {
-          "id": "intro",
-          "en": "Market → Project → Asset → Transaction. [CHƯA VIẾT]",
-          "vi": "Thị trường → Dự án → Tài sản → Giao dịch. [CHƯA VIẾT]"
-        },
-        {
-          "id": "headline",
-          "en": "Headline: Each piece of work sits on one step from market to transaction",
-          "vi": "Tiêu đề: Mỗi bài nằm ở một bước, từ thị trường đến giao dịch"
-        }
-      ]
+      "rows": []
     },
     {
       "name": "Skills map",
@@ -89,31 +81,31 @@
       "rows": [
         {
           "id": "headline",
-          "en": "Headline: What each skill is backed by",
-          "vi": "Tiêu đề: Mỗi kỹ năng có bằng chứng ở đâu"
+          "en": "Headline: Core competencies",
+          "vi": "Tiêu đề: Năng lực chuyên môn"
         },
         {
           "id": "valuation",
-          "en": "Income valuation (DCF) | Grade-B office valuation",
-          "vi": "Định giá theo thu nhập (DCF) | Định giá tòa văn phòng hạng B",
+          "en": "Income approach valuation (DCF) | Grade-B office valuation",
+          "vi": "Thẩm định giá theo phương pháp thu nhập (DCF) | Thẩm định giá tòa nhà văn phòng hạng B",
           "link": "case3"
         },
         {
           "id": "feasibility",
-          "en": "Feasibility modelling and funding | Riverside Residences feasibility model",
-          "vi": "Mô hình khả thi và nguồn vốn | Mô hình FS Riverside Residences",
+          "en": "Feasibility studies and financial modelling (NPV, IRR, funding need) | Residential and retail feasibility study",
+          "vi": "Lập dự án đầu tư và mô hình tài chính (NPV, IRR, nhu cầu vốn) | Lập dự án đầu tư khu căn hộ và thương mại dịch vụ",
           "link": "case2"
         },
         {
           "id": "legal",
-          "en": "Project legal due diligence | Acquisition checklist; legal files read at DKRA",
-          "vi": "Thẩm định pháp lý dự án | Checklist mua dự án; đọc hồ sơ pháp lý tại DKRA",
+          "en": "Project legal due diligence | Legal due diligence checklist; project file reviews at DKRA",
+          "vi": "Thẩm định pháp lý dự án | Danh mục thẩm định pháp lý; rà soát hồ sơ dự án tại DKRA",
           "link": "case4"
         },
         {
           "id": "quant",
-          "en": "Quantitative research (SPSS, SmartPLS, R) | AI chatbot study, Second Prize; Dow Jones volatility model",
-          "vi": "Nghiên cứu định lượng (SPSS, SmartPLS, R) | Đề tài chatbot AI, Giải B; mô hình biến động Dow Jones",
+          "en": "Macroeconomic and quantitative analysis (Excel, SPSS, SmartPLS, R) | AI chatbot study (Second Prize); Dow Jones volatility model; EB-IB macro report",
+          "vi": "Phân tích kinh tế vĩ mô và định lượng (Excel, SPSS, SmartPLS, R) | Đề tài chatbot AI (Giải B); mô hình biến động Dow Jones; báo cáo EB-IB",
           "link": "research"
         }
       ]
@@ -141,7 +133,7 @@
             "en": [
               {
                 "value": "21.0%",
-                "label": "project IRR, VND 1,728bn peak funding",
+                "label": "project IRR; peak funding need VND 1,728bn",
                 "tools": "Excel · quarterly feasibility model",
                 "chart": "case2-funding-and-sensitivity"
               }
@@ -149,7 +141,7 @@
             "vi": [
               {
                 "value": "21,0%",
-                "label": "IRR dự án, nhu cầu vốn đỉnh 1.728 tỷ",
+                "label": "IRR dự án; nhu cầu vốn tối đa 1.728 tỷ đồng",
                 "tools": "Excel · mô hình FS theo quý",
                 "chart": "case2-funding-and-sensitivity"
               }
@@ -158,23 +150,23 @@
         },
         {
           "id": "tagline",
-          "en": "Tag line: Feasibility study | Apartment and retail project, South HCMC | Group coursework, UEH, 03/2025. My role: team lead",
-          "vi": "Dòng thẻ: Nghiên cứu khả thi | Dự án căn hộ và thương mại dịch vụ, Nam TP.HCM | Đồ án nhóm, UEH, 03/2025. Vai trò: trưởng nhóm"
+          "en": "Tag line: Feasibility study | Residential and retail, South HCMC | Group coursework, UEH, 03/2025. Role: Team lead",
+          "vi": "Dòng thẻ: Lập dự án đầu tư | Căn hộ và thương mại dịch vụ, Nam TP.HCM | Đồ án nhóm, UEH, 03/2025. Vai trò: Trưởng nhóm"
         },
         {
           "id": "headline",
-          "en": "Headline: A 21-storey apartment and retail project earns a 21% project IRR, but needs VND 1,728bn of funding before sales cash arrives",
-          "vi": "Tiêu đề: Dự án căn hộ và thương mại 21 tầng đạt IRR dự án 21%, nhưng cần 1.728 tỷ đồng vốn trước khi tiền bán hàng về"
+          "en": "Headline: Feasibility Study – Residential and Retail Development, South HCMC",
+          "vi": "Tiêu đề: Lập dự án đầu tư (FS) khu căn hộ và thương mại dịch vụ, Nam TP.HCM"
         },
         {
           "id": "question",
-          "en": "Question: Is a 478-unit apartment and retail project on a 1-hectare site worth developing at a sale price of VND 78m/m², and how much funding does it need?",
-          "vi": "Câu hỏi: Dự án 478 căn hộ và thương mại dịch vụ trên khu đất 1 ha có đáng triển khai với giá bán 78 triệu/m² không, và cần bao nhiêu vốn?"
+          "en": "Purpose: Assess the returns and funding need of a 478-unit residential and retail project on a site of about 1 hectare, at a sale price of VND 78m/m².",
+          "vi": "Mục đích: Đánh giá hiệu quả đầu tư và nhu cầu vốn của dự án 478 căn hộ và thương mại dịch vụ trên khu đất khoảng 1 ha, giá bán 78 triệu đồng/m²."
         },
         {
           "id": "approach",
-          "en": "Approach: (1) A quarterly model for 2021–2026 across 13 linked sheets: site areas, construction and sales schedules, development cost, revenue by sales wave, operating costs, VAT and corporate tax. (2) Funding from equity, two bank loans (14.5% a year to Q1/2023, then 11%) and buyer instalments, with interest on the average quarterly balance. (3) Returns from two views, project (TIPV, at WACC) and equity (EPV, at a 25% cost of equity), with IRR sensitivity to sale price and construction cost.",
-          "vi": "Cách làm: (1) Mô hình theo quý giai đoạn 2021–2026 gồm 13 sheet liên kết: diện tích quy hoạch, tiến độ xây dựng và bán hàng, tổng chi phí đầu tư, doanh thu theo đợt bán, chi phí hoạt động, VAT và thuế TNDN. (2) Nguồn vốn gồm vốn chủ, hai khoản vay ngân hàng (14,5%/năm đến quý 1/2023, sau đó 11%) và tiền khách hàng trả theo tiến độ; lãi tính trên dư nợ bình quân quý. (3) Hiệu quả theo hai quan điểm, tổng đầu tư (TIPV, chiết khấu bằng WACC) và chủ sở hữu (EPV, chi phí vốn chủ 25%), kèm độ nhạy IRR theo giá bán và chi phí xây dựng."
+          "en": "Method: (1) A quarterly financial model for 2021–2026 across 13 linked sheets: site plan and areas, construction and sales schedules, total investment, revenue by sales phase, operating costs, VAT and corporate income tax. (2) Funding from equity, two bank loans (14.5% a year to Q1/2023, then 11%) and buyer instalments, with interest on the average quarterly balance. (3) Returns from the total investment view (TIPV, at a 13.87% WACC) and the equity view (EPV, at a 25% cost of equity), with IRR sensitivity to sale price and construction cost.",
+          "vi": "Phương pháp: (1) Mô hình tài chính theo quý giai đoạn 2021–2026 gồm 13 bảng tính liên kết: quy hoạch và diện tích, tiến độ đầu tư và bán hàng, tổng mức đầu tư, doanh thu theo đợt, chi phí hoạt động, thuế GTGT và thuế TNDN. (2) Cơ cấu nguồn vốn gồm vốn chủ sở hữu, hai khoản vay ngân hàng (14,5%/năm đến quý I/2023, sau đó 11%/năm) và tiền thu từ khách hàng theo tiến độ; lãi vay tính trên dư nợ bình quân quý. (3) Đánh giá hiệu quả theo quan điểm tổng đầu tư (TIPV, chiết khấu theo WACC 13,87%) và quan điểm chủ sở hữu (EPV, chi phí vốn chủ sở hữu 25%); phân tích độ nhạy IRR theo giá bán và chi phí xây dựng."
         },
         {
           "id": "key_figures",
@@ -187,16 +179,16 @@
                 "label": "Project IRR (TIPV)"
               },
               {
+                "value": "VND 236bn",
+                "label": "Project NPV at a 13.87% WACC"
+              },
+              {
                 "value": "VND 1,728bn",
                 "label": "Peak funding need, Q3/2023"
               },
               {
                 "value": "VND 110bn",
                 "label": "Equity NPV at a 25% cost of equity"
-              },
-              {
-                "value": "VND 3,870bn",
-                "label": "Revenue"
               }
             ],
             "vi": [
@@ -205,39 +197,39 @@
                 "label": "IRR dự án (TIPV)"
               },
               {
+                "value": "236 tỷ đồng",
+                "label": "NPV dự án, WACC 13,87%"
+              },
+              {
                 "value": "1.728 tỷ đồng",
-                "label": "Nhu cầu vốn đỉnh, quý 3/2023"
+                "label": "Nhu cầu vốn tối đa, quý III/2023"
               },
               {
                 "value": "110 tỷ đồng",
-                "label": "NPV vốn chủ, chi phí vốn chủ 25%"
-              },
-              {
-                "value": "3.870 tỷ đồng",
-                "label": "Doanh thu"
+                "label": "NPV vốn chủ sở hữu, chi phí vốn 25%"
               }
             ]
           }
         },
         {
           "id": "funding_headline",
-          "en": "Headline: Funding need peaks at VND 1,728bn before sales cash arrives",
-          "vi": "Tiêu đề: Nhu cầu vốn đỉnh 1.728 tỷ đồng trước khi tiền bán hàng về"
+          "en": "Headline: Peak funding need of VND 1,728bn in Q3/2023, before sales collections begin",
+          "vi": "Tiêu đề: Nhu cầu vốn tối đa 1.728 tỷ đồng (quý III/2023), trước khi có dòng tiền thu từ bán hàng"
         },
         {
           "id": "sensitivity",
           "en": "Sensitivity: a 10% lower sale price cuts project IRR from 21.0% to 17.1%; 10% higher construction cost cuts it to 18.9%.",
-          "vi": "Độ nhạy: giá bán giảm 10% làm IRR dự án giảm từ 21,0% xuống 17,1%; chi phí xây dựng tăng 10% làm IRR giảm xuống 18,9%."
+          "vi": "Phân tích độ nhạy: giá bán giảm 10% làm IRR dự án giảm từ 21,0% xuống 17,1%; chi phí xây dựng tăng 10% làm IRR giảm xuống 18,9%."
         },
         {
           "id": "role",
-          "en": "What I did: as team lead I built the whole feasibility model in Excel, then reviewed the report and presented it.",
-          "vi": "Phần tôi làm: là trưởng nhóm, tôi dựng toàn bộ mô hình FS trên Excel, rồi duyệt báo cáo và thuyết trình."
+          "en": "Role and contribution: Team lead. Built the full financial model in Excel, reviewed the report and presented it.",
+          "vi": "Vai trò và đóng góp: Trưởng nhóm. Xây dựng toàn bộ mô hình tài chính trên Excel, rà soát báo cáo và thuyết trình."
         },
         {
           "id": "lessons",
-          "en": "What I would do differently: take WACC weights from the same debt schedule the cash flow uses; discount equity cash flows at the cost of equity; build sensitivity tables on the model's own input cells from the start.",
-          "vi": "Điều tôi sẽ làm khác: lấy tỷ trọng vốn cho WACC từ chính lịch vay mà dòng tiền dùng; chiết khấu dòng tiền chủ sở hữu bằng chi phí vốn chủ; dựng bảng độ nhạy trên ô đầu vào của mô hình ngay từ đầu."
+          "en": "Lessons and improvements: take WACC weights from the debt schedule the cash flow actually uses; discount equity cash flows at the cost of equity; build sensitivity tables directly on the model's input cells.",
+          "vi": "Bài học và hướng hoàn thiện: xác định tỷ trọng vốn cho WACC từ chính lịch vay trong mô hình dòng tiền; chiết khấu dòng tiền chủ sở hữu bằng chi phí vốn chủ sở hữu; lập bảng độ nhạy trực tiếp trên ô đầu vào của mô hình."
         }
       ]
     },
@@ -247,8 +239,8 @@
       "rows": [
         {
           "id": "tagline",
-          "en": "Tag line: Income valuation | Grade-B Office, HCMC CBD | Group coursework, UEH, 03/2025. My role: team lead",
-          "vi": "Dòng thẻ: Định giá theo thu nhập | Văn phòng hạng B, khu trung tâm TP.HCM | Đồ án nhóm, UEH, 03/2025. Vai trò: trưởng nhóm"
+          "en": "Tag line: Valuation | Grade-B office, HCMC CBD | Group coursework, UEH, 03/2025. Role: Team lead",
+          "vi": "Dòng thẻ: Thẩm định giá | Văn phòng hạng B, khu trung tâm TP.HCM | Đồ án nhóm, UEH, 03/2025. Vai trò: Trưởng nhóm"
         },
         {
           "id": "card",
@@ -258,7 +250,7 @@
             "en": [
               {
                 "value": "VND 744bn",
-                "label": "market value",
+                "label": "estimated market value",
                 "tools": "Excel · 20-year DCF",
                 "chart": "case3-sensitivity-heatmap"
               }
@@ -266,7 +258,7 @@
             "vi": [
               {
                 "value": "744 tỷ đồng",
-                "label": "giá trị thị trường",
+                "label": "giá trị thị trường ước tính",
                 "tools": "Excel · DCF 20 năm",
                 "chart": "case3-sensitivity-heatmap"
               }
@@ -275,23 +267,23 @@
         },
         {
           "id": "headline",
-          "en": "Headline: A 12-storey Grade-B office in the HCMC CBD is worth VND 744bn if the owner lets each floor directly",
-          "vi": "Tiêu đề: Tòa văn phòng hạng B 12 tầng ở khu trung tâm TP.HCM có giá trị 744 tỷ đồng nếu chủ sở hữu tự cho thuê từng sàn"
+          "en": "Headline: Grade-B Office Valuation – Discounted Cash Flow",
+          "vi": "Tiêu đề: Thẩm định giá tòa nhà văn phòng hạng B – Phương pháp dòng tiền chiết khấu (DCF)"
         },
         {
           "id": "question",
-          "en": "Question: What is the market value of a 12-storey Grade-B office building in the HCMC CBD if the owner lets the floors directly?",
-          "vi": "Câu hỏi: Giá trị thị trường của tòa văn phòng hạng B 12 tầng ở khu trung tâm TP.HCM là bao nhiêu, nếu chủ sở hữu tự cho thuê từng sàn?"
+          "en": "Purpose: Estimate the market value of a 12-storey Grade-B office building in the HCMC CBD.",
+          "vi": "Mục đích: Xác định giá trị thị trường của tòa nhà văn phòng hạng B, 12 tầng, khu trung tâm TP.HCM."
         },
         {
           "id": "approach",
-          "en": "Approach: (1) 20-year pre-tax DCF, 2025–2044, built floor by floor from rent, service charges, parking and after-hours income, with occupancy stepping from 98% to 91%. (2) One discount rate of 7.78%, the average of four period estimates, checked against the 10-year government bond yield of 2.96%; terminal growth 3%. (3) An r × g sensitivity grid.",
-          "vi": "Cách làm: (1) DCF trước thuế 20 năm (2025–2044), dựng theo từng sàn từ tiền thuê, phí dịch vụ, gửi xe và phí ngoài giờ; tỷ lệ lấp đầy giảm dần từ 98% xuống 91%. (2) Một tỷ suất chiết khấu 7,78%, bình quân của bốn ước tính theo giai đoạn, đối chiếu với lợi suất TPCP 10 năm 2,96%; tăng trưởng dài hạn 3%. (3) Bảng độ nhạy r × g."
+          "en": "Method: (1) 20-year pre-tax discounted cash flow (2025–2044), built floor by floor from rent, service charges, parking and after-hours income, with occupancy stepping down from 98% to 91%. (2) A 7.78% discount rate, the average of four period estimates, checked against the 2.96% 10-year government bond yield; 3% terminal growth. (3) Sensitivity of value to the discount rate (r) and terminal growth (g).",
+          "vi": "Phương pháp: (1) Dòng tiền chiết khấu trước thuế 20 năm (2025–2044), lập theo từng sàn từ tiền thuê, phí dịch vụ, phí gửi xe và phí ngoài giờ; tỷ lệ lấp đầy giảm dần từ 98% xuống 91%. (2) Tỷ suất chiết khấu 7,78%, bình quân bốn ước tính theo giai đoạn, đối chiếu lợi suất trái phiếu Chính phủ kỳ hạn 10 năm 2,96%; tốc độ tăng trưởng dài hạn 3%. (3) Phân tích độ nhạy của giá trị theo tỷ suất chiết khấu (r) và tốc độ tăng trưởng dài hạn (g)."
         },
         {
           "id": "approach_headline",
-          "en": "Headline: A floor-by-floor DCF with one discount rate checked against government bonds",
-          "vi": "Tiêu đề: DCF dựng theo từng sàn, một tỷ suất chiết khấu đã đối chiếu với lợi suất trái phiếu chính phủ"
+          "en": "Headline: Method and key assumptions",
+          "vi": "Tiêu đề: Phương pháp và giả định chính"
         },
         {
           "id": "key_figures",
@@ -301,7 +293,7 @@
             "en": [
               {
                 "value": "VND 744bn",
-                "label": "Market value"
+                "label": "Estimated market value"
               },
               {
                 "value": "7.78% · 3%",
@@ -309,7 +301,7 @@
               },
               {
                 "value": "≈ 39%",
-                "label": "Terminal value share of value"
+                "label": "Terminal value as share of total value"
               },
               {
                 "value": "≈ 4.9%",
@@ -319,7 +311,7 @@
             "vi": [
               {
                 "value": "744 tỷ đồng",
-                "label": "Giá trị thị trường"
+                "label": "Giá trị thị trường ước tính"
               },
               {
                 "value": "7,78% · 3%",
@@ -327,7 +319,7 @@
               },
               {
                 "value": "≈ 39%",
-                "label": "Tỷ trọng giá trị cuối kỳ trong kết quả"
+                "label": "Giá trị cuối kỳ trên tổng giá trị"
               },
               {
                 "value": "≈ 4,9%",
@@ -342,19 +334,14 @@
           "vi": "Tiêu đề: Giá trị nhạy nhất với tỷ suất chiết khấu"
         },
         {
-          "id": "special_assumption",
-          "en": "Special assumption: the building is valued as if it were not bound by the existing master lease and the owner let each floor directly.",
-          "vi": "Giả thiết đặc biệt: tòa nhà được định giá như thể không bị ràng buộc bởi hợp đồng thuê nguyên tòa hiện hữu và chủ sở hữu tự cho thuê từng sàn."
-        },
-        {
           "id": "role",
-          "en": "What I did: as team lead I built the whole Excel model, entered the valuation results into the valuation certificate, and reviewed and revised the entire report before submission.",
-          "vi": "Phần tôi làm: là trưởng nhóm, tôi dựng toàn bộ file Excel, đưa kết quả thẩm định vào chứng thư, rồi duyệt và sửa lại toàn bộ đồ án trước khi nộp."
+          "en": "Role and contribution: Team lead. Built the full Excel model, prepared the valuation results in the valuation certificate, and reviewed and finalised the report.",
+          "vi": "Vai trò và đóng góp: Trưởng nhóm. Xây dựng toàn bộ mô hình Excel, lập kết quả thẩm định trong chứng thư, rà soát và hoàn thiện báo cáo."
         },
         {
           "id": "lessons",
-          "en": "What I would do differently: fix the tax basis of cash flows and discount rate before modelling; treat depreciation as non-cash from the start and budget maintenance capex instead; base rent growth on signed leases and market reports, not 5% a year for the whole period.",
-          "vi": "Điều tôi sẽ làm khác: chốt cơ sở thuế của dòng tiền và tỷ suất chiết khấu trước khi dựng mô hình; không trừ khấu hao như khoản chi tiền mà dự trù chi đầu tư duy trì; lấy mức tăng giá thuê từ hợp đồng đã ký và báo cáo thị trường thay vì tăng đều 5%/năm suốt kỳ."
+          "en": "Lessons and improvements: align the tax basis of cash flows and discount rate before modelling; treat depreciation as non-cash and budget maintenance capex instead; base rent growth on signed leases and market reports rather than a flat 5% a year.",
+          "vi": "Bài học và hướng hoàn thiện: thống nhất cơ sở thuế của dòng tiền và tỷ suất chiết khấu trước khi lập mô hình; không coi khấu hao là khoản chi tiền mà dự trù chi phí đầu tư duy trì; xác định tốc độ tăng giá thuê từ hợp đồng đã ký và báo cáo thị trường thay vì giả định tăng đều 5%/năm."
         }
       ]
     },
@@ -364,8 +351,8 @@
       "rows": [
         {
           "id": "tagline",
-          "en": "Tag line: Due-diligence checklist for buying a development project (residential or mixed-use) | Self-initiated | Legal basis checked to 11/2026",
-          "vi": "Dòng thẻ: Checklist thẩm định khi mua dự án phát triển (nhà ở, hỗn hợp) | Tự soạn | Căn cứ pháp lý rà soát đến 11/2026"
+          "en": "Tag line: Legal due diligence | Residential and mixed-use development projects | Self-initiated, legal basis updated to 11/2026",
+          "vi": "Dòng thẻ: Thẩm định pháp lý | Dự án nhà ở và hỗn hợp đang phát triển | Tự xây dựng, căn cứ pháp lý cập nhật đến 11/2026"
         },
         {
           "id": "card",
@@ -375,7 +362,7 @@
             "en": [
               {
                 "value": "6 + 6",
-                "label": "groups of checks and red flags, each priced into the deal",
+                "label": "document groups and key risks",
                 "tools": "Legal and document review",
                 "chart": ""
               }
@@ -383,7 +370,7 @@
             "vi": [
               {
                 "value": "6 + 6",
-                "label": "nhóm kiểm tra và cờ đỏ, mỗi điểm quy vào giá",
+                "label": "nhóm hồ sơ rà soát và rủi ro trọng yếu",
                 "tools": "Rà soát pháp lý và hồ sơ",
                 "chart": ""
               }
@@ -392,23 +379,23 @@
         },
         {
           "id": "question",
-          "en": "Question: What has to be checked before buying a development project, and how does each open item change the price or the deal terms?",
-          "vi": "Câu hỏi: Cần kiểm tra gì trước khi mua một dự án phát triển, và mỗi điểm còn mở làm thay đổi giá hoặc điều khoản giao dịch thế nào?"
+          "en": "Purpose: Set out the documents to review, the key risks and how each risk is reflected in the price or deal terms when acquiring a development project.",
+          "vi": "Mục đích: Xác định các nhóm hồ sơ cần rà soát, các rủi ro trọng yếu và cách phản ánh rủi ro vào giá hoặc điều khoản giao dịch khi nhận chuyển nhượng dự án đang phát triển."
         },
         {
           "id": "headline",
-          "en": "Headline: Six checks before buying a development project, each turned into price or deal terms",
-          "vi": "Tiêu đề: Sáu nhóm kiểm tra trước khi mua dự án phát triển, mỗi điểm còn mở quy thành giá hoặc điều khoản"
+          "en": "Headline: Legal Due Diligence Checklist for Development Project Acquisitions",
+          "vi": "Tiêu đề: Danh mục thẩm định pháp lý khi nhận chuyển nhượng dự án bất động sản"
         },
         {
           "id": "scope",
-          "en": "Scope: for projects still being developed. It does not fit a standing income asset such as an office building, where the work centres on leases, building condition and the land certificate.",
-          "vi": "Phạm vi: dùng cho dự án đang phát triển. Không dùng cho tài sản đang khai thác như tòa văn phòng; với loại đó, trọng tâm là hợp đồng thuê, tình trạng kỹ thuật tòa nhà và giấy chứng nhận."
+          "en": "Scope: development projects only. For standing income assets such as office buildings, the review centres on leases, building condition and the land-use certificate.",
+          "vi": "Phạm vi: áp dụng cho dự án đang phát triển. Với tài sản đang khai thác như tòa nhà văn phòng, trọng tâm rà soát là hợp đồng thuê, tình trạng kỹ thuật và giấy chứng nhận."
         },
         {
           "id": "step0",
-          "en": "Step 0, deal structure: buying the project company's shares keeps licences and land in place but inherits every liability; a project transfer gives a clean slate but must meet the transfer conditions in Luật Kinh doanh bất động sản 29/2023, Articles 39–42. The structure decides the scope below.",
-          "vi": "Bước 0, cấu trúc giao dịch: mua cổ phần hoặc phần vốn góp của công ty dự án thì giữ nguyên giấy phép và đất nhưng nhận luôn mọi nghĩa vụ; nhận chuyển nhượng dự án thì sạch nghĩa vụ cũ nhưng phải đủ điều kiện tại Luật Kinh doanh bất động sản 29/2023, Điều 39–42. Cấu trúc quyết định phạm vi thẩm định bên dưới."
+          "en": "Step 0 – Deal structure: a share acquisition keeps licences and land rights in place but inherits all liabilities; a project transfer starts clean but must meet the conditions of the Law on Real Estate Business 29/2023, Articles 39–42. The structure sets the scope of the review.",
+          "vi": "Bước 0 – Cấu trúc giao dịch: mua cổ phần hoặc phần vốn góp của công ty dự án giữ nguyên giấy phép và quyền sử dụng đất nhưng kế thừa toàn bộ nghĩa vụ; nhận chuyển nhượng dự án không kế thừa nghĩa vụ cũ nhưng phải đáp ứng điều kiện tại Luật Kinh doanh bất động sản 29/2023, Điều 39–42. Cấu trúc giao dịch quyết định phạm vi thẩm định."
         },
         {
           "id": "check1",
@@ -422,7 +409,7 @@
         {
           "id": "check2",
           "en": "2. Land: origin of the land, allocation or lease decision, one-off or annual rent (annual rent limits what can be transferred), land-use term, whether the land use fee is final and paid or still open to reassessment, remaining clearance, mortgages, and the 20% social-housing land obligation or the cash paid instead. Basis: Luật Đất đai 31/2024; Nghị định 100/2024, amended by Nghị định 261/2025.",
-          "vi": "2. Đất: nguồn gốc đất, quyết định giao hoặc cho thuê, trả tiền một lần hay hằng năm (trả hằng năm thì hạn chế chuyển nhượng), thời hạn sử dụng, tiền sử dụng đất đã chốt và đã nộp hay còn có thể bị tính lại, phần mặt bằng chưa giải phóng, thế chấp, nghĩa vụ 20% quỹ đất nhà ở xã hội hoặc khoản tiền nộp thay. Căn cứ: Luật Đất đai 31/2024; Nghị định 100/2024, sửa đổi bởi Nghị định 261/2025.",
+          "vi": "2. Đất đai: nguồn gốc đất, quyết định giao hoặc cho thuê, trả tiền một lần hay hằng năm (trả hằng năm thì hạn chế chuyển nhượng), thời hạn sử dụng, tiền sử dụng đất đã chốt và đã nộp hay còn có thể bị tính lại, phần mặt bằng chưa giải phóng, thế chấp, nghĩa vụ 20% quỹ đất nhà ở xã hội hoặc khoản tiền nộp thay. Căn cứ: Luật Đất đai 31/2024; Nghị định 100/2024, sửa đổi bởi Nghị định 261/2025.",
           "flags": [
             1,
             5
@@ -430,13 +417,13 @@
         },
         {
           "id": "check3",
-          "en": "3. Technical: building permit or permit exemption, fire-safety design approval and acceptance, environmental permit; site condition against approved drawings; contractor contracts and cost to complete. Basis: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020.",
-          "vi": "3. Kỹ thuật: giấy phép xây dựng hoặc diện miễn phép, thẩm duyệt và nghiệm thu PCCC, giấy phép môi trường; hiện trạng thi công so với hồ sơ duyệt; hợp đồng nhà thầu và chi phí còn lại để hoàn thành. Căn cứ: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020."
+          "en": "3. Technical, fire safety and environment: building permit or permit exemption, fire-safety design approval and acceptance, environmental permit; site condition against approved drawings; contractor contracts and cost to complete. Basis: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020.",
+          "vi": "3. Kỹ thuật, PCCC và môi trường: giấy phép xây dựng hoặc diện miễn phép, thẩm duyệt và nghiệm thu PCCC, giấy phép môi trường; hiện trạng thi công so với hồ sơ duyệt; hợp đồng nhà thầu và chi phí còn lại để hoàn thành. Căn cứ: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020."
         },
         {
           "id": "check4",
-          "en": "4. Sales already made: signed buyer contracts, deposits and instalments collected against the legal caps (5% deposit, 30% first payment, 70% before handover, 95% before the certificate), bank guarantees for off-plan units, promised handover dates, buyer complaints, co-investment (BCC) and agency contracts. Basis: Luật Kinh doanh bất động sản 29/2023, Articles 23–26.",
-          "vi": "4. Phần đã bán: hợp đồng đã ký với khách, tiền cọc và tiền đã thu so với trần luật định (cọc 5%, lần đầu 30%, trước bàn giao 70%, trước khi có giấy chứng nhận 95%), bảo lãnh ngân hàng cho nhà hình thành trong tương lai, cam kết bàn giao, khiếu nại của khách, hợp đồng hợp tác đầu tư (BCC) và hợp đồng đại lý. Căn cứ: Luật Kinh doanh bất động sản 29/2023, Điều 23–26.",
+          "en": "4. Signed sales contracts: signed buyer contracts, deposits and instalments collected against the legal caps (5% deposit, 30% first payment, 70% before handover, 95% before the certificate), bank guarantees for off-plan units, promised handover dates, buyer complaints, co-investment (BCC) and agency contracts. Basis: Luật Kinh doanh bất động sản 29/2023, Articles 23–26.",
+          "vi": "4. Hợp đồng mua bán đã ký: hợp đồng đã ký với khách, tiền cọc và tiền đã thu so với trần luật định (cọc 5%, lần đầu 30%, trước bàn giao 70%, trước khi có giấy chứng nhận 95%), bảo lãnh ngân hàng cho nhà hình thành trong tương lai, cam kết bàn giao, khiếu nại của khách, hợp đồng hợp tác đầu tư (BCC) và hợp đồng đại lý. Căn cứ: Luật Kinh doanh bất động sản 29/2023, Điều 23–26.",
           "flags": [
             4
           ]
@@ -456,18 +443,18 @@
         },
         {
           "id": "red_flags",
-          "en": "Red flags: (1) land use fee not yet final, or an inspection conclusion asking for it to be recalculated; (2) clearance described as 'nearly done'; (3) project timeline expired without an extension, which risks land recovery; (4) money taken from buyers above the caps or before the project was eligible for sale, or without a bank guarantee; (5) annual-rent land in a deal structured as a project transfer; (6) shares or land pledged, or the 20% social-housing obligation unresolved.",
-          "vi": "Cờ đỏ (Red flags): (1) tiền sử dụng đất chưa chốt, hoặc có kết luận thanh tra yêu cầu tính lại; (2) giải phóng mặt bằng được mô tả là \"gần xong\"; (3) dự án quá tiến độ mà chưa được gia hạn, có nguy cơ bị thu hồi đất; (4) thu tiền khách vượt trần, thu khi dự án chưa đủ điều kiện bán, hoặc không có bảo lãnh; (5) đất thuê trả tiền hằng năm nhưng giao dịch lại là chuyển nhượng dự án; (6) cổ phần hoặc đất đang cầm cố, thế chấp, hoặc nghĩa vụ 20% nhà ở xã hội chưa xử lý."
+          "en": "Key risks (red flags): (1) land use fee not yet final, or an inspection conclusion asking for it to be recalculated; (2) clearance described as 'nearly done'; (3) project timeline expired without an extension, which risks land recovery; (4) money taken from buyers above the caps or before the project was eligible for sale, or without a bank guarantee; (5) annual-rent land in a deal structured as a project transfer; (6) shares or land pledged, or the 20% social-housing obligation unresolved.",
+          "vi": "Rủi ro trọng yếu (red flags): (1) tiền sử dụng đất chưa chốt, hoặc có kết luận thanh tra yêu cầu tính lại; (2) giải phóng mặt bằng chưa hoàn tất nhưng được báo cáo là \"gần xong\"; (3) dự án quá tiến độ mà chưa được gia hạn, có nguy cơ bị thu hồi đất; (4) thu tiền khách vượt trần, thu khi dự án chưa đủ điều kiện bán, hoặc không có bảo lãnh; (5) đất thuê trả tiền hằng năm nhưng giao dịch lại là chuyển nhượng dự án; (6) cổ phần hoặc đất đang cầm cố, thế chấp, hoặc nghĩa vụ 20% nhà ở xã hội chưa xử lý."
         },
         {
           "id": "into_price",
-          "en": "Into the price: each open item becomes a number in the model (extra land use fee, cost to complete, delay months) or a deal term (price cut, escrow, specific indemnity from the seller).",
-          "vi": "Đưa vào giá: mỗi điểm còn mở được quy thành số trong mô hình (tiền sử dụng đất phát sinh, chi phí còn lại, số tháng chậm tiến độ) hoặc thành điều khoản giao dịch (giảm giá, giữ lại một phần tiền, cam kết bồi hoàn riêng của bên bán)."
+          "en": "Pricing the risks: each open issue is either quantified in the model (additional land use fee, cost to complete, months of delay) or turned into a deal term (price reduction, retention, specific indemnity from the seller).",
+          "vi": "Phản ánh vào giá giao dịch: mỗi vấn đề chưa xử lý được lượng hóa trong mô hình (tiền sử dụng đất phát sinh, chi phí hoàn thành, thời gian chậm tiến độ) hoặc chuyển thành điều khoản giao dịch (giảm giá, giữ lại một phần giá trị thanh toán, cam kết bồi hoàn của bên chuyển nhượng)."
         },
         {
           "id": "from_practice",
-          "en": "From practice: in project sales at DKRA I read each project's legal file before selling it, which is where this checklist started.",
-          "vi": "Từ thực tế: khi làm kinh doanh dự án tại DKRA, tôi đọc hồ sơ pháp lý của từng dự án trước khi bán; checklist này bắt đầu từ việc đó."
+          "en": "Background: developed from reviewing each project's legal file before distribution at DKRA, and checked against current legislation.",
+          "vi": "Cơ sở xây dựng: phát triển từ kinh nghiệm rà soát hồ sơ pháp lý của từng dự án trước khi phân phối tại DKRA, đối chiếu với văn bản pháp luật hiện hành."
         }
       ]
     },
@@ -477,23 +464,39 @@
       "rows": [
         {
           "id": "headline",
-          "en": "Headline: From real estate sales into analysis",
-          "vi": "Tiêu đề: Từ kinh doanh bất động sản sang phân tích"
+          "en": "Headline: Work experience",
+          "vi": "Tiêu đề: Kinh nghiệm làm việc"
         },
         {
           "id": "dkra",
-          "en": "Sales Consultant, DKRA Vega | 08/2025 – 04/2026 | Read each project's legal file before selling it. Prepared my own analyses of location, product, pricing and sales policy for each assigned project, using consultancy and in-house market reports. Worked with partner banks on clients' mortgage plans: loan dossiers and payment and repayment schedules. Named Outstanding Sales Executive across the project's distribution agencies.",
-          "vi": "Chuyên viên tư vấn kinh doanh, DKRA Vega | 08/2025 – 04/2026 | Đọc hồ sơ pháp lý của từng dự án trước khi bán. Tự lập bản phân tích vị trí, sản phẩm, giá bán, chính sách bán hàng cho từng dự án phụ trách, dựa trên báo cáo thị trường của đơn vị tư vấn và bộ phận nghiên cứu nội bộ. Làm việc với ngân hàng đối tác để lập phương án vay cho khách hàng: hồ sơ vay, lịch thanh toán và lịch trả nợ. Được vinh danh Chuyên viên kinh doanh xuất sắc trong toàn bộ hệ thống đại lý phân phối của dự án."
+          "en": "Sales Consultant, DKRA Vega Joint Stock Company | 08/2025 – 04/2026 | Reviewed each project's legal file before distribution. Prepared analyses of location, product, pricing and sales policy for each assigned project, using reports from major consultancies and the in-house research team. Worked with partner banks on clients' mortgage plans: loan dossiers, payment and repayment schedules. Closed the project's highest-value contract at the time. Named Outstanding Sales Executive across the project's distribution agencies; selected for a training program with PropNex in Singapore.",
+          "vi": "Chuyên viên tư vấn kinh doanh, Công ty Cổ phần DKRA Vega | 08/2025 – 04/2026 | Rà soát hồ sơ pháp lý của từng dự án trước khi phân phối. Lập bản phân tích vị trí, sản phẩm, giá bán và chính sách bán hàng cho từng dự án phụ trách, dựa trên báo cáo thị trường của các đơn vị tư vấn lớn và bộ phận nghiên cứu nội bộ. Phối hợp với ngân hàng đối tác lập phương án vay cho khách hàng: hồ sơ vay, lịch thanh toán và lịch trả nợ. Chốt hợp đồng có giá trị cao nhất dự án tại thời điểm giao dịch. Được vinh danh Chuyên viên kinh doanh xuất sắc trong toàn hệ thống đại lý phân phối của dự án; được chọn tham gia chương trình đào tạo cùng PropNex tại Singapore."
         },
         {
           "id": "em",
-          "en": "Sales Executive, EM Vietnam Jewelry | 07/2024 – 06/2025 | Best Sales of the Month three times among 15–20 sales staff across four branches. Compiled daily revenue and prepared daily and weekly sales reports.",
-          "vi": "Chuyên viên kinh doanh, EM Vietnam Jewelry | 07/2024 – 06/2025 | 3 lần đạt Best Sales of the Month trên 15–20 nhân viên kinh doanh tại 4 chi nhánh. Tổng hợp doanh thu cuối ngày, lập báo cáo bán hàng theo ngày và theo tuần."
+          "en": "Sales Executive, EM Vietnam Jewelry Joint Stock Company | 07/2024 – 06/2025 | Best Sales of the Month three times; ranked Top 2–7 in the remaining months among 15–20 sales staff across four branches. Compiled daily revenue and prepared daily and weekly sales reports for store management. Served international customers in English and Chinese.",
+          "vi": "Chuyên viên kinh doanh, Công ty Cổ phần EM Vietnam Jewelry | 07/2024 – 06/2025 | 3 lần đạt Best Sales of the Month; các tháng còn lại duy trì Top 2–7 trên 15–20 nhân viên kinh doanh tại 4 chi nhánh. Tổng hợp doanh thu và lập báo cáo bán hàng theo ngày, theo tuần cho quản lý cửa hàng. Tư vấn khách hàng quốc tế bằng tiếng Anh và tiếng Trung."
         },
         {
           "id": "skl",
-          "en": "Business Support Assistant, Saigon King Land | 11/2022 – 09/2023 | Worked with external valuation firms to obtain valuation reports for clients and tracked document deadlines.",
-          "vi": "Trợ lý hỗ trợ kinh doanh, Saigon King Land | 11/2022 – 09/2023 | Làm việc với các đơn vị thẩm định giá để nhận báo cáo thẩm định cho khách hàng, theo dõi tiến độ hồ sơ."
+          "en": "Business Support Assistant, Saigon King Land Joint Stock Company | 11/2022 – 09/2023 | Worked with external valuation firms to obtain valuation reports for clients and tracked document deadlines. Sourced prospective clients and advised some of them on real estate investment options.",
+          "vi": "Trợ lý hỗ trợ kinh doanh, Công ty Cổ phần Saigon King Land | 11/2022 – 09/2023 | Phối hợp với các đơn vị thẩm định giá để nhận báo cáo thẩm định giá cho khách hàng và theo dõi tiến độ hồ sơ. Tìm kiếm khách hàng và tư vấn phương án đầu tư bất động sản cho một số khách hàng."
+        }
+      ]
+    },
+    {
+      "name": "Activities",
+      "key": "activities",
+      "rows": [
+        {
+          "id": "headline",
+          "en": "Headline: Extracurricular activities",
+          "vi": "Tiêu đề: Hoạt động ngoại khóa"
+        },
+        {
+          "id": "margroup",
+          "en": "Sponsorship Manager, MarGroup – Marketing Research Club, UEH | 11/2022 – 01/2024 | Brought in 7 corporate sponsors, including Vinamilk, Jobtest, Annam Gourmet and PeakAds; cash sponsorship reached 110% of target and in-kind sponsorship 14 times the target. Led a 9-member team and negotiated terms with sponsors directly.",
+          "vi": "Quản lý tài trợ, MarGroup – Câu lạc bộ Nghiên cứu Marketing UEH | 11/2022 – 01/2024 | Ký kết tài trợ với 7 doanh nghiệp, trong đó có Vinamilk, Jobtest, Annam Gourmet và PeakAds; tài trợ tiền mặt đạt 110% chỉ tiêu, tài trợ hiện vật gấp 14 lần chỉ tiêu. Quản lý nhóm 9 thành viên và trực tiếp đàm phán với nhà tài trợ."
         }
       ]
     },
@@ -508,23 +511,23 @@
         },
         {
           "id": "headline",
-          "en": "Headline: One award-winning study and two quantitative projects",
-          "vi": "Tiêu đề: Một đề tài đoạt giải và hai đồ án định lượng"
+          "en": "Headline: Research and awards",
+          "vi": "Tiêu đề: Nghiên cứu khoa học và giải thưởng"
         },
         {
           "id": "chatbot_body",
-          "en": "Scientific research, not coursework. Second Prize, UEH Young Researcher Competition (2025). Team leader of five; processed survey data from 419 respondents in SPSS and estimated the model in SmartPLS (PLS-SEM). Finding: unbiased recommendations raise perceived fairness, transparency and accountability; perceived fairness builds trust in the chatbot, which drives intention to use it. Manuscript under peer review at an international journal.",
-          "vi": "Nghiên cứu khoa học, không phải đồ án môn. Giải B – Nhà nghiên cứu trẻ UEH (2025). Trưởng nhóm 5 người; xử lý dữ liệu khảo sát 419 người bằng SPSS và ước lượng mô hình bằng SmartPLS (PLS-SEM). Kết quả: gợi ý không thiên lệch làm tăng cảm nhận về công bằng, minh bạch và trách nhiệm giải trình; cảm nhận công bằng tạo niềm tin vào chatbot, từ đó thúc đẩy ý định sử dụng. Bản thảo đang được phản biện tại một tạp chí quốc tế."
+          "en": "Second Prize, UEH Young Researcher Competition (2025). Team leader of five; processed survey data from 419 respondents in SPSS and estimated the model in SmartPLS (PLS-SEM). Finding: unbiased recommendations raise perceived fairness, transparency and accountability; perceived fairness builds trust in the chatbot, which drives intention to use it. Manuscript under peer review at an international journal.",
+          "vi": "Giải B – Nhà nghiên cứu trẻ UEH (2025). Trưởng nhóm 5 thành viên; xử lý dữ liệu khảo sát 419 người bằng SPSS, ước lượng mô hình bằng SmartPLS (PLS-SEM). Kết quả: gợi ý không thiên lệch làm tăng cảm nhận về công bằng, minh bạch và trách nhiệm giải trình; cảm nhận công bằng tạo niềm tin vào chatbot, từ đó thúc đẩy ý định sử dụng. Bản thảo đang được phản biện tại một tạp chí quốc tế."
         },
         {
           "id": "dowjones",
-          "en": "Dow Jones volatility, geopolitical risk, inflation and Fed rates (group coursework, 2025). ARMA(2,2)–EGARCH(1,1) with exogenous variables, estimated in R (rugarch) on daily DJIA data 2004–2023, plus a 30-day forecast. Finding: only geopolitical risk was significant, and it lowered volatility; inflation and the Fed funds rate were not significant. My role: built the model in R and prepared the dataset, then reviewed and finalised the report.",
-          "vi": "Biến động chỉ số Dow Jones trước rủi ro địa chính trị, lạm phát và lãi suất Fed (đồ án nhóm, 2025). Mô hình ARMA(2,2)–EGARCH(1,1) có biến ngoại sinh, ước lượng bằng R (rugarch) trên dữ liệu ngày của DJIA giai đoạn 2004–2023, kèm dự báo 30 ngày. Kết quả: chỉ rủi ro địa chính trị có ý nghĩa thống kê và làm giảm biến động; lạm phát và lãi suất Fed không có ý nghĩa. Vai trò: dựng mô hình trên R và chuẩn bị dữ liệu, rồi duyệt và hoàn thiện báo cáo."
+          "en": "Dow Jones volatility, geopolitical risk, inflation and Fed rates (group coursework, 2025). ARMA(2,2)–EGARCH(1,1) with exogenous variables, estimated in R (rugarch) on daily DJIA data 2004–2023, plus a 30-day forecast. Finding: only geopolitical risk was significant, and it lowered volatility; inflation and the Fed funds rate were not significant. Role: built the model in R, prepared the dataset, reviewed and finalised the report.",
+          "vi": "Biến động chỉ số Dow Jones trước rủi ro địa chính trị, lạm phát và lãi suất Fed (đồ án nhóm, 2025). Mô hình ARMA(2,2)–EGARCH(1,1) có biến ngoại sinh, ước lượng bằng R (rugarch) trên dữ liệu ngày của DJIA giai đoạn 2004–2023, kèm dự báo 30 ngày. Kết quả: chỉ rủi ro địa chính trị có ý nghĩa thống kê và làm giảm biến động; lạm phát và lãi suất Fed không có ý nghĩa. Vai trò: xây dựng mô hình trên R, chuẩn bị dữ liệu, rà soát và hoàn thiện báo cáo."
         },
         {
           "id": "ebib",
-          "en": "Vietnam's macroeconomic position in 2022 on the EB-IB model (group coursework, 12/2023). Built multilateral and bilateral real exchange rates in Excel, chose the base year, placed Vietnam on the EB-IB diagram for 2022 and 2023, and drew stabilisation policy implications. My role: built the whole Excel model, then reviewed and finalised the report.",
-          "vi": "Định vị kinh tế vĩ mô Việt Nam năm 2022 trên mô hình EB-IB (đồ án nhóm, 12/2023). Tính tỷ giá thực đa phương và song phương bằng Excel, chọn năm gốc, định vị nền kinh tế năm 2022 và 2023 trên mô hình EB-IB, đề xuất chính sách bình ổn. Vai trò: dựng toàn bộ file Excel, rồi duyệt và hoàn thiện báo cáo."
+          "en": "Vietnam's macroeconomic position in 2022 on the EB-IB model (group coursework, 12/2023). Computed bilateral and multilateral real exchange rates (REER) against a basket of 16 trading partners in Excel, tested and set 2017 as the base year, positioned the economy for 2022 with a 2023 forecast, and drew stabilisation policy implications. Result: 2022 REER of 0.94, VND overvalued by about 6%; the economy sat in the deficit-unemployment zone. Role: built the full Excel model, reviewed and finalised the report.",
+          "vi": "Định vị kinh tế vĩ mô Việt Nam năm 2022 trên mô hình EB-IB (đồ án nhóm, 12/2023). Tính tỷ giá thực song phương và đa phương (REER) với rổ 16 đối tác bằng Excel, kiểm định và chọn năm gốc 2017, định vị nền kinh tế năm 2022 và dự báo năm 2023, đề xuất chính sách bình ổn. Kết quả: REER năm 2022 bằng 0,94, VND được định giá cao khoảng 6%; nền kinh tế thuộc vùng Thâm hụt – Thất nghiệp. Vai trò: xây dựng toàn bộ mô hình Excel, rà soát và hoàn thiện báo cáo."
         }
       ]
     },
@@ -534,28 +537,28 @@
       "rows": [
         {
           "id": "headline",
-          "en": "Headline: How I check a model",
-          "vi": "Tiêu đề: Cách tôi kiểm tra một mô hình"
+          "en": "Headline: Model review principles",
+          "vi": "Tiêu đề: Nguyên tắc kiểm soát mô hình"
         },
         {
           "id": "p1",
-          "en": "1. Fix the basis first: cash flows and the discount rate must be on the same tax basis before any number is built.",
-          "vi": "1. Chốt cơ sở trước: dòng tiền và tỷ suất chiết khấu phải cùng một cơ sở thuế trước khi dựng con số đầu tiên."
+          "en": "1. Consistent basis: cash flows and the discount rate must share the same tax basis before the model is built.",
+          "vi": "1. Thống nhất cơ sở tính toán: dòng tiền và tỷ suất chiết khấu phải cùng cơ sở thuế trước khi lập mô hình."
         },
         {
           "id": "p2",
-          "en": "2. Name the interest being valued: state which right is valued and any special assumption, so the reader knows what the number means.",
-          "vi": "2. Gọi đúng quyền lợi được định giá: nêu rõ định giá quyền gì và giả thiết đặc biệt nào, để người đọc hiểu con số nói gì."
+          "en": "2. Defined subject of value: state the interest being valued and the assumptions applied, so the result is read correctly.",
+          "vi": "2. Xác định rõ đối tượng định giá: nêu rõ quyền lợi được định giá và các giả thiết áp dụng để người đọc hiểu đúng kết quả."
         },
         {
           "id": "p3",
-          "en": "3. Test the answer against the market: compare the implied yield with the government bond yield and show how far the value moves in a sensitivity grid.",
-          "vi": "3. Đối chiếu kết quả với thị trường: so tỷ suất ngầm định với lợi suất trái phiếu chính phủ và cho thấy giá trị thay đổi bao nhiêu trong bảng độ nhạy."
+          "en": "3. Market cross-check: compare the implied yield with the government bond yield and show how far value moves in a sensitivity table.",
+          "vi": "3. Đối chiếu với thị trường: so sánh tỷ suất ngầm định với lợi suất trái phiếu Chính phủ và trình bày mức biến động của giá trị trong bảng độ nhạy."
         },
         {
           "id": "next",
-          "en": "Next: analysing the financial statements of listed real estate developers, and the residual method for development land.",
-          "vi": "Tiếp theo: phân tích báo cáo tài chính doanh nghiệp bất động sản niêm yết và phương pháp thặng dư cho đất phát triển dự án."
+          "en": "Development plan: financial statement analysis of listed real estate developers, and the residual method for development land.",
+          "vi": "Kế hoạch phát triển: phân tích báo cáo tài chính doanh nghiệp bất động sản niêm yết và phương pháp thặng dư cho đất phát triển dự án."
         }
       ]
     },
@@ -565,8 +568,8 @@
       "rows": [
         {
           "id": "summary",
-          "en": "Valuation | Financial modelling | Project legal review | Data & research (Excel, R, Stata, SPSS, SmartPLS). [CHƯA VIẾT]",
-          "vi": "Định giá | Mô hình tài chính | Pháp lý dự án | Dữ liệu và nghiên cứu (Excel, R, Stata, SPSS, SmartPLS). [CHƯA VIẾT]"
+          "en": "Excel (financial modelling, NPV/IRR, XLOOKUP, PivotTable) | SPSS | SmartPLS | Stata | R | PowerPoint, Word, Google Workspace",
+          "vi": "Excel (mô hình tài chính, NPV/IRR, XLOOKUP, PivotTable) | SPSS | SmartPLS | Stata | R | PowerPoint, Word, Google Workspace"
         }
       ]
     },
@@ -576,8 +579,34 @@
       "rows": [
         {
           "id": "summary",
-          "en": "UEH, 09/2022–03/2026, GPA 3.75/4.0. [CHƯA VIẾT]",
-          "vi": "UEH, 09/2022–03/2026, GPA 3.75/4.0. [CHƯA VIẾT]"
+          "en": "University of Economics Ho Chi Minh City (UEH) | 09/2022 – 03/2026 | Bachelor's Degree in Real Estate, Investment track; High Distinction. GPA 3.75/4.0, top 2 in the program. First-ranked admission candidate, Faculty of Economics (09/2022). Academic Excellence Scholarship for four consecutive semesters. Courses graded 4.0/4.0 include Corporate Finance, Financial Analysis, Financial Accounting, Behavioral Finance, Applied Econometrics and Advanced Quantitative Methods.",
+          "vi": "Đại học Kinh tế TP. Hồ Chí Minh (UEH) | 09/2022 – 03/2026 | Cử nhân Bất động sản, chuyên ngành Đầu tư; tốt nghiệp loại Xuất sắc. GPA 3.75/4.0, top 2 ngành. Thủ khoa đầu vào Khoa Kinh tế (09/2022). Học bổng khuyến khích học tập 4 học kỳ liên tiếp. Các học phần đạt 4.0/4.0 gồm Tài chính doanh nghiệp, Phân tích tài chính, Kế toán tài chính, Tài chính hành vi, Kinh tế lượng ứng dụng và Phương pháp định lượng nâng cao."
+        }
+      ]
+    },
+    {
+      "name": "Credentials",
+      "key": "credentials",
+      "rows": [
+        {
+          "id": "valuation",
+          "en": "Real Estate Valuation Certificate – Center for Economics, Law and State Management, UEH (2025)",
+          "vi": "Chứng chỉ Định giá Bất động sản – Trung tâm Kinh tế, Luật và Quản lý Nhà nước, UEH (2025)"
+        },
+        {
+          "id": "english",
+          "en": "English: TOEIC 710/990 (2022); used daily with international clients",
+          "vi": "Tiếng Anh: TOEIC 710/990 (2022); giao tiếp hằng ngày với khách hàng quốc tế"
+        },
+        {
+          "id": "chinese",
+          "en": "Chinese: HSK Level 4; HSKK Intermediate (2026)",
+          "vi": "Tiếng Trung: HSK 4; HSKK Trung cấp (2026)"
+        },
+        {
+          "id": "ic3",
+          "en": "IC3 Digital Literacy Certification (01/2024)",
+          "vi": "Chứng chỉ tin học IC3 (01/2024)"
         }
       ]
     },
@@ -592,8 +621,8 @@
       "rows": [
         {
           "id": "text",
-          "en": "Academic coursework. Project names and data are anonymised. Not a formal valuation opinion.",
-          "vi": "Đồ án học thuật. Tên dự án và số liệu đã ẩn danh. Không phải ý kiến thẩm định giá chính thức."
+          "en": "Projects are academic and self-initiated work; project names and data are anonymised. Not a formal valuation opinion.",
+          "vi": "Các dự án là đồ án học thuật và dự án tự thực hiện; tên dự án và số liệu đã được ẩn danh. Nội dung không phải ý kiến thẩm định giá chính thức."
         }
       ]
     }

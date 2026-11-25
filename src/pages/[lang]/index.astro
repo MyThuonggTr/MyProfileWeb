@@ -3,7 +3,7 @@ import Base from "../../layouts/Base.astro";
 import Icon from "../../components/Icon.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import { LANGS, type Lang, raw, text, pipes, items, titled, job, rowIds, attr } from "../../lib/content";
-import { ui, DOWNLOADS, EMAIL, CASES, caseHref } from "../../lib/ui";
+import { ui, DOWNLOADS, EMAIL, CASES, caseHref, FILES, fileOf } from "../../lib/ui";
 
 export const getStaticPaths = () => LANGS.map((lang) => ({ params: { lang } }));
 const lang = Astro.params.lang as Lang;
@@ -19,13 +19,21 @@ const skills = rowIds("skills_map").filter((id) => id !== "headline").map((id) =
   return { skill, evidence, href: link === "research" ? "#research" : caseHref(lang, link) };
 });
 const jobs = ["dkra", "em", "skl"].map((id) => job("experience", id, lang));
+const acts = ["margroup"].map((id) => job("activities", id, lang));
+const edu = raw("education", "summary", lang).split(" | ");
+const eduPoints = edu[2].split(/(?<=\.) (?=[A-ZĐÀ-Ỹ])/u);
+const creds = ["valuation", "english", "chinese", "ic3"].map((id) => raw("credentials", id, lang));
 const chatbot = text("research", "chatbot_body", lang);
-const award = chatbot.split(". ")[1];
+const award = chatbot.split(". ").find((s) => /Prize|Giải/.test(s))!;
 const dow = titled(raw("research", "dowjones", lang));
 const ebib = titled(raw("research", "ebib", lang));
-const tools = pipes(raw("skills", "summary", lang).replace(/\.$/, ""));
-const edu = raw("education", "summary", lang).replace(/\.$/, "");
+const research = [
+  { ...dow, files: ["djData", "djR"] as const },
+  { ...ebib, files: ["ebibReport", "ebibExcel"] as const },
+];
+const tools = pipes(raw("skills", "summary", lang));
 const pdf = DOWNLOADS.pdf[lang];
+const typeOf = (href: string) => href.split(".").pop()!.toUpperCase().replace("XLSX", "Excel").replace("DOCX", "Word");
 ---
 <Base lang={lang} title={`${t.name} – ${target}`} description={positioning} home>
   <section id="top" class="section--white">
@@ -46,7 +54,7 @@ const pdf = DOWNLOADS.pdf[lang];
       </figure>
     </div>
     <div class="wrap stats">
-      <div class="grid grid--stats">
+      <div class="grid grid--stats4">
         {stats.map((s) => (
           <div class="stat">
             <div class="stat__value num">{s.value}</div>
@@ -59,10 +67,7 @@ const pdf = DOWNLOADS.pdf[lang];
 
   <section id="skills" aria-labelledby="skills-h" class="section section--rule">
     <div class="wrap stack">
-      <div class="stack" style="gap:10px">
-        <div class="eyebrow">{t.skillsMap}</div>
-        <h2 id="skills-h" class="h2">{text("skills_map", "headline", lang)}</h2>
-      </div>
+      <h2 id="skills-h" class="h2">{text("skills_map", "headline", lang)}</h2>
       <div class="table-box">
         <table class="smap">
           <thead><tr><th scope="col">{t.skill}</th><th scope="col">{t.evidence}</th></tr></thead>
@@ -85,10 +90,7 @@ const pdf = DOWNLOADS.pdf[lang];
 
   <section id="experience" aria-labelledby="exp-h" class="section section--rule">
     <div class="wrap stack">
-      <div class="stack" style="gap:10px">
-        <div class="eyebrow">{t.experience}</div>
-        <h2 id="exp-h" class="h2">{text("experience", "headline", lang)}</h2>
-      </div>
+      <h2 id="exp-h" class="h2">{text("experience", "headline", lang)}</h2>
       <ol class="timeline">
         {jobs.map((j) => (
           <li>
@@ -101,26 +103,39 @@ const pdf = DOWNLOADS.pdf[lang];
           </li>
         ))}
       </ol>
+      <h3 class="h3 sub">{text("activities", "headline", lang)}</h3>
+      <ol class="timeline">
+        {acts.map((j) => (
+          <li>
+            <div class="timeline__when num">{j.period}</div>
+            <div class="timeline__what">
+              <h4 class="h3" style="font-size:18px">{j.role}</h4>
+              <p class="meta">{j.org}</p>
+              <ul>{j.points.map((p) => <li>{p}</li>)}</ul>
+            </div>
+          </li>
+        ))}
+      </ol>
     </div>
   </section>
 
   <section id="research" aria-labelledby="research-h" class="section section--white section--rule">
     <div class="wrap stack">
-      <div class="stack" style="gap:10px">
-        <div class="eyebrow">{t.research}</div>
-        <h2 id="research-h" class="h2">{text("research", "headline", lang)}</h2>
-      </div>
+      <h2 id="research-h" class="h2">{text("research", "headline", lang)}</h2>
       <article class="card card--soft">
         <ul class="chips"><li class="chip chip--solid">{award}</li></ul>
         <h3 class="h3">{text("research", "chatbot_title", lang)}</h3>
-        <p class="prose">{chatbot}</p>
+        <p class="prose">{chatbot.replace(award + ". ", "")}</p>
       </article>
       <div class="grid">
-        {[dow, ebib].map((r) => (
+        {research.map((r) => (
           <article class="card">
             <p class="meta">{r.meta}</p>
             <h3 class="h3" style="font-size:20px">{r.title}</h3>
             <p class="prose" style="font-size:15px">{r.body}</p>
+            <div class="files">
+              {r.files.map((k) => <a class="link-arrow" href={DOWNLOADS[k].href} download={DOWNLOADS[k].name}><Icon name="download" size={16} />{typeOf(DOWNLOADS[k].href)}</a>)}
+            </div>
           </article>
         ))}
       </div>
@@ -129,13 +144,36 @@ const pdf = DOWNLOADS.pdf[lang];
 
   <section id="education" aria-labelledby="edu-h" class="section section--rule">
     <div class="wrap split">
-      <div class="stack split__main" style="gap:18px">
+      <div class="stack split__main" style="gap:16px">
         <h2 id="edu-h" class="h2">{t.education}</h2>
-        <div class="card" style="padding:24px;gap:6px"><p class="edu">{edu}</p></div>
+        <div class="card" style="padding:24px;gap:8px">
+          <h3 class="h3" style="font-size:20px">{edu[0]}</h3>
+          <p class="meta num">{edu[1]}</p>
+          <ul class="plain-list">{eduPoints.map((p) => <li>{p}</li>)}</ul>
+        </div>
       </div>
-      <div class="stack split__side" style="gap:18px">
-        <h2 class="h2">{t.tools}</h2>
+      <div class="stack split__side" style="gap:16px">
+        <h2 class="h2">{t.credentials}</h2>
+        <ul class="plain-list card" style="padding:24px">{creds.map((c) => <li>{c}</li>)}</ul>
+        <h3 class="h3">{t.tools}</h3>
         <ul class="skill-list">{tools.map((s) => <li>{s}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="downloads" aria-labelledby="dl-h" class="section section--white section--rule">
+    <div class="wrap stack">
+      <h2 id="dl-h" class="h2">{t.downloads}</h2>
+      <div class="table-box">
+        <table class="smap">
+          <thead><tr><th scope="col">{t.file}</th><th scope="col">{t.fileType}</th><th scope="col"></th></tr></thead>
+          <tbody>
+            {FILES.map((f) => {
+              const d = fileOf(f.key);
+              return <tr><th scope="row">{f[lang]}</th><td>{f.type}</td><td><a class="link-arrow" href={d.href} download={d.name}><Icon name="download" size={16} />{t.downloadPdf.split(" ")[0]}</a></td></tr>;
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -163,24 +201,27 @@ const pdf = DOWNLOADS.pdf[lang];
   @media (max-width: 640px) { .portrait { max-width: 140px; } .hero { gap: 28px; } }
   .portrait__frame { aspect-ratio: 4 / 5; border-radius: 8px; background: var(--tint); border: 1.5px dashed #9aa6b6; display: flex; align-items: center; justify-content: center; color: var(--text-muted); }
   .stats { padding-bottom: 56px; }
-  .smap { width: 100%; border-collapse: collapse; min-width: 520px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+  .grid--stats4 { gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+  .smap { width: 100%; border-collapse: collapse; min-width: 520px; background: var(--surface); border: 1px solid var(--border); }
   .smap th, .smap td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--border); vertical-align: top; }
   .smap thead th { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); background: var(--bg); }
-  .smap tbody th { font-weight: 600; color: var(--primary); width: 38%; }
+  .smap tbody th { font-weight: 600; color: var(--primary); width: 46%; }
   .smap td a { font-weight: 500; }
   .grid--cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
   .meta { font-size: 14px; color: var(--text-muted); }
-  .timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+  .sub { margin-top: 16px; }
+  .timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
   .timeline > li { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--border); }
   .timeline__when { font-weight: 600; color: var(--text-muted); font-size: 15px; }
   .timeline__what ul { margin: 10px 0 0; padding-left: 20px; color: var(--text-2); display: flex; flex-direction: column; gap: 6px; max-width: 80ch; }
   @media (max-width: 640px) { .timeline > li { grid-template-columns: 1fr; gap: 6px; } }
+  .files { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: auto; }
   .split { display: flex; flex-wrap: wrap; gap: 40px; }
-  .split__main { flex: 1 1 360px; min-width: 0; }
-  .split__side { flex: 999 1 420px; min-width: 0; }
+  .split__main { flex: 999 1 460px; min-width: 0; }
+  .split__side { flex: 1 1 360px; min-width: 0; }
+  .plain-list { margin: 0; padding-left: 20px; color: var(--text-2); display: flex; flex-direction: column; gap: 6px; }
   .skill-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; font-size: 15px; font-weight: 500; }
   .skill-list li { padding: 10px 16px; border-radius: 6px; background: var(--surface); border: 1px solid var(--border); color: var(--primary); }
-  .edu { color: var(--text-2); font-size: 17px; }
   .contact { background: var(--primary); color: #fff; border-bottom: 1px solid #3a5578; }
   .contact__in { padding-block: 64px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between; }
   .contact__mail { color: #fff; font-size: clamp(17px, 2vw, 22px); font-weight: 500; overflow-wrap: anywhere; }

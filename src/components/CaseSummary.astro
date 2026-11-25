@@ -4,13 +4,14 @@ import Icon from "./Icon.astro";
 import { type Lang, text, pipes, card } from "../lib/content";
 import { ui, DOWNLOADS } from "../lib/ui";
 
-interface Props { lang: Lang; block: string; excel: boolean }
-const { lang, block, excel } = Astro.props;
+interface Props { lang: Lang; block: string }
+const { lang, block } = Astro.props;
+const excel = (DOWNLOADS as Record<string, { href: string; name: string }>)[block];
 const t = ui(lang);
 const c = card(block, lang);
 const tags = pipes(text(block, "tagline", lang));
 const last = tags.at(-1)!.split(". ");
-const role = last.find((x) => /role|Vai trò/i.test(x))?.replace(/^(My role|Vai trò): /, "");
+const role = last.find((x) => /role|Vai trò/i.test(x))?.replace(/^(My role|Role|Vai trò): /, "");
 const when = last[0].match(/(\d{2}\/\d{4})/)?.[1] ?? last[0];
 const pdf = DOWNLOADS.pdf[lang];
 const rows = [
@@ -27,7 +28,7 @@ const rows = [
     {rows.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
   </dl>
   <div class="btn-row">
-    {excel && <a class="btn btn--solid" href={DOWNLOADS.excel.href} download={DOWNLOADS.excel.name}><Icon name="download" />{t.downloadExcel}</a>}
+    {excel && <a class="btn btn--solid" href={excel.href} download={excel.name}><Icon name="download" />{t.downloadExcel}</a>}
     <a class="btn btn--line" href={pdf.href} download={pdf.name}><Icon name="download" />{t.downloadPdf}</a>
   </div>
 </section>

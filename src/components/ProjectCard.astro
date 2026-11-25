@@ -2,7 +2,7 @@
 // Same card for every project: chart, type, one-line question, one key number, role and tools.
 import Icon from "./Icon.astro";
 import { type Lang, text, pipes, card } from "../lib/content";
-import { ui, caseHref } from "../lib/ui";
+import { ui, caseHref, DOWNLOADS } from "../lib/ui";
 
 interface Props { lang: Lang; block: string }
 const { lang, block } = Astro.props;
@@ -12,6 +12,8 @@ const tags = pipes(text(block, "tagline", lang));
 const kind = tags[0].replace(/\s*\(.*\)$/, "");
 const role = tags.at(-1)!.split(". ").find((x) => /role|Vai trò/i.test(x));
 const question = text(block, "question", lang);
+const title = text(block, "headline", lang);
+const excel = (DOWNLOADS as Record<string, { href: string; name: string }>)[block];
 ---
 <article class="pcard">
   <a class="pcard__media" href={caseHref(lang, block)} tabindex="-1" aria-hidden="true">
@@ -21,13 +23,17 @@ const question = text(block, "question", lang);
   </a>
   <div class="pcard__body">
     <p class="pcard__kind">{kind}</p>
-    <h3 class="h3"><a href={caseHref(lang, block)}>{question}</a></h3>
+    <h3 class="h3"><a href={caseHref(lang, block)}>{title}</a></h3>
+    <p class="pcard__purpose">{question}</p>
     <p class="pcard__result"><span class="num">{c.value}</span> {c.label}</p>
     <ul class="pcard__meta">
       {role && <li>{role}</li>}
       <li>{t.tools}: {c.tools}</li>
     </ul>
-    <a class="link-arrow pcard__go" href={caseHref(lang, block)}>{t.readCase}<Icon name="arrow-right" size={16} /></a>
+    <div class="pcard__go">
+      <a class="link-arrow" href={caseHref(lang, block)}>{t.readCase}<Icon name="arrow-right" size={16} /></a>
+      {excel && <a class="link-arrow" href={excel.href} download={excel.name}><Icon name="download" size={16} />Excel</a>}
+    </div>
   </div>
 </article>
 
@@ -45,5 +51,6 @@ const question = text(block, "question", lang);
   .pcard__result { font-size: 15px; color: var(--text-2); }
   .pcard__result .num { font-family: var(--font-head); font-size: 24px; font-weight: 700; color: var(--primary); margin-right: 4px; }
   .pcard__meta { list-style: none; margin: 0; padding: 0; font-size: 14px; color: var(--text-muted); display: flex; flex-direction: column; gap: 2px; }
-  .pcard__go { margin-top: auto; }
+  .pcard__go { margin-top: auto; display: flex; flex-wrap: wrap; gap: 4px 20px; }
+  .pcard__purpose { font-size: 15px; color: var(--text-2); }
 </style>

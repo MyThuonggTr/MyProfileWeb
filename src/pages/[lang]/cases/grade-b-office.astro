@@ -18,7 +18,6 @@ const headline = text("case3", "headline", lang);
 const nextName = pipes(text("case2", "tagline", lang))[1];
 const approach = numbered(text("case3", "approach", lang));
 const stats = items("case3", "key_figures", lang);
-const special = labelled("case3", "special_assumption", lang);
 const role = labelled("case3", "role", lang);
 const lessons = labelled("case3", "lessons", lang);
 ---
@@ -30,7 +29,7 @@ const lessons = labelled("case3", "lessons", lang);
       </nav>
       <ul class="chips">{chips.map((c, i) => <li class={i === 0 ? "chip chip--key" : "chip"}>{c}</li>)}</ul>
       <h1 class="h1" style="max-width:920px;font-size:clamp(30px,4.4vw,50px)">{headline}</h1>
-      <CaseSummary lang={lang} block="case3" excel />
+      <CaseSummary lang={lang} block="case3" />
     </div>
   </section>
 
@@ -47,7 +46,6 @@ const lessons = labelled("case3", "lessons", lang);
 
   <section aria-labelledby="approach-h" class="section">
     <div class="wrap stack">
-      <div class="eyebrow">{t.approach}</div>
       <h2 id="approach-h" class="h2">{text("case3", "approach_headline", lang)}</h2>
       <ol class="grid approach">
         {approach.map((a, i) => (
@@ -57,7 +55,6 @@ const lessons = labelled("case3", "lessons", lang);
           </li>
         ))}
       </ol>
-      <div class="note"><Icon name="info" size={22} /><p><strong>{special.label}:</strong> {special.body}</p></div>
     </div>
   </section>
 

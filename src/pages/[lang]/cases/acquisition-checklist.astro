@@ -33,7 +33,7 @@ const officeName = pipes(text("case2", "tagline", lang))[1];
       </nav>
       <ul class="chips">{tags.map((c, i) => <li class={i === 0 ? "chip chip--key" : "chip"}>{c}</li>)}</ul>
       <h1 class="h1" style="max-width:920px;font-size:clamp(30px,4.4vw,50px)">{headline}</h1>
-      <CaseSummary lang={lang} block="case4" excel={false} />
+      <CaseSummary lang={lang} block="case4" />
       <div class="note"><Icon name="info" size={22} /><p><strong>{scope.label}:</strong> {scope.body}</p></div>
     </div>
   </section>

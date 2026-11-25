@@ -5,7 +5,7 @@ import "@fontsource-variable/inter";
 import "@fontsource-variable/source-serif-4";
 import "../../../styles/global.css";
 import { LANGS, type Lang, raw, text, labelled, pipes, numbered, clauses, items, titled, basis, attr, card, job, rowIds } from "../../../lib/content";
-import { ui, EMAIL, CASES } from "../../../lib/ui";
+import { ui, EMAIL, CASES, FILES, fileOf } from "../../../lib/ui";
 
 export const getStaticPaths = () => LANGS.map((lang) => ({ params: { lang } }));
 const lang = Astro.params.lang as Lang;
@@ -16,6 +16,10 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 const title = text("hero", "title", lang);
 const target = text("hero", "target", lang);
 const jobs = ["dkra", "em", "skl"].map((id) => job("experience", id, lang));
+const acts = ["margroup"].map((id) => job("activities", id, lang));
+const edu = raw("education", "summary", lang).split(" | ");
+const eduPoints = edu[2].split(/(?<=\.) (?=[A-ZĐÀ-Ỹ])/u);
+const creds = ["valuation", "english", "chinese", "ic3"].map((id) => raw("credentials", id, lang));
 const skills = rowIds("skills_map").filter((id) => id !== "headline").map((id) => raw("skills_map", id, lang).split(" | "));
 const tagsOf = (b: string) => pipes(text(b, "tagline", lang));
 const chipsOf = (b: string) => { const tg = tagsOf(b); return [...tg.slice(0, -1), ...tg.at(-1)!.split(". ")]; };
@@ -32,7 +36,7 @@ const principles = ["p1", "p2", "p3"].map((id) => labelled("principles", id, lan
 const L = (b: string, id: string) => labelled(b, id, lang);
 const month = "11/2026";
 const pageLabel = lang === "vi" ? "Trang" : "Page";
-const slides = 14;
+const slides = 16;
 let n = 0;
 const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
 ---
@@ -55,23 +59,33 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <footer>{foot()}</footer>
   </section>
 
-  <!-- 2 Profile on one page -->
+  <!-- 2 Profile and core competencies -->
   <section class="slide dense">
     <div class="eyebrow">{t.profile}</div>
     <p class="lead">{text("hero", "positioning", lang)}</p>
-    <div class="row3">
+    <div class="row4">
       {items("about", "key_figures", lang).map((s) => <div class="stat"><div class="stat__value num">{s.value}</div><div class="stat__label">{s.label}</div></div>)}
     </div>
-    <div class="row2">
+    <h3>{text("skills_map", "headline", lang)}</h3>
+    <table class="ptable"><thead><tr><th>{t.skill}</th><th>{t.evidence}</th></tr></thead>{skills.map(([s, e]) => <tr><th>{s}</th><td>{e}</td></tr>)}</table>
+    <footer>{foot()}</footer>
+  </section>
+
+  <!-- 3 Experience, education, credentials -->
+  <section class="slide dense">
+    <div class="row-exp">
       <div>
-        <h3>{t.experience}</h3>
-        <ul class="plain">{jobs.map((j) => <li><strong>{j.role}</strong>, {j.org} <span class="muted num">· {j.period}</span></li>)}</ul>
-        <h3 style="margin-top:14px">{t.education}</h3>
-        <p>{raw("education", "summary", lang).replace(/\.$/, "")}</p>
+        <h3>{text("experience", "headline", lang)}</h3>
+        {jobs.map((j) => <div class="job"><p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p><ul class="list small">{j.points.slice(0, 3).map((p) => <li>{p}</li>)}</ul></div>)}
+        <h3 style="margin-top:8px">{text("activities", "headline", lang)}</h3>
+        {acts.map((j) => <p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p>)}
       </div>
       <div>
-        <h3>{t.skillsMap}</h3>
-        <table class="ptable">{skills.map(([s, e]) => <tr><th>{s}</th><td>{e}</td></tr>)}</table>
+        <h3>{t.education}</h3>
+        <p><strong>{edu[0]}</strong> <span class="muted num">· {edu[1]}</span></p>
+        <ul class="list small">{eduPoints.map((p) => <li>{p}</li>)}</ul>
+        <h3 style="margin-top:8px">{t.credentials}</h3>
+        <ul class="list small">{creds.map((c) => <li>{c}</li>)}</ul>
       </div>
     </div>
     <footer>{foot()}</footer>
@@ -87,7 +101,8 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
         return (
           <div class="box pcard">
             <p class="kind">{tagsOf(c.key)[0].replace(/\s*\(.*\)$/, "")}</p>
-            <h3>{text(c.key, "question", lang)}</h3>
+            <h3>{text(c.key, "headline", lang)}</h3>
+            <p class="muted">{text(c.key, "question", lang)}</p>
             <p class="big num">{k.value}</p>
             <p class="muted">{k.label}</p>
             <p class="muted">{t.tools}: {k.tools}</p>
@@ -114,7 +129,6 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <div class="eyebrow">{t.approach}</div>
     <h2>{text("case3", "approach_headline", lang)}</h2>
     <ol class="row3 numbered">{numbered(text("case3", "approach", lang)).map((a, i) => <li class="box"><span class="n num">{String(i + 1).padStart(2, "0")}</span><p>{a}</p></li>)}</ol>
-    <div class="box box--line"><p><strong>{L("case3", "special_assumption").label}:</strong> {L("case3", "special_assumption").body}</p></div>
     <footer>{foot()}</footer>
   </section>
   <section class="slide">
@@ -163,6 +177,7 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   <section class="slide">
     <ul class="chips">{tagsOf("case4").map((c, i) => <li class={i === 0 ? "chip chip--key" : "chip"}>{c}</li>)}</ul>
     <h2>{text("case4", "headline", lang)}</h2>
+    <p class="lead"><strong>{t.question}:</strong> {text("case4", "question", lang)}</p>
     <div class="box box--line"><p><strong>{L("case4", "scope").label}:</strong> {L("case4", "scope").body}</p></div>
     <div class="row2">
       <div class="box"><h3>{cap(L("case4", "step0").label)}</h3><p>{cap(L("case4", "step0").body)}</p></div>
@@ -207,7 +222,16 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <footer>{foot()}</footer>
   </section>
 
-  <!-- 14 Contact -->
+  <!-- 15 Downloads -->
+  <section class="slide dense">
+    <h2>{t.downloads}</h2>
+    <table class="ptable ftable"><colgroup><col style="width:44%" /><col style="width:10%" /><col style="width:46%" /></colgroup><thead><tr><th>{t.file}</th><th>{t.fileType}</th><th>File</th></tr></thead>
+      {FILES.map((f) => <tr><th>{f[lang]}</th><td>{f.type}</td><td class="small">{fileOf(f.key).name}{site && <><br />{site.replace(/\/$/, "")}{fileOf(f.key).href}</>}</td></tr>)}
+    </table>
+    <footer>{foot()}</footer>
+  </section>
+
+  <!-- 16 Contact -->
   <section class="slide cover">
     <h2 style="color:#fff">{t.contact}</h2>
     <p class="cover__target" style="color:#fff">{EMAIL}</p>
@@ -267,6 +291,13 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   .ctable .small { font-size: 12.5px; color: var(--text-muted); width: 34%; }
   .ctable .list { font-size: 14.5px; gap: 3px; }
   .body { font-size: 17px; }
+  .ftable th, .ftable td { padding: 6px 10px; font-size: 14px; }
+  .ftable { table-layout: fixed; }
+  .ftable th { width: auto !important; }
+  .row-exp { display: grid; grid-template-columns: 1.25fr 1fr; gap: 28px; }
+  .job { margin-bottom: 6px; }
+  .list.small, td.small { font-size: 13.5px; }
+  .ptable thead th { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); background: var(--bg); }
   .dense { gap: 16px; font-size: 15.5px; line-height: 1.45; }
   .dense .box { padding: 16px 20px; }
 </style>
