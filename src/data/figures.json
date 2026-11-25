@@ -3,168 +3,602 @@
     "case": "case3",
     "key": "dcf_value",
     "value": "743946255673",
-    "unit": "VND"
+    "unit": "VND",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "dcf_value_rounded",
     "value": "744000000000",
-    "unit": "VND"
+    "unit": "VND",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "discount_rate",
     "value": "7.78",
-    "unit": "%"
+    "unit": "%",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "terminal_growth",
     "value": "3",
-    "unit": "%"
+    "unit": "%",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "terminal_value_share",
     "value": "39",
-    "unit": "% of value"
+    "unit": "% of value",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "noi_yield_2025",
     "value": "4.9",
-    "unit": "%"
+    "unit": "%",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "gov_bond_10y",
     "value": "2.96",
-    "unit": "%"
+    "unit": "%",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g2.5_r6.78",
     "value": "885",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g2.5_r7.78",
     "value": "716",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g2.5_r8.78",
     "value": "601",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g3_r6.78",
     "value": "937",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g3_r7.78",
     "value": "744",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g3_r8.78",
     "value": "617",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g3.5_r6.78",
     "value": "1005",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g3.5_r7.78",
     "value": "778",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case3",
     "key": "sens_g3.5_r8.78",
     "value": "636",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case1",
     "key": "total_investment",
     "value": "92.26",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case1",
     "key": "land_cost",
     "value": "60",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case1",
     "key": "construction_cost",
     "value": "21.48",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case1",
     "key": "equipment_cost",
     "value": "5.6",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case1",
     "key": "site_area",
     "value": "12",
-    "unit": "ha"
+    "unit": "ha",
+    "on_page": true
   },
   {
     "case": "case1",
     "key": "plot_revenue",
     "value": "307.06",
-    "unit": "VND bn"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "case1",
     "key": "irr",
     "value": "[CẦN XÁC NHẬN]",
-    "unit": "%"
+    "unit": "%",
+    "on_page": true
   },
   {
     "case": "case1",
     "key": "npv",
     "value": "[CẦN XÁC NHẬN]",
-    "unit": "VND bn"
-  },
-  {
-    "case": "case2",
-    "key": "npv",
-    "value": "[CẦN XÁC NHẬN]",
-    "unit": "VND m"
+    "unit": "VND bn",
+    "on_page": true
   },
   {
     "case": "about",
     "key": "gpa",
     "value": "3.75",
-    "unit": "/4.0"
+    "unit": "/4.0",
+    "on_page": true
   },
   {
     "case": "about",
     "key": "scholarship_semesters",
     "value": "4",
-    "unit": "semesters"
+    "unit": "semesters",
+    "on_page": true
   },
   {
     "case": "about",
     "key": "research_award",
     "value": "Giải B – Nhà nghiên cứu trẻ UEH (2025)",
-    "unit": ""
+    "unit": "",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "revenue",
+    "value": "3870.09",
+    "unit": "VND bn",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "total_dev_cost",
+    "value": "3164.68",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "profit_after_tax",
+    "value": "564.33",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "irr_tipv",
+    "value": "21.0",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_epv",
+    "value": "44.6",
+    "unit": "%",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "npv_tipv",
+    "value": "235.65",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "wacc",
+    "value": "13.87",
+    "unit": "%",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "npv_epv",
+    "value": "109.9",
+    "unit": "VND bn",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "cost_of_equity",
+    "value": "25",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "peak_funding",
+    "value": "1728",
+    "unit": "VND bn",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "units",
+    "value": "478",
+    "unit": "apartments",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "gfa",
+    "value": "60459",
+    "unit": "m2",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "apartment_price",
+    "value": "78",
+    "unit": "VND m/m2",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c90_p-10",
+    "value": "19.2",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c90_p-5",
+    "value": "21.2",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c90_p0",
+    "value": "23.1",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c90_p5",
+    "value": "25.0",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c90_p10",
+    "value": "26.8",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c95_p-10",
+    "value": "18.2",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c95_p-5",
+    "value": "20.1",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c95_p0",
+    "value": "22.1",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c95_p5",
+    "value": "23.9",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c95_p10",
+    "value": "25.8",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c100_p-10",
+    "value": "17.1",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c100_p-5",
+    "value": "19.1",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c100_p0",
+    "value": "21.0",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c100_p5",
+    "value": "22.9",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c100_p10",
+    "value": "24.7",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c105_p-10",
+    "value": "16.1",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c105_p-5",
+    "value": "18.0",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c105_p0",
+    "value": "19.9",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c105_p5",
+    "value": "21.8",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c105_p10",
+    "value": "23.6",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c110_p-10",
+    "value": "15.1",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c110_p-5",
+    "value": "17.0",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c110_p0",
+    "value": "18.9",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c110_p5",
+    "value": "20.8",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "irr_c110_p10",
+    "value": "22.6",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2021Q1",
+    "value": "-8.0",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2021Q2",
+    "value": "-10.7",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2021Q3",
+    "value": "-840.9",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2021Q4",
+    "value": "-889.9",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2022Q1",
+    "value": "-999.1",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2022Q2",
+    "value": "-1056.5",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2022Q3",
+    "value": "-1116.3",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2022Q4",
+    "value": "-1181.8",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2023Q1",
+    "value": "-1367.7",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2023Q2",
+    "value": "-1582.4",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2023Q3",
+    "value": "-1728.2",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2023Q4",
+    "value": "-1580.8",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2024Q1",
+    "value": "-1272.3",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2024Q2",
+    "value": "-971.6",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2024Q3",
+    "value": "-529.5",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2024Q4",
+    "value": "-8.2",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2025Q1",
+    "value": "1037.2",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2025Q2",
+    "value": "1034.2",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2025Q3",
+    "value": "1031.2",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2025Q4",
+    "value": "1097.1",
+    "unit": "VND bn",
+    "on_page": false
+  },
+  {
+    "case": "case2",
+    "key": "cum_cf_2026Q1",
+    "value": "1097.1",
+    "unit": "VND bn",
+    "on_page": false
   }
 ]

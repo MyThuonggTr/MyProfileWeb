@@ -48,6 +48,27 @@ const strings = {
     basis: "Basis",
     keyFigures: "Key figures",
     fileFormats: "PDF, 16:9",
+    selectedWork: "Selected work",
+    skillsMap: "Skills map",
+    skill: "Skill",
+    evidence: "Where it is shown",
+    experience: "Experience",
+    summary: "At a glance",
+    result: "Result",
+    role2: "My role",
+    tools: "Tools",
+    date: "Date",
+    files: "Files",
+    noExcel: "The model file is not shared; the model structure is shown below.",
+    modelMap: "Model structure",
+    funding: "Funding and sensitivity",
+    readCase3: "Read the case",
+    contactMe: "Contact me",
+    checks: "Checks",
+    redFlag: "Red flag",
+    details: "Full checklist and legal basis",
+    profile: "Profile",
+    projects: "Projects",
   },
   vi: {
     name: "Trịnh Thị Mỹ Thương",
@@ -84,6 +105,27 @@ const strings = {
     basis: "Căn cứ",
     keyFigures: "Số chính",
     fileFormats: "PDF, 16:9",
+    selectedWork: "Dự án tiêu biểu",
+    skillsMap: "Kỹ năng và bằng chứng",
+    skill: "Kỹ năng",
+    evidence: "Thể hiện ở đâu",
+    experience: "Kinh nghiệm",
+    summary: "Tóm tắt",
+    result: "Kết quả",
+    role2: "Vai trò",
+    tools: "Công cụ",
+    date: "Thời gian",
+    files: "Tài liệu",
+    noExcel: "File mô hình không chia sẻ; cấu trúc mô hình ở bên dưới.",
+    modelMap: "Cấu trúc mô hình",
+    funding: "Nguồn vốn và độ nhạy",
+    readCase3: "Xem bài",
+    contactMe: "Liên hệ",
+    checks: "Các nhóm kiểm tra",
+    redFlag: "Cờ đỏ",
+    details: "Checklist đầy đủ và căn cứ pháp lý",
+    profile: "Hồ sơ",
+    projects: "Dự án",
   },
 } as const;
 
@@ -96,3 +138,11 @@ export const otherLangPath = (path: string, to: Lang) => path.replace(/^\/(en|vi
 export function num(n: number, lang: Lang, decimals = 0): string {
   return n.toLocaleString(lang === "vi" ? "vi-VN" : "en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
 }
+
+/** Published cases, in reading order. */
+export const CASES = [
+  { key: "case3", slug: "grade-b-office", excel: true },
+  { key: "case2", slug: "riverside-residences", excel: false },
+  { key: "case4", slug: "acquisition-checklist", excel: false },
+] as const;
+export const caseHref = (lang: Lang, key: string) => `/${lang}/cases/${CASES.find((c) => c.key === key)!.slug}/`;

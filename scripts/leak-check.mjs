@@ -57,7 +57,7 @@ for (const s of sources) {
 
 // --- confirmed figures must appear on their page, formatted per language
 const figures = JSON.parse(fs.readFileSync(path.join(root, "src/data/figures.json"), "utf8"));
-const pageOf = { case3: "cases/grade-b-office/index.html", about: "index.html" };
+const pageOf = { case3: "cases/grade-b-office/index.html", case2: "cases/riverside-residences/index.html", about: "index.html" };
 const fmt = (n, lang, d) => n.toLocaleString(lang === "vi" ? "vi-VN" : "en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
 const decimals = (v) => (String(v).split(".")[1] ?? "").length;
 function expected(f, lang) {
@@ -65,12 +65,12 @@ function expected(f, lang) {
   if (Number.isNaN(v)) return lang === "vi" ? f.value : null; // text figure, written in Vietnamese
   if (f.unit === "VND") return fmt(Math.round(v / 1e9), lang, 0);
   if (f.unit.startsWith("%")) return `${fmt(v, lang, decimals(f.value))}%`;
-  if (f.unit === "VND bn") return fmt(v, lang, decimals(f.value));
+  if (f.unit === "VND bn") return fmt(v, lang, v >= 100 ? 0 : decimals(f.value)); // large amounts are shown rounded
   return f.value;
 }
 const missing = [];
 for (const f of figures) {
-  if (f.value === "[CẦN XÁC NHẬN]" || !pageOf[f.case]) continue;
+  if (f.value === "[CẦN XÁC NHẬN]" || !pageOf[f.case] || !f.on_page) continue; // model-only and chart-only figures are not shown
   for (const lang of ["en", "vi"]) {
     const want = expected(f, lang);
     if (want === null) continue;

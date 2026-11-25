@@ -1,9 +1,10 @@
 ---
 import Base from "../../../layouts/Base.astro";
 import Icon from "../../../components/Icon.astro";
+import CaseSummary from "../../../components/CaseSummary.astro";
 import SensitivityTable from "../../../components/SensitivityTable.astro";
 import { LANGS, type Lang, text, labelled, pipes, numbered, clauses, items } from "../../../lib/content";
-import { ui, DOWNLOADS } from "../../../lib/ui";
+import { ui } from "../../../lib/ui";
 
 export const getStaticPaths = () => LANGS.map((lang) => ({ params: { lang } }));
 const lang = Astro.params.lang as Lang;
@@ -14,13 +15,12 @@ const tags = pipes(text("case3", "tagline", lang));
 const last = tags.pop()!.split(". ");
 const chips = [...tags, ...last];
 const headline = text("case3", "headline", lang);
-const question = labelled("case3", "question", lang);
+const nextName = pipes(text("case2", "tagline", lang))[1];
 const approach = numbered(text("case3", "approach", lang));
 const stats = items("case3", "key_figures", lang);
 const special = labelled("case3", "special_assumption", lang);
 const role = labelled("case3", "role", lang);
 const lessons = labelled("case3", "lessons", lang);
-const pdf = DOWNLOADS.pdf[lang];
 ---
 <Base lang={lang} title={`${tags[1]} – ${t.name}`} description={headline}>
   <section class="section--white">
@@ -30,11 +30,7 @@ const pdf = DOWNLOADS.pdf[lang];
       </nav>
       <ul class="chips">{chips.map((c, i) => <li class={i === 0 ? "chip chip--key" : "chip"}>{c}</li>)}</ul>
       <h1 class="h1" style="max-width:920px;font-size:clamp(30px,4.4vw,50px)">{headline}</h1>
-      <p class="lead" style="max-width:760px"><strong>{question.label}:</strong> {question.body}</p>
-      <div class="btn-row">
-        <a class="btn btn--solid" href={DOWNLOADS.excel.href} download={DOWNLOADS.excel.name}><Icon name="download" />{t.downloadExcel}</a>
-        <a class="btn btn--line" href={pdf.href} download={pdf.name}><Icon name="download" />{t.downloadPdf}</a>
-      </div>
+      <CaseSummary lang={lang} block="case3" excel />
     </div>
   </section>
 
@@ -96,7 +92,7 @@ const pdf = DOWNLOADS.pdf[lang];
   <nav class="section--white section--rule" aria-label={t.next}>
     <div class="wrap pager">
       <a class="link-arrow" href={`/${lang}/#projects`}><Icon name="arrow-left" size={16} />{t.allProjects}</a>
-      <a class="link-arrow" href={`/${lang}/cases/acquisition-checklist/`}>{t.next}: {t.checklist}<Icon name="arrow-right" size={16} /></a>
+      <a class="link-arrow" href={`/${lang}/cases/riverside-residences/`}>{t.next}: {nextName}<Icon name="arrow-right" size={16} /></a>
     </div>
   </nav>
 </Base>

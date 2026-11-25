@@ -1,0 +1,43 @@
+---
+// "At a glance" box at the top of every case page: question, result, role, tools, date, files.
+import Icon from "./Icon.astro";
+import { type Lang, text, pipes, card } from "../lib/content";
+import { ui, DOWNLOADS } from "../lib/ui";
+
+interface Props { lang: Lang; block: string; excel: boolean }
+const { lang, block, excel } = Astro.props;
+const t = ui(lang);
+const c = card(block, lang);
+const tags = pipes(text(block, "tagline", lang));
+const last = tags.at(-1)!.split(". ");
+const role = last.find((x) => /role|Vai trò/i.test(x))?.replace(/^(My role|Vai trò): /, "");
+const when = last[0].match(/(\d{2}\/\d{4})/)?.[1] ?? last[0];
+const pdf = DOWNLOADS.pdf[lang];
+const rows = [
+  [t.question, text(block, "question", lang)],
+  [t.result, `${c.value} ${c.label}`],
+  ...(role ? [[t.role2, role]] : []),
+  [t.tools, c.tools],
+  [t.date, when],
+];
+---
+<section class="glance" aria-label={t.summary}>
+  <h2 class="glance__title">{t.summary}</h2>
+  <dl>
+    {rows.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+  </dl>
+  <div class="btn-row">
+    {excel && <a class="btn btn--solid" href={DOWNLOADS.excel.href} download={DOWNLOADS.excel.name}><Icon name="download" />{t.downloadExcel}</a>}
+    <a class="btn btn--line" href={pdf.href} download={pdf.name}><Icon name="download" />{t.downloadPdf}</a>
+  </div>
+</section>
+
+<style>
+  .glance { background: var(--bg); border: 1px solid var(--border); border-top: 3px solid var(--primary); border-radius: var(--radius); padding: 22px 24px; display: flex; flex-direction: column; gap: 16px; }
+  .glance__title { font-family: var(--font-body); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--eyebrow); }
+  dl { margin: 0; display: grid; gap: 10px; }
+  dl div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; }
+  dt { font-size: 14px; font-weight: 600; color: var(--text-muted); }
+  dd { margin: 0; color: var(--text); }
+  @media (max-width: 520px) { dl div { grid-template-columns: 1fr; gap: 2px; } }
+</style>

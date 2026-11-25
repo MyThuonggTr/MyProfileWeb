@@ -1,29 +1,29 @@
 ---
 import Base from "../../../layouts/Base.astro";
 import Icon from "../../../components/Icon.astro";
-import { LANGS, type Lang, text, labelled, pipes, numbered, basis } from "../../../lib/content";
-import { ui, DOWNLOADS } from "../../../lib/ui";
+import CaseSummary from "../../../components/CaseSummary.astro";
+import { LANGS, type Lang, text, labelled, pipes, numbered, basis, attr } from "../../../lib/content";
+import { ui } from "../../../lib/ui";
 
 export const getStaticPaths = () => LANGS.map((lang) => ({ params: { lang } }));
 const lang = Astro.params.lang as Lang;
 const t = ui(lang);
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 const tags = pipes(text("case4", "tagline", lang));
 const headline = text("case4", "headline", lang);
 const scope = labelled("case4", "scope", lang);
 const step0 = labelled("case4", "step0", lang);
+const flags = numbered(text("case4", "red_flags", lang)).map((f) => cap(f.replace(/;$/, "")));
 const checks = ["check1", "check2", "check3", "check4", "check5", "check6"].map((id) => {
   const { label, body } = labelled("case4", id, lang);
   const m = label.match(/^(\d+)\. (.*)$/)!;
-  return { n: m[1], title: m[2], ...basis(body) };
+  const own = (attr<number[]>("case4", id, "flags") ?? []).map((n) => flags[n - 1]);
+  return { n: m[1], title: m[2], flags: own, ...basis(cap(body)) };
 });
-const flags = numbered(text("case4", "red_flags", lang));
-const flagsLabel = labelled("case4", "red_flags", lang).label;
 const price = labelled("case4", "into_price", lang);
 const practice = labelled("case4", "from_practice", lang);
-const officeName = pipes(text("case3", "tagline", lang))[1];
-const pdf = DOWNLOADS.pdf[lang];
-const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const officeName = pipes(text("case2", "tagline", lang))[1];
 ---
 <Base lang={lang} title={`${t.checklist} – ${t.name}`} description={headline}>
   <section class="section--white">
@@ -33,33 +33,39 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
       </nav>
       <ul class="chips">{tags.map((c, i) => <li class={i === 0 ? "chip chip--key" : "chip"}>{c}</li>)}</ul>
       <h1 class="h1" style="max-width:920px;font-size:clamp(30px,4.4vw,50px)">{headline}</h1>
+      <CaseSummary lang={lang} block="case4" excel={false} />
       <div class="note"><Icon name="info" size={22} /><p><strong>{scope.label}:</strong> {scope.body}</p></div>
-      <div class="btn-row"><a class="btn btn--line" href={pdf.href} download={pdf.name}><Icon name="download" />{t.downloadPdf}</a></div>
     </div>
   </section>
 
-  <section class="section section--rule">
+  <section aria-labelledby="checks-h" class="section section--rule">
     <div class="wrap stack">
       <div class="card step0">
         <h2 class="h3">{cap(step0.label)}</h2>
         <p class="prose">{cap(step0.body)}</p>
       </div>
-      <ol class="grid checks">
-        {checks.map((c) => (
-          <li class="card" style="padding:24px;gap:10px">
-            <div class="check__head"><span class="check__n num">{c.n.padStart(2, "0")}</span><h3 class="h3" style="font-size:20px">{c.title}</h3></div>
-            <p class="prose" style="font-size:15px">{cap(c.body)}</p>
-            {c.basis && <p class="basis"><strong>{t.basis}:</strong> {c.basis}</p>}
-          </li>
-        ))}
-      </ol>
-    </div>
-  </section>
-
-  <section aria-labelledby="flags-h" class="section section--white section--rule">
-    <div class="wrap stack">
-      <h2 id="flags-h" class="h2">{flagsLabel}</h2>
-      <ol class="flags">{flags.map((f) => <li>{cap(f.replace(/;$/, ""))}</li>)}</ol>
+      <h2 id="checks-h" class="h2">{t.checks}</h2>
+      <div class="table-box">
+        <table class="ctable">
+          <thead><tr><th scope="col">#</th><th scope="col">{t.checks}</th><th scope="col">{t.redFlag}</th></tr></thead>
+          <tbody>
+            {checks.map((c) => (
+              <tr>
+                <td class="ctable__n num">{c.n.padStart(2, "0")}</td>
+                <th scope="row">
+                  <span class="ctable__title">{c.title}</span>
+                  <details>
+                    <summary>{t.details}</summary>
+                    <p class="prose">{c.body}</p>
+                    {c.basis && <p class="basis"><strong>{t.basis}:</strong> {c.basis}</p>}
+                  </details>
+                </th>
+                <td>{c.flags.length ? <ul class="flag-list">{c.flags.map((f) => <li>{f}</li>)}</ul> : <span class="muted">–</span>}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <div class="grid">
         <div class="card card--soft"><h3 class="h3">{price.label}</h3><p class="prose">{cap(price.body)}</p></div>
         <div class="card card--soft"><h3 class="h3">{practice.label}</h3><p class="prose">{cap(practice.body)}</p></div>
@@ -67,10 +73,10 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
     </div>
   </section>
 
-  <nav class="section--rule" aria-label={t.next}>
+  <nav class="section--white section--rule" aria-label={t.next}>
     <div class="wrap pager">
-      <a class="link-arrow" href={`/${lang}/#projects`}><Icon name="arrow-left" size={16} />{t.allProjects}</a>
-      <a class="link-arrow" href={`/${lang}/cases/grade-b-office/`}>{t.next}: {officeName}<Icon name="arrow-right" size={16} /></a>
+      <a class="link-arrow" href={`/${lang}/cases/riverside-residences/`}><Icon name="arrow-left" size={16} />{officeName}</a>
+      <a class="link-arrow" href={`/${lang}/#projects`}>{t.allProjects}<Icon name="arrow-right" size={16} /></a>
     </div>
   </nav>
 </Base>
@@ -79,12 +85,19 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
   .intro { padding-block: 40px 56px; gap: 20px; }
   .crumbs { font-size: 14px; color: var(--text-muted); display: flex; gap: 8px; flex-wrap: wrap; }
   .crumbs a { text-decoration: none; }
-  .step0 { border-left: 0; border-top: 3px solid var(--primary); }
-  .checks { list-style: none; margin: 0; padding: 0; }
-  .check__head { display: flex; gap: 12px; align-items: baseline; }
-  .check__n { font-family: var(--font-head); font-size: 24px; font-weight: 700; color: var(--accent-text); }
-  .basis { font-size: 14px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px; margin-top: auto; }
-  .flags { margin: 0; padding-left: 24px; display: flex; flex-direction: column; gap: 10px; color: var(--text-2); max-width: 85ch; }
-  .flags li::marker { color: var(--accent-text); font-weight: 700; }
+  .step0 { border-top: 3px solid var(--primary); }
+  .ctable { width: 100%; min-width: 600px; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); }
+  .ctable th, .ctable td { text-align: left; vertical-align: top; padding: 16px 18px; border-bottom: 1px solid var(--border); }
+  .ctable thead th { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); background: var(--bg); }
+  .ctable tbody th { font-weight: 400; width: 52%; }
+  .ctable__n { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--accent-text); width: 56px; }
+  .ctable__title { display: block; font-family: var(--font-head); font-size: 19px; font-weight: 600; color: var(--primary); }
+  .ctable details { margin-top: 4px; }
+  .ctable details summary { font-size: 14px; min-height: 36px; }
+  .ctable details .prose { font-size: 15px; margin-top: 6px; }
+  .basis { font-size: 13.5px; color: var(--text-muted); margin-top: 8px; }
+  .flag-list { margin: 0; padding-left: 18px; color: var(--text-2); font-size: 15px; display: flex; flex-direction: column; gap: 6px; }
+  .flag-list li::marker { color: var(--accent-text); }
+  .muted { color: var(--text-muted); }
   .pager { padding-block: 32px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
 </style>

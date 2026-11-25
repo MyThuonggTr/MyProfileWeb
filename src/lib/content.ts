@@ -63,3 +63,20 @@ export function titled(s: string): { title: string; meta: string; body: string }
 }
 
 export const items = (block: string, id: string, lang: Lang): Item[] => row(block, id).items?.[lang] ?? [];
+
+/** A project card: one key number plus tools and chart name. */
+export type Card = Item & { tools: string; chart: string };
+export const card = (block: string, lang: Lang) => items(block, "card", lang)[0] as Card;
+
+/** Extra attributes stored on a row (e.g. red-flag numbers, link target). */
+export const attr = <T,>(block: string, id: string, key: string): T | undefined => (row(block, id) as Record<string, unknown>)[key] as T;
+
+/** Rows of a block, in order. */
+export const rowIds = (block: string) => blocks.find((b) => b.key === block)?.rows.map((r) => r.id) ?? [];
+
+/** "Role, Company | period | sentence. sentence." experience entries. */
+export function job(block: string, id: string, lang: Lang) {
+  const [head, period, body] = raw(block, id, lang).split(" | ");
+  const i = head.indexOf(", ");
+  return { role: head.slice(0, i), org: head.slice(i + 2), period, points: body.split(/(?<=\.) (?=[A-ZĐÀ-Ỹ0-9])/u) };
+}

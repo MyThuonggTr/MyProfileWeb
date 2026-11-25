@@ -21,18 +21,21 @@ const publicContent = {
 };
 fs.writeFileSync(path.join(root, "src/data/content.json"), JSON.stringify(publicContent, null, 2) + "\n");
 
-// figures.csv: keep case,key,value,unit; drop the local-only cross-check rows and the source column.
-const lines = fs.readFileSync(must(path.join(src, "content/figures.csv")), "utf8").trim().split("\n").slice(1);
+// figures.csv: keep case,key,value,unit,on_page; drop the local-only cross-check rows and the source column.
+const parseCsvLine = (l) => (l.match(/("([^"]|"")*"|[^,]*)(,|$)/g) ?? []).map((c) => c.replace(/,$/, "").replace(/^"|"$/g, "").replace(/""/g, '"'));
+const lines = fs.readFileSync(must(path.join(src, "content/figures.csv")), "utf8").trim().split(/\r?\n/).slice(1);
 const figures = lines
-  .map((l) => l.match(/^([^,]*),([^,]*),("[^"]*"|[^,]*),([^,]*),/))
-  .filter(Boolean)
-  .map(([, c, key, value, unit]) => ({ case: c, key, value: value.replace(/^"|"$/g, ""), unit }))
+  .map(parseCsvLine)
+  .map(([c, key, value, unit, , onPage]) => ({ case: c, key, value, unit, on_page: onPage !== "no" }))
   .filter((f) => !f.key.startsWith("crosscheck"));
 fs.writeFileSync(path.join(root, "src/data/figures.json"), JSON.stringify(figures, null, 2) + "\n");
 
 const copies = [
   ["charts/case3-sensitivity-heatmap-en.png", "public/images/case3-sensitivity-heatmap-en.png"],
   ["charts/case3-sensitivity-heatmap-vi.png", "public/images/case3-sensitivity-heatmap-vi.png"],
+  ...["model-map", "funding-and-sensitivity"].flatMap((n) =>
+    ["en", "vi"].map((l) => [`charts/case2-${n}-${l}.png`, `public/images/case2-${n}-${l}.png`]),
+  ),
   ["excel/Grade-B Office HCMC - DCF Valuation.xlsx", "public/downloads/grade-b-office-hcmc-dcf-valuation.xlsx"],
 ];
 for (const [from, to] of copies) fs.copyFileSync(must(path.join(src, from)), path.join(root, to));
