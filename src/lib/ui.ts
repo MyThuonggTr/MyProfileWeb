@@ -3,6 +3,7 @@ import type { Lang } from "./content";
 
 export const EMAIL = "trinhmythuong.work@gmail.com";
 export const NAME = "Trinh Thi My Thuong";
+export const PHONE = { display: "0866 941 540", href: "tel:+84866941540" };
 
 export const DOWNLOADS = {
   pdf: {
@@ -16,6 +17,9 @@ export const DOWNLOADS = {
   ebibExcel: { href: "/downloads/vietnam-macro-positioning-2022-eb-ib-workings.xlsx", name: "Vietnam Macro Positioning 2022 - EB-IB Workings.xlsx" },
   djData: { href: "/downloads/dow-jones-volatility-dataset.xlsx", name: "Dow Jones Volatility - Dataset.xlsx" },
   djR: { href: "/downloads/dow-jones-volatility-egarch-model.R", name: "Dow Jones Volatility - EGARCH Model.R" },
+  transcriptVi: { href: "/downloads/academic-transcript-real-estate-vi.pdf", name: "Trinh Thi My Thuong - Academic Transcript, Real Estate (VI).pdf" },
+  transcriptEn: { href: "/downloads/academic-transcript-real-estate-en.pdf", name: "Trinh Thi My Thuong - Academic Transcript, Real Estate (EN).pdf" },
+  scholarship: { href: "/downloads/scholarship-confirmation.pdf", name: "Trinh Thi My Thuong - Scholarship Confirmation.pdf" },
 } as const;
 export type DownloadKey = Exclude<keyof typeof DOWNLOADS, "pdf">;
 
@@ -29,6 +33,9 @@ export const FILES: { key: DownloadKey | "pdfVi" | "pdfEn"; en: string; vi: stri
   { key: "ebibExcel", en: "Vietnam macro positioning 2022 (EB-IB) – REER and base-year workings", vi: "Định vị kinh tế vĩ mô Việt Nam 2022 (EB-IB) – bảng tính REER và năm gốc", type: "Excel" },
   { key: "djData", en: "Dow Jones volatility – dataset", vi: "Biến động Dow Jones – bộ dữ liệu", type: "Excel" },
   { key: "djR", en: "Dow Jones volatility – ARMA-EGARCH model", vi: "Biến động Dow Jones – mô hình ARMA-EGARCH", type: "R" },
+  { key: "transcriptEn", en: "Academic transcript – Real Estate (English)", vi: "Bảng điểm ngành Bất động sản (tiếng Anh)", type: "PDF" },
+  { key: "transcriptVi", en: "Academic transcript – Real Estate (Vietnamese)", vi: "Bảng điểm ngành Bất động sản (tiếng Việt)", type: "PDF" },
+  { key: "scholarship", en: "Scholarship confirmation, four semesters (bilingual)", vi: "Giấy xác nhận học bổng 4 học kỳ (song ngữ)", type: "PDF" },
 ];
 export const fileOf = (key: (typeof FILES)[number]["key"]) =>
   key === "pdfVi" ? DOWNLOADS.pdf.vi : key === "pdfEn" ? DOWNLOADS.pdf.en : DOWNLOADS[key];
@@ -37,7 +44,7 @@ const strings = {
   en: {
     name: "Trinh Thi My Thuong",
     role: "Real estate valuation & investment analysis",
-    nav: { projects: "Projects", experience: "Experience", research: "Research", downloads: "Downloads", contact: "Contact" },
+    nav: { projects: "Projects", research: "Research", experience: "Experience", downloads: "Downloads", contact: "Contact" },
     langLabel: "Language",
     skip: "Skip to content",
     portfolio: "Portfolio",
@@ -91,6 +98,9 @@ const strings = {
     profile: "Profile summary",
     projects: "Projects",
     downloads: "Downloads",
+    personalNote: "Date of birth, place of birth and student ID are covered in the public copies.",
+    transcript: "Transcript",
+    scholarshipDoc: "Scholarship confirmation",
     file: "Document",
     fileType: "Format",
     activities: "Extracurricular activities",
@@ -102,7 +112,7 @@ const strings = {
   vi: {
     name: "Trịnh Thị Mỹ Thương",
     role: "Thẩm định giá và phân tích đầu tư bất động sản",
-    nav: { projects: "Dự án", experience: "Kinh nghiệm", research: "Nghiên cứu", downloads: "Tài liệu", contact: "Liên hệ" },
+    nav: { projects: "Dự án", research: "Nghiên cứu", experience: "Kinh nghiệm", downloads: "Tài liệu", contact: "Liên hệ" },
     langLabel: "Ngôn ngữ",
     skip: "Đến nội dung chính",
     portfolio: "Portfolio",
@@ -156,6 +166,9 @@ const strings = {
     profile: "Tóm tắt hồ sơ",
     projects: "Dự án",
     downloads: "Tài liệu tải về",
+    personalNote: "Bản công khai đã che ngày sinh, nơi sinh và mã số sinh viên.",
+    transcript: "Bảng điểm",
+    scholarshipDoc: "Giấy xác nhận học bổng",
     file: "Tài liệu",
     fileType: "Định dạng",
     activities: "Hoạt động ngoại khóa",

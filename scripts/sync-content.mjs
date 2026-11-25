@@ -42,6 +42,9 @@ const copies = [
   ["attachments/Vietnam Macro Positioning 2022 - EB-IB Workings.xlsx", "public/downloads/vietnam-macro-positioning-2022-eb-ib-workings.xlsx"],
   ["attachments/Dow Jones Volatility - Dataset.xlsx", "public/downloads/dow-jones-volatility-dataset.xlsx"],
   ["attachments/Dow Jones Volatility - EGARCH Model.R", "public/downloads/dow-jones-volatility-egarch-model.R"],
+  ["attachments/Academic Transcript - Real Estate (VI).pdf", "public/downloads/academic-transcript-real-estate-vi.pdf"],
+  ["attachments/Academic Transcript - Real Estate (EN).pdf", "public/downloads/academic-transcript-real-estate-en.pdf"],
+  ["attachments/Scholarship Confirmation (VI-EN).pdf", "public/downloads/scholarship-confirmation.pdf"],
 ];
 for (const [from, to] of copies) fs.copyFileSync(must(path.join(src, from)), path.join(root, to));
 console.log(`synced: ${publicContent.blocks.length} blocks, ${figures.length} figures, ${copies.length} files`);

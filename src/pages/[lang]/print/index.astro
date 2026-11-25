@@ -5,7 +5,7 @@ import "@fontsource-variable/inter";
 import "@fontsource-variable/source-serif-4";
 import "../../../styles/global.css";
 import { LANGS, type Lang, raw, text, labelled, pipes, numbered, clauses, items, titled, basis, attr, card, job, rowIds } from "../../../lib/content";
-import { ui, EMAIL, CASES, FILES, fileOf } from "../../../lib/ui";
+import { ui, EMAIL, PHONE, CASES, FILES, fileOf } from "../../../lib/ui";
 
 export const getStaticPaths = () => LANGS.map((lang) => ({ params: { lang } }));
 const lang = Astro.params.lang as Lang;
@@ -54,7 +54,7 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <div class="eyebrow eyebrow--line" style="color:var(--accent-decor)">{title} · {month}</div>
     <h1>{t.name}</h1>
     <p class="cover__target">{target}</p>
-    <p class="cover__mail">{EMAIL}{site && <> · {site.replace(/^https?:\/\//, "")}</>}</p>
+    <p class="cover__mail">{EMAIL} · {PHONE.display}{site && <> · {site.replace(/^https?:\/\//, "")}</>}</p>
     <p class="cover__note">{raw("disclaimer", "text", lang)}</p>
     <footer>{foot()}</footer>
   </section>
@@ -68,26 +68,6 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     </div>
     <h3>{text("skills_map", "headline", lang)}</h3>
     <table class="ptable"><thead><tr><th>{t.skill}</th><th>{t.evidence}</th></tr></thead>{skills.map(([s, e]) => <tr><th>{s}</th><td>{e}</td></tr>)}</table>
-    <footer>{foot()}</footer>
-  </section>
-
-  <!-- 3 Experience, education, credentials -->
-  <section class="slide dense">
-    <div class="row-exp">
-      <div>
-        <h3>{text("experience", "headline", lang)}</h3>
-        {jobs.map((j) => <div class="job"><p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p><ul class="list small">{j.points.slice(0, 3).map((p) => <li>{p}</li>)}</ul></div>)}
-        <h3 style="margin-top:8px">{text("activities", "headline", lang)}</h3>
-        {acts.map((j) => <p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p>)}
-      </div>
-      <div>
-        <h3>{t.education}</h3>
-        <p><strong>{edu[0]}</strong> <span class="muted num">· {edu[1]}</span></p>
-        <ul class="list small">{eduPoints.map((p) => <li>{p}</li>)}</ul>
-        <h3 style="margin-top:8px">{t.credentials}</h3>
-        <ul class="list small">{creds.map((c) => <li>{c}</li>)}</ul>
-      </div>
-    </div>
     <footer>{foot()}</footer>
   </section>
 
@@ -214,6 +194,26 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <footer>{foot()}</footer>
   </section>
 
+  <!-- 3 Experience, education, credentials -->
+  <section class="slide dense">
+    <div class="row-exp">
+      <div>
+        <h3>{text("experience", "headline", lang)}</h3>
+        {jobs.map((j) => <div class="job"><p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p><ul class="list small">{j.points.slice(0, 3).map((p) => <li>{p}</li>)}</ul></div>)}
+        <h3 style="margin-top:8px">{text("activities", "headline", lang)}</h3>
+        {acts.map((j) => <p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p>)}
+      </div>
+      <div>
+        <h3>{t.education}</h3>
+        <p><strong>{edu[0]}</strong> <span class="muted num">· {edu[1]}</span></p>
+        <ul class="list small">{eduPoints.map((p) => <li>{p}</li>)}</ul>
+        <h3 style="margin-top:8px">{t.credentials}</h3>
+        <ul class="list small">{creds.map((c) => <li>{c}</li>)}</ul>
+      </div>
+    </div>
+    <footer>{foot()}</footer>
+  </section>
+
   <!-- 13 How I check a model -->
   <section class="slide">
     <h2>{text("principles", "headline", lang)}</h2>
@@ -225,6 +225,7 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   <!-- 15 Downloads -->
   <section class="slide dense">
     <h2>{t.downloads}</h2>
+    <p class="muted">{t.personalNote}</p>
     <table class="ptable ftable"><colgroup><col style="width:44%" /><col style="width:10%" /><col style="width:46%" /></colgroup><thead><tr><th>{t.file}</th><th>{t.fileType}</th><th>File</th></tr></thead>
       {FILES.map((f) => <tr><th>{f[lang]}</th><td>{f.type}</td><td class="small">{fileOf(f.key).name}{site && <><br />{site.replace(/\/$/, "")}{fileOf(f.key).href}</>}</td></tr>)}
     </table>
@@ -235,6 +236,7 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   <section class="slide cover">
     <h2 style="color:#fff">{t.contact}</h2>
     <p class="cover__target" style="color:#fff">{EMAIL}</p>
+    <p class="cover__target" style="color:#fff">{PHONE.display}</p>
     {site && <p class="cover__mail">{site}</p>}
     <p class="cover__note">{raw("disclaimer", "text", lang)}</p>
     <footer>{foot()}</footer>
@@ -291,7 +293,7 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   .ctable .small { font-size: 12.5px; color: var(--text-muted); width: 34%; }
   .ctable .list { font-size: 14.5px; gap: 3px; }
   .body { font-size: 17px; }
-  .ftable th, .ftable td { padding: 6px 10px; font-size: 14px; }
+  .ftable th, .ftable td { padding: 4px 10px; font-size: 13px; }
   .ftable { table-layout: fixed; }
   .ftable th { width: auto !important; }
   .row-exp { display: grid; grid-template-columns: 1.25fr 1fr; gap: 28px; }

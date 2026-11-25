@@ -3,7 +3,7 @@ import Base from "../../layouts/Base.astro";
 import Icon from "../../components/Icon.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import { LANGS, type Lang, raw, text, pipes, items, titled, job, rowIds, attr } from "../../lib/content";
-import { ui, DOWNLOADS, EMAIL, CASES, caseHref, FILES, fileOf } from "../../lib/ui";
+import { ui, DOWNLOADS, EMAIL, PHONE, CASES, caseHref, FILES, fileOf } from "../../lib/ui";
 
 export const getStaticPaths = () => LANGS.map((lang) => ({ params: { lang } }));
 const lang = Astro.params.lang as Lang;
@@ -46,7 +46,7 @@ const typeOf = (href: string) => href.split(".").pop()!.toUpperCase().replace("X
         <div class="btn-row">
           <a class="btn btn--solid" href="#projects">{t.viewProjects}</a>
           <a class="btn btn--line" href={pdf.href} download={pdf.name}><Icon name="download" />{t.downloadPdf}</a>
-          <a class="btn btn--line" href={`mailto:${EMAIL}`}>{t.contactMe}</a>
+          <a class="btn btn--line" href="#contact">{t.contactMe}</a>
         </div>
       </div>
       <figure class="portrait">
@@ -88,7 +88,30 @@ const typeOf = (href: string) => href.split(".").pop()!.toUpperCase().replace("X
     </div>
   </section>
 
-  <section id="experience" aria-labelledby="exp-h" class="section section--rule">
+  <section id="research" aria-labelledby="research-h" class="section section--rule">
+    <div class="wrap stack">
+      <h2 id="research-h" class="h2">{text("research", "headline", lang)}</h2>
+      <article class="card">
+        <ul class="chips"><li class="chip chip--solid">{award}</li></ul>
+        <h3 class="h3">{text("research", "chatbot_title", lang)}</h3>
+        <p class="prose">{chatbot.replace(award + ". ", "")}</p>
+      </article>
+      <div class="grid">
+        {research.map((r) => (
+          <article class="card">
+            <p class="meta">{r.meta}</p>
+            <h3 class="h3" style="font-size:20px">{r.title}</h3>
+            <p class="prose" style="font-size:15px">{r.body}</p>
+            <div class="files">
+              {r.files.map((k) => <a class="link-arrow" href={DOWNLOADS[k].href} download={DOWNLOADS[k].name}><Icon name="download" size={16} />{typeOf(DOWNLOADS[k].href)}</a>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h" class="section section--white section--rule">
     <div class="wrap stack">
       <h2 id="exp-h" class="h2">{text("experience", "headline", lang)}</h2>
       <ol class="timeline">
@@ -119,29 +142,6 @@ const typeOf = (href: string) => href.split(".").pop()!.toUpperCase().replace("X
     </div>
   </section>
 
-  <section id="research" aria-labelledby="research-h" class="section section--white section--rule">
-    <div class="wrap stack">
-      <h2 id="research-h" class="h2">{text("research", "headline", lang)}</h2>
-      <article class="card card--soft">
-        <ul class="chips"><li class="chip chip--solid">{award}</li></ul>
-        <h3 class="h3">{text("research", "chatbot_title", lang)}</h3>
-        <p class="prose">{chatbot.replace(award + ". ", "")}</p>
-      </article>
-      <div class="grid">
-        {research.map((r) => (
-          <article class="card">
-            <p class="meta">{r.meta}</p>
-            <h3 class="h3" style="font-size:20px">{r.title}</h3>
-            <p class="prose" style="font-size:15px">{r.body}</p>
-            <div class="files">
-              {r.files.map((k) => <a class="link-arrow" href={DOWNLOADS[k].href} download={DOWNLOADS[k].name}><Icon name="download" size={16} />{typeOf(DOWNLOADS[k].href)}</a>)}
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
   <section id="education" aria-labelledby="edu-h" class="section section--rule">
     <div class="wrap split">
       <div class="stack split__main" style="gap:16px">
@@ -150,6 +150,10 @@ const typeOf = (href: string) => href.split(".").pop()!.toUpperCase().replace("X
           <h3 class="h3" style="font-size:20px">{edu[0]}</h3>
           <p class="meta num">{edu[1]}</p>
           <ul class="plain-list">{eduPoints.map((p) => <li>{p}</li>)}</ul>
+          <div class="files">
+            <a class="link-arrow" href={DOWNLOADS[lang === "vi" ? "transcriptVi" : "transcriptEn"].href} download={DOWNLOADS[lang === "vi" ? "transcriptVi" : "transcriptEn"].name}><Icon name="download" size={16} />{t.transcript}</a>
+            <a class="link-arrow" href={DOWNLOADS.scholarship.href} download={DOWNLOADS.scholarship.name}><Icon name="download" size={16} />{t.scholarshipDoc}</a>
+          </div>
         </div>
       </div>
       <div class="stack split__side" style="gap:16px">
@@ -175,6 +179,7 @@ const typeOf = (href: string) => href.split(".").pop()!.toUpperCase().replace("X
           </tbody>
         </table>
       </div>
+      <p class="meta">{t.personalNote}</p>
     </div>
   </section>
 
@@ -183,6 +188,7 @@ const typeOf = (href: string) => href.split(".").pop()!.toUpperCase().replace("X
       <div class="stack" style="gap:12px;flex:999 1 420px;min-width:0">
         <h2 id="contact-h" class="h2" style="color:#fff">{t.contact}</h2>
         <a class="contact__mail" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+        <a class="contact__mail" href={PHONE.href}>{PHONE.display}</a>
       </div>
       <div class="btn-row" style="flex:1 1 260px">
         <a class="btn btn--white" href={DOWNLOADS.pdf.en.href} download={DOWNLOADS.pdf.en.name} hreflang="en"><Icon name="download" />{t.pdfEn}</a>

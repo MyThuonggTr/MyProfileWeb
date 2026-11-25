@@ -3,7 +3,7 @@ import "@fontsource-variable/inter";
 import "@fontsource-variable/source-serif-4";
 import "../styles/global.css";
 import { raw, type Lang } from "../lib/content";
-import { ui, otherLangPath, EMAIL } from "../lib/ui";
+import { ui, otherLangPath, EMAIL, PHONE } from "../lib/ui";
 
 interface Props { lang: Lang; title: string; description: string; home?: boolean }
 const { lang, title, description, home = false } = Astro.props;
@@ -35,8 +35,8 @@ const sec = (id: string) => (home ? `#${id}` : `${homeHref}#${id}`);
       <nav aria-label="Main" class="site-nav">
         <span class="nav-links">
           <a href={sec("projects")}>{t.nav.projects}</a>
-          <a href={sec("experience")}>{t.nav.experience}</a>
           <a href={sec("research")}>{t.nav.research}</a>
+          <a href={sec("experience")}>{t.nav.experience}</a>
           <a href={sec("downloads")}>{t.nav.downloads}</a>
           <a href={sec("contact")}>{t.nav.contact}</a>
         </span>
@@ -51,7 +51,7 @@ const sec = (id: string) => (home ? `#${id}` : `${homeHref}#${id}`);
   <footer class="site-footer">
     <div class="wrap site-footer__in">
       <span>{raw("disclaimer", "text", lang)}</span>
-      <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+      <span><a href={`mailto:${EMAIL}`}>{EMAIL}</a> · <a href={PHONE.href}>{PHONE.display}</a></span>
     </div>
   </footer>
 </body>
