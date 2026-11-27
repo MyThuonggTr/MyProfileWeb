@@ -36,6 +36,13 @@ try {
       failed = true;
       console.error(`${lang}: slides overflow`, overflow);
     }
+    // page numbers in the footers ("n/total") must match the real number of slides
+    const footers = await page.$$eval(".slide footer", (els) => els.map((el) => el.textContent.trim()));
+    const bad = footers.filter((f, i) => !f.endsWith(`${i + 1}/${footers.length}`));
+    if (bad.length) {
+      failed = true;
+      console.error(`${lang}: footer page numbers do not match ${footers.length} slides`, bad.slice(0, 2));
+    }
     const out = path.join(root, `public/downloads/trinh-thi-my-thuong-real-estate-valuation-portfolio-${lang}.pdf`);
     await page.pdf({ path: out, preferCSSPageSize: true, printBackground: true });
     console.log(`${lang}: ${out}`);

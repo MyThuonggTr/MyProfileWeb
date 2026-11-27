@@ -82,6 +82,7 @@ const typeOf = (href: string) => href.split(".").pop()!.toUpperCase().replace("X
   <section id="projects" aria-labelledby="projects-h" class="section section--white section--rule">
     <div class="wrap stack">
       <h2 id="projects-h" class="h2">{t.selectedWork}</h2>
+      <div class="note"><Icon name="info" size={22} /><p>{raw("disclaimer", "text", lang)}</p></div>
       <div class="grid grid--cards">
         {CASES.map((c) => <ProjectCard lang={lang} block={c.key} />)}
       </div>

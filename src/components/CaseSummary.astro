@@ -1,7 +1,7 @@
 ---
 // "At a glance" box at the top of every case page: question, result, role, tools, date, and the project's own files (model and report).
 import Icon from "./Icon.astro";
-import { type Lang, text, pipes, card } from "../lib/content";
+import { type Lang, text, raw, pipes, card } from "../lib/content";
 import { ui, DOWNLOADS } from "../lib/ui";
 
 interface Props { lang: Lang; block: string }
@@ -31,6 +31,7 @@ const rows = [
     {excel && <a class="btn btn--solid" href={excel.href} download={excel.name}><Icon name="download" />{t.downloadExcel}</a>}
     {report && <a class="btn btn--line" href={report.href} download={report.name}><Icon name="download" />{t.reportLabel[block as keyof typeof t.reportLabel]}</a>}
   </div>
+  <p class="glance__note">{raw("disclaimer", "text", lang)}</p>
 </section>
 
 <style>
@@ -40,5 +41,6 @@ const rows = [
   dl div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; }
   dt { font-size: 14px; font-weight: 600; color: var(--text-muted); }
   dd { margin: 0; color: var(--text); }
+  .glance__note { margin: 0; font-size: 14px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 12px; }
   @media (max-width: 520px) { dl div { grid-template-columns: 1fr; gap: 2px; } }
 </style>

@@ -1,5 +1,5 @@
 ---
-// Same card for every project: chart, type, one-line question, one key number, role and tools.
+// Same card for every project: chart, type, one-line question, one key number, role, tools and its files.
 import Icon from "./Icon.astro";
 import { type Lang, text, pipes, card } from "../lib/content";
 import { ui, caseHref, DOWNLOADS } from "../lib/ui";
@@ -13,7 +13,9 @@ const kind = tags[0].replace(/\s*\(.*\)$/, "");
 const role = tags.at(-1)!.split(". ").find((x) => /role|Vai trò/i.test(x));
 const question = text(block, "question", lang);
 const title = text(block, "headline", lang);
-const excel = (DOWNLOADS as Record<string, { href: string; name: string }>)[block];
+const files = DOWNLOADS as Record<string, { href: string; name: string }>;
+const excel = files[block];
+const report = files[`${block}Report`];
 ---
 <article class="pcard">
   <a class="pcard__media" href={caseHref(lang, block)} tabindex="-1" aria-hidden="true">
@@ -33,6 +35,7 @@ const excel = (DOWNLOADS as Record<string, { href: string; name: string }>)[bloc
     <div class="pcard__go">
       <a class="link-arrow" href={caseHref(lang, block)}>{t.readCase}<Icon name="arrow-right" size={16} /></a>
       {excel && <a class="link-arrow" href={excel.href} download={excel.name}><Icon name="download" size={16} />Excel</a>}
+      {report && <a class="link-arrow" href={report.href} download={report.name}><Icon name="download" size={16} />PDF</a>}
     </div>
   </div>
 </article>

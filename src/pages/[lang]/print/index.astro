@@ -36,7 +36,7 @@ const principles = ["p1", "p2", "p3"].map((id) => labelled("principles", id, lan
 const L = (b: string, id: string) => labelled(b, id, lang);
 const month = "11/2026";
 const pageLabel = lang === "vi" ? "Trang" : "Page";
-const slides = 16;
+const slides = 17;
 let n = 0;
 const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
 ---
@@ -194,21 +194,33 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <footer>{foot()}</footer>
   </section>
 
-  <!-- 3 Experience, education, credentials -->
+  <!-- Experience: every point of every role, so achievements are not cut -->
   <section class="slide dense">
+    <h2>{text("experience", "headline", lang)}</h2>
     <div class="row-exp">
       <div>
-        <h3>{text("experience", "headline", lang)}</h3>
-        {jobs.map((j) => <div class="job"><p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p><ul class="list small">{j.points.slice(0, 3).map((p) => <li>{p}</li>)}</ul></div>)}
-        <h3 style="margin-top:8px">{text("activities", "headline", lang)}</h3>
-        {acts.map((j) => <p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p>)}
+        {jobs.slice(0, 1).map((j) => <div class="job"><p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p><ul class="list small">{j.points.map((p) => <li>{p}</li>)}</ul></div>)}
       </div>
+      <div>
+        {jobs.slice(1).map((j) => <div class="job"><p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p><ul class="list small">{j.points.map((p) => <li>{p}</li>)}</ul></div>)}
+        <h3 style="margin-top:8px">{text("activities", "headline", lang)}</h3>
+        {acts.map((j) => <div class="job"><p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p><ul class="list small">{j.points.map((p) => <li>{p}</li>)}</ul></div>)}
+      </div>
+    </div>
+    <footer>{foot()}</footer>
+  </section>
+
+  <!-- Education and credentials -->
+  <section class="slide">
+    <div class="row-exp">
       <div>
         <h3>{t.education}</h3>
         <p><strong>{edu[0]}</strong> <span class="muted num">· {edu[1]}</span></p>
-        <ul class="list small">{eduPoints.map((p) => <li>{p}</li>)}</ul>
-        <h3 style="margin-top:8px">{t.credentials}</h3>
-        <ul class="list small">{creds.map((c) => <li>{c}</li>)}</ul>
+        <ul class="list">{eduPoints.map((p) => <li>{p}</li>)}</ul>
+      </div>
+      <div>
+        <h3>{t.credentials}</h3>
+        <ul class="list">{creds.map((c) => <li>{c}</li>)}</ul>
       </div>
     </div>
     <footer>{foot()}</footer>
