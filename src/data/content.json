@@ -453,8 +453,8 @@
               {
                 "phase": 2,
                 "title": "Mở bán nhà ở hình thành trong tương lai",
-                "review": "Văn bản của cơ quan quản lý cấp tỉnh xác nhận đủ điều kiện bán; nghiệm thu móng; thỏa thuận cấp bảo lãnh với ngân hàng và thư bảo lãnh cho từng khách hàng; tiền đã thu so với trần: cọc 5%, lần đầu 30%, trước bàn giao 70%, chưa có sổ 95%.",
-                "risk": "Thu tiền giữ chỗ, ký hợp tác chia sản phẩm trước khi đủ điều kiện; thu vượt trần; không có bảo lãnh.",
+                "review": "Đủ điều kiện của Điều 24: đã khởi công, có giấy tờ về quyền sử dụng đất, đã nghiệm thu móng (nhà chung cư), đã hoàn thành nghĩa vụ tài chính về đất đai, đã công khai thông tin dự án, và có văn bản của cơ quan quản lý cấp tỉnh xác nhận nhà ở đủ điều kiện bán. Bảo lãnh: chủ đầu tư bắt buộc phải được ngân hàng chấp thuận cấp bảo lãnh trước khi bán; ngân hàng phát hành thư bảo lãnh cho từng khách, trừ khi khách chọn không nhận bảo lãnh bằng văn bản lúc ký hợp đồng. Tiền đã thu so với trần: cọc 5%, lần đầu 30% (gồm cọc), trước bàn giao 70% (50% nếu bên bán là tổ chức có vốn đầu tư nước ngoài), chưa có sổ 95%.",
+                "risk": "Thu tiền giữ chỗ hoặc ký hợp tác chia sản phẩm trước khi đủ điều kiện; chưa nộp xong tiền sử dụng đất nhưng đã mở bán; thu vượt trần; không có thỏa thuận cấp bảo lãnh.",
                 "basis": "Luật Kinh doanh bất động sản 29/2023, Điều 23–26; Nghị định 96/2024; Luật Nhà ở 27/2023"
               },
               {
@@ -518,8 +518,8 @@
               {
                 "phase": 2,
                 "title": "Off-plan sales launch",
-                "review": "Provincial authority's letter confirming eligibility for sale; foundation acceptance; the bank's guarantee agreement and a guarantee letter for each buyer; cash collected against the caps: 5% deposit, 30% first payment, 70% before handover, 95% before the certificate.",
-                "risk": "Booking fees or product-sharing deals before eligibility; collections above the caps; no guarantee.",
+                "review": "Meets the Article 24 conditions: construction started, land-use documents in hand, foundation accepted (apartment buildings), land charges paid, project information disclosed, and the provincial authority's letter confirming the units are eligible for sale. Guarantee: before selling, the developer must have a bank's approval to guarantee its obligations; the bank issues a guarantee letter to each buyer unless the buyer opts out in writing when signing. Cash collected against the caps: 5% deposit, 30% first payment including deposit, 70% before handover (50% where the seller is a foreign-invested company), 95% before the certificate.",
+                "risk": "Booking fees or product-sharing deals before eligibility; sales launched before land charges are paid; collections above the caps; no guarantee agreement with a bank.",
                 "basis": "Luật Kinh doanh bất động sản 29/2023, Articles 23–26; Nghị định 96/2024; Luật Nhà ở 27/2023"
               },
               {

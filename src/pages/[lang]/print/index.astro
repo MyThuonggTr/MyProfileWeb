@@ -35,7 +35,7 @@ const principles = ["p1", "p2", "p3"].map((id) => labelled("principles", id, lan
 const L = (b: string, id: string) => labelled(b, id, lang);
 const month = "11/2026";
 const pageLabel = lang === "vi" ? "Trang" : "Page";
-const slides = 19;
+const slides = 20;
 let n = 0;
 const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
 ---
@@ -169,7 +169,7 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <p class="small muted"><strong>{L("case4", "how_to_read").label}:</strong> {L("case4", "how_to_read").body}</p>
     <footer>{foot()}</footer>
   </section>
-  {[[0, 3], [3, 6], [6, 9]].map(([a, b], k, all) => (
+  {[[0, 3], [3, 6], [6, 7], [7, 9]].map(([a, b], k, all) => (
     <section class="slide dense">
       <h2>{t.process}</h2>
       <table class="ctable">
