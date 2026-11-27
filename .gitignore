@@ -8,3 +8,18 @@ dist/
 # never commit private source material
 alias-map*
 local-only/
+
+# keep the repo to site source only: no working notes, plans, reports or tool config
+plans/
+reports/
+docs/
+journals/
+.claude/
+CLAUDE.md
+AGENTS.md
+*.md
+!README.md
+*.log
+~$*
+.idea/
+.vscode/
