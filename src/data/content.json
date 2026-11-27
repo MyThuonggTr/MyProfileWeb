@@ -356,21 +356,21 @@
         },
         {
           "id": "card",
-          "en": "Card: 9 legal steps in 3 phases | Tools: current legislation, Excel",
-          "vi": "Thẻ: 9 bước pháp lý trong 3 giai đoạn | Công cụ: văn bản pháp luật hiện hành, Excel",
+          "en": "Card: 10 steps, 9 legal checks | Tools: current legislation, Excel",
+          "vi": "Thẻ: 10 bước, 9 điểm rà soát pháp lý | Công cụ: văn bản pháp luật hiện hành, Excel",
           "items": {
             "vi": [
               {
-                "value": "9 bước",
-                "label": "pháp lý trong 3 giai đoạn; áp dụng vào dự án Riverside: chậm mở bán 2 quý làm IRR giảm 4,1 điểm",
+                "value": "10 bước",
+                "label": "thực hiện dự án, 9 điểm rà soát pháp lý; áp dụng vào dự án Riverside: chậm mở bán 2 quý làm IRR giảm 4,1 điểm",
                 "tools": "Văn bản pháp luật hiện hành · Excel",
                 "chart": "case4-legal-process"
               }
             ],
             "en": [
               {
-                "value": "9 steps",
-                "label": "across 3 phases; applied to Riverside: a 2-quarter sales delay cuts IRR by 4.1 points",
+                "value": "10 steps",
+                "label": "of project delivery, 9 legal checks; applied to Riverside: a 2-quarter sales delay cuts IRR by 4.1 points",
                 "tools": "Current legislation · Excel",
                 "chart": "case4-legal-process"
               }
@@ -379,28 +379,229 @@
         },
         {
           "id": "question",
-          "en": "Purpose: Map the legal steps of a commercial housing project, from land selection to buyers' certificates, and show how one legal delay changes the project's value.",
-          "vi": "Mục đích: Hệ thống hóa các bước pháp lý của một dự án nhà ở thương mại, từ chọn quỹ đất đến cấp giấy chứng nhận, và cho thấy một vướng mắc pháp lý làm thay đổi giá trị dự án ra sao."
+          "en": "Purpose: Summarise how a commercial housing project runs from market research to handover, show which steps carry legal checks, and show how one legal delay changes the project's value.",
+          "vi": "Mục đích: Tóm tắt một dự án nhà ở thương mại đi từ nghiên cứu thị trường đến bàn giao như thế nào, chỉ ra pháp lý nằm ở những bước nào, và cho thấy một vướng mắc pháp lý làm thay đổi giá trị dự án ra sao."
         },
         {
           "id": "headline",
-          "en": "Headline: The Legal Path of a Housing Project and Its Effect on Value",
-          "vi": "Tiêu đề: Lộ trình pháp lý dự án nhà ở thương mại và tác động lên giá trị"
+          "en": "Headline: How a Real Estate Investment Project Runs, and Where the Legal Checks Sit",
+          "vi": "Tiêu đề: Trình tự thực hiện dự án đầu tư bất động sản và các điểm rà soát pháp lý"
         },
         {
           "id": "thesis",
-          "en": "Background: At DKRA I read each project's legal file before its sales launch. This study puts that work in the order a housing project is actually formed, checks it against current law, and links each legal step to the cash flow of a valuation model. At every step I ask three questions: what is already approved, what is still missing, and if something stalls, how much later the cash comes and how much more it costs.",
-          "vi": "Bối cảnh: Khi làm tại DKRA, tôi đọc hồ sơ pháp lý của từng dự án trước khi mở bán. Nghiên cứu này sắp xếp lại các nội dung đó theo đúng trình tự hình thành một dự án nhà ở, đối chiếu với luật hiện hành, và nối từng bước pháp lý với dòng tiền trong mô hình định giá. Ở mỗi bước, tôi rà bằng ba câu hỏi: đã có văn bản gì, còn thiếu gì, và nếu vướng thì dòng tiền chậm bao lâu, tốn thêm bao nhiêu."
+          "en": "Background: At DKRA I worked at the sales step and read each project's legal file before launch; at university I built the feasibility study for Riverside. This study puts both views into one sequence: how a project is decided and delivered, where the legal checks sit, and how each legal milestone enters a valuation model.",
+          "vi": "Bối cảnh: Khi làm tại DKRA, tôi tham gia ở bước kinh doanh và đọc hồ sơ pháp lý của từng dự án trước khi mở bán; ở trường, tôi lập FS cho dự án Riverside. Nghiên cứu này ghép hai góc nhìn đó vào một trình tự chung: dự án được quyết định và triển khai ra sao, pháp lý chen vào đâu, và mỗi mốc pháp lý đi vào mô hình định giá thế nào."
         },
         {
           "id": "how_to_read",
-          "en": "How to read: review the stage the project has reached and every stage before it. Stages not yet reached are work still to be done, so they go into the model's timeline and costs.",
-          "vi": "Cách đọc: dự án đang ở bước nào thì rà soát bước đó và mọi bước trước. Các bước chưa tới là việc bên mua hoặc chủ đầu tư còn phải làm, cần đưa vào tiến độ và chi phí trong mô hình."
+          "en": "How to read: The project goes through 10 steps in 3 phases; 6 of the 10 carry legal checks. At each check I ask three questions: what is already approved, what is still missing, and if something stalls, how much later the cash comes and how much more it costs. Review the step the project has reached and every step before it.",
+          "vi": "Cách đọc: Dự án đi qua 10 bước trong 3 giai đoạn; pháp lý nằm ở 6 trong 10 bước. Ở mỗi điểm rà soát, tôi đặt ba câu hỏi: đã có văn bản gì, còn thiếu gì, và nếu vướng thì dòng tiền chậm bao lâu, tốn thêm bao nhiêu. Dự án đang ở bước nào thì rà soát bước đó và mọi bước trước."
         },
         {
           "id": "phases",
-          "en": "Phases: Pre-investment | Implementation | Completion",
-          "vi": "Giai đoạn: Chuẩn bị đầu tư | Thực hiện đầu tư | Kết thúc đầu tư"
+          "en": "Phases: Research and preparation | Implementation | Completion",
+          "vi": "Giai đoạn: Nghiên cứu và chuẩn bị đầu tư | Thực hiện đầu tư | Kết thúc đầu tư"
+        },
+        {
+          "id": "process",
+          "vi": "Mười bước thực hiện dự án đầu tư bất động sản trong ba giai đoạn.",
+          "en": "Ten steps of a real estate investment project in three phases.",
+          "items": {
+            "vi": [
+              {
+                "phase": 1,
+                "title": "Nghiên cứu thị trường",
+                "work": "Đánh giá lãi suất, tín dụng và chính sách; cung cầu khu vực; dự án cạnh tranh, giá bán, tốc độ hấp thụ; chân dung khách hàng.",
+                "output": "Phân khúc, sản phẩm và mức giá mục tiêu.",
+                "who": "Chủ đầu tư, đơn vị nghiên cứu thị trường.",
+                "legal": []
+              },
+              {
+                "phase": 1,
+                "title": "Tìm quỹ đất hoặc dự án",
+                "work": "Sàng lọc vị trí, quy hoạch, loại đất, nguồn gốc đất và giá chuyển nhượng; loại sớm những khu đất không làm được nhà ở.",
+                "output": "Danh sách quỹ đất khả thi và cách có được đất.",
+                "who": "Chủ đầu tư, môi giới quỹ đất, tư vấn pháp lý.",
+                "legal": [
+                  1
+                ]
+              },
+              {
+                "phase": 1,
+                "title": "Phân tích hiệu quả (FS)",
+                "work": "Lên phương án sản phẩm theo chỉ tiêu quy hoạch; tổng mức đầu tư; doanh thu theo tiến độ bán; cơ cấu vốn; dòng tiền, NPV, IRR và độ nhạy.",
+                "output": "Quyết định có đầu tư không, và mức giá tối đa có thể trả cho quỹ đất.",
+                "who": "Chủ đầu tư, tư vấn đầu tư.",
+                "legal": []
+              },
+              {
+                "phase": 2,
+                "title": "Đưa quỹ đất vào doanh nghiệp",
+                "work": "Thỏa thuận nhận quyền sử dụng đất, đấu giá, đấu thầu lựa chọn nhà đầu tư, nhận chuyển nhượng dự án, hoặc mua cổ phần công ty dự án.",
+                "output": "Quyền phát triển dự án thuộc về doanh nghiệp.",
+                "who": "Chủ đầu tư, tư vấn pháp lý, tư vấn M&A.",
+                "legal": [
+                  2
+                ]
+              },
+              {
+                "phase": 2,
+                "title": "Pháp lý dự án",
+                "work": "Chấp thuận chủ trương đầu tư; quy hoạch chi tiết 1/500; bồi thường, giao đất và nộp tiền sử dụng đất.",
+                "output": "Dự án có đất hợp pháp và đủ hồ sơ để xin phép xây dựng.",
+                "who": "Chủ đầu tư, tư vấn pháp lý, cơ quan nhà nước.",
+                "legal": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "phase": 2,
+                "title": "Thiết kế (song song với pháp lý)",
+                "work": "Thiết kế sơ bộ, thiết kế cơ sở, thiết kế kỹ thuật và thi công; thẩm duyệt phòng cháy, chữa cháy.",
+                "output": "Hồ sơ thiết kế và dự toán, dùng để cập nhật FS.",
+                "who": "Tư vấn thiết kế.",
+                "legal": []
+              },
+              {
+                "phase": 2,
+                "title": "Thi công",
+                "work": "Giấy phép xây dựng hoặc diện miễn phép, khởi công; cọc, móng, kết cấu, hoàn thiện, cơ điện, hạ tầng; vốn vay ngân hàng cho xây dựng.",
+                "output": "Công trình theo tiến độ; nghiệm thu móng là điều kiện mở bán căn hộ.",
+                "who": "Tổng thầu, tư vấn giám sát, quản lý dự án, ngân hàng.",
+                "legal": [
+                  6
+                ]
+              },
+              {
+                "phase": 2,
+                "title": "Kinh doanh",
+                "work": "Đủ điều kiện bán, bảo lãnh ngân hàng, chính sách bán hàng, đại lý bán hàng, ngân hàng cho khách vay mua nhà.",
+                "output": "Dòng tiền thu từ khách hàng.",
+                "who": "Chủ đầu tư, đại lý bán hàng, ngân hàng.",
+                "legal": [
+                  7
+                ]
+              },
+              {
+                "phase": 3,
+                "title": "Nghiệm thu và bàn giao",
+                "work": "Nghiệm thu phòng cháy, chữa cháy và hoàn thành công trình; bàn giao nhà; cấp giấy chứng nhận cho người mua.",
+                "output": "Thu đợt tiền khi bàn giao và 5% cuối khi có sổ.",
+                "who": "Chủ đầu tư, cơ quan nhà nước.",
+                "legal": [
+                  8,
+                  9
+                ]
+              },
+              {
+                "phase": 3,
+                "title": "Vận hành và quyết toán",
+                "work": "Bàn giao kinh phí bảo trì cho Ban quản trị, chọn đơn vị quản lý vận hành, bàn giao hạ tầng cho địa phương, quyết toán thuế.",
+                "output": "Dự án khép lại; lợi nhuận thực tế được xác định.",
+                "who": "Chủ đầu tư, Ban quản trị, đơn vị vận hành.",
+                "legal": []
+              }
+            ],
+            "en": [
+              {
+                "phase": 1,
+                "title": "Market research",
+                "work": "Interest rates, credit and policy; local supply and demand; competing projects, prices, absorption; target buyers.",
+                "output": "Segment, product and target price.",
+                "who": "Developer, market research firm.",
+                "legal": []
+              },
+              {
+                "phase": 1,
+                "title": "Land or project search",
+                "work": "Screen location, zoning, land type, land origin and asking price; drop early any site that cannot take housing.",
+                "output": "Shortlist of workable sites and how to obtain them.",
+                "who": "Developer, land brokers, legal adviser.",
+                "legal": [
+                  1
+                ]
+              },
+              {
+                "phase": 1,
+                "title": "Feasibility study (FS)",
+                "work": "Product mix within planning limits; total investment; revenue by sales schedule; funding structure; cash flow, NPV, IRR and sensitivity.",
+                "output": "Invest or not, and the most the land is worth paying for.",
+                "who": "Developer, investment adviser.",
+                "legal": []
+              },
+              {
+                "phase": 2,
+                "title": "Bringing the land into the company",
+                "work": "Negotiated purchase of land-use rights, auction, investor tender, project transfer, or buying the project company.",
+                "output": "The company holds the right to develop the project.",
+                "who": "Developer, legal adviser, M&A adviser.",
+                "legal": [
+                  2
+                ]
+              },
+              {
+                "phase": 2,
+                "title": "Project approvals",
+                "work": "Investment policy approval; 1/500 detailed plan; compensation, land allocation and land use fee.",
+                "output": "Lawful land and a complete file for the building permit.",
+                "who": "Developer, legal adviser, authorities.",
+                "legal": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "phase": 2,
+                "title": "Design (alongside approvals)",
+                "work": "Concept, basic, technical and construction design; fire-safety design approval.",
+                "output": "Design package and cost estimate used to update the FS.",
+                "who": "Design consultant.",
+                "legal": []
+              },
+              {
+                "phase": 2,
+                "title": "Construction",
+                "work": "Building permit or exemption and commencement; piles, foundations, structure, finishes, MEP, infrastructure; construction loans.",
+                "output": "Works on schedule; foundation acceptance is a condition for selling apartments.",
+                "who": "General contractor, supervision consultant, project manager, bank.",
+                "legal": [
+                  6
+                ]
+              },
+              {
+                "phase": 2,
+                "title": "Sales",
+                "work": "Eligibility for sale, bank guarantee, sales policy, sales agencies, mortgage banks for buyers.",
+                "output": "Cash from buyers.",
+                "who": "Developer, sales agencies, banks.",
+                "legal": [
+                  7
+                ]
+              },
+              {
+                "phase": 3,
+                "title": "Completion and handover",
+                "work": "Fire-safety and completion acceptance; handover of units; certificates for buyers.",
+                "output": "Handover payment, and the last 5% once certificates are issued.",
+                "who": "Developer, authorities.",
+                "legal": [
+                  8,
+                  9
+                ]
+              },
+              {
+                "phase": 3,
+                "title": "Operation and close-out",
+                "work": "Maintenance fund to the owners' board, choice of property manager, infrastructure handed to the locality, tax finalisation.",
+                "output": "Project closed; actual profit known.",
+                "who": "Developer, owners' board, property manager.",
+                "legal": []
+              }
+            ]
+          }
         },
         {
           "id": "steps",

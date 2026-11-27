@@ -26,6 +26,8 @@ const chipsOf = (b: string) => { const tg = tagsOf(b); return [...tg.slice(0, -1
 type Step = { phase: number; title: string; review: string; risk: string; basis: string };
 const steps = rich<Step>("case4", "steps", lang).map((x, k) => ({ ...x, n: k + 1 }));
 const phaseNames = pipes(text("case4", "phases", lang));
+const proc = rich<{ phase: number; title: string; work: string; output: string; who: string; legal: number[] }>("case4", "process", lang).map((x, k) => ({ ...x, n: k + 1 }));
+const ownerOf = Object.fromEntries(proc.flatMap((x) => x.legal.map((k) => [k, x.n])));
 const lenses = rich<{ role: string; points: string[] }>("case4", "lenses", lang);
 const scenarios = rich<{ scenario: string; irr: string; npv: string; peak: string }>("case4", "example", lang);
 const chatbot = text("research", "chatbot_body", lang);
@@ -35,7 +37,7 @@ const principles = ["p1", "p2", "p3"].map((id) => labelled("principles", id, lan
 const L = (b: string, id: string) => labelled(b, id, lang);
 const month = "11/2026";
 const pageLabel = lang === "vi" ? "Trang" : "Page";
-const slides = 20;
+const slides = 22;
 let n = 0;
 const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
 ---
@@ -162,23 +164,42 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
       {phaseNames.map((name, k) => (
         <div class="pflow__phase">
           <p class="pflow__name">{String(k + 1).padStart(2, "0")} · {name}</p>
-          <ol class="pflow__steps">{steps.filter((x) => x.phase === k + 1).map((x) => <li><span class="pflow__dot">{x.n}</span>{x.title}</li>)}</ol>
+          <ol class="pflow__steps">{proc.filter((x) => x.phase === k + 1).map((x) => <li><span class="pflow__dot">{x.n}</span>{x.title}{x.legal.length > 0 && <em class="pflow__tag">◆ {t.legalTag}</em>}</li>)}</ol>
         </div>
       ))}
     </div>
     <p class="small muted"><strong>{L("case4", "how_to_read").label}:</strong> {L("case4", "how_to_read").body}</p>
     <footer>{foot()}</footer>
   </section>
+  {[[0, 5], [5, 10]].map(([a, b]) => (
+    <section class="slide dense">
+      <h2>{t.part1}</h2>
+      <table class="ctable">
+        <thead><tr><th>#</th><th>{t.stepWord}</th><th>{t.work}</th><th>{t.output}</th></tr></thead>
+        <tbody>
+          {proc.slice(a, b).map((x) => (
+            <tr>
+              <td class="n num">{String(x.n).padStart(2, "0")}</td>
+              <th>{x.title}{x.legal.length > 0 && <p class="small">◆ {t.legalCheck} {x.legal.map((k) => `P${k}`).join(", ")}</p>}</th>
+              <td class="body">{x.work}<p class="small">{t.who}: {x.who}</p></td>
+              <td class="risk">{x.output}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <footer>{foot()}</footer>
+    </section>
+  ))}
   {[[0, 3], [3, 6], [6, 7], [7, 9]].map(([a, b], k, all) => (
     <section class="slide dense">
-      <h2>{t.process}</h2>
+      <h2>{t.legalCheck} P1–P9</h2>
       <table class="ctable">
-        <thead><tr><th>#</th><th>{t.stepWord}</th><th>{t.review}</th><th>{t.risk}</th></tr></thead>
+        <thead><tr><th>#</th><th>{t.legalCheck}</th><th>{t.review}</th><th>{t.risk}</th></tr></thead>
         <tbody>
           {steps.slice(a, b).map((x) => (
             <tr>
               <td class="n num">{String(x.n).padStart(2, "0")}</td>
-              <th>{x.title}</th>
+              <th>{x.title}<p class="small">P{x.n} · {t.atStep} {ownerOf[x.n]}</p></th>
               <td class="body">{x.review}<p class="small">{t.basis}: {x.basis}</p></td>
               <td class="risk">{x.risk}</td>
             </tr>
@@ -318,7 +339,9 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   .ex { margin-top: 4px; }
   .ex h3 { font-size: 16px; margin-bottom: 2px; }
   .ex .ctable th, .ex .ctable td { padding: 5px 10px; }
-  .pflow { display: grid; grid-template-columns: 4fr 3fr 2fr; gap: 12px; }
+  .pflow { display: grid; grid-template-columns: 3fr 5fr 2fr; gap: 12px; }
+  .pflow__tag { font-style: normal; font-size: 10.5px; font-weight: 700; color: var(--accent-text); }
+  .pflow__phase:nth-child(2) { border-top-color: #3f5f86; }
   .pflow__phase { border: 1px solid var(--border); border-top: 4px solid var(--primary); border-radius: 8px; padding: 10px 12px; }
   .pflow__phase:nth-child(3) { border-top-color: var(--accent-decor); }
   .pflow__name { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
