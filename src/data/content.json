@@ -356,21 +356,21 @@
         },
         {
           "id": "card",
-          "en": "Card: 6 groups of checks, 6 red flags | Tools: legal and document review",
-          "vi": "Thẻ: 6 nhóm kiểm tra, 6 cờ đỏ | Công cụ: rà soát pháp lý và hồ sơ",
+          "en": "Card: 6 project stages, 8 key risks | Tools: legal and document review",
+          "vi": "Thẻ: 6 giai đoạn, 8 rủi ro trọng yếu | Công cụ: rà soát pháp lý và hồ sơ",
           "items": {
             "en": [
               {
-                "value": "6 + 6",
-                "label": "document groups and key risks",
+                "value": "6 + 8",
+                "label": "project stages and key risks",
                 "tools": "Legal and document review",
                 "chart": ""
               }
             ],
             "vi": [
               {
-                "value": "6 + 6",
-                "label": "nhóm hồ sơ rà soát và rủi ro trọng yếu",
+                "value": "6 + 8",
+                "label": "giai đoạn pháp lý và rủi ro trọng yếu",
                 "tools": "Rà soát pháp lý và hồ sơ",
                 "chart": ""
               }
@@ -379,8 +379,8 @@
         },
         {
           "id": "question",
-          "en": "Purpose: Set out the documents to review, the key risks and how each risk is reflected in the price or deal terms when acquiring a development project.",
-          "vi": "Mục đích: Xác định các nhóm hồ sơ cần rà soát, các rủi ro trọng yếu và cách phản ánh rủi ro vào giá hoặc điều khoản giao dịch khi nhận chuyển nhượng dự án đang phát triển."
+          "en": "Purpose: Review a development project's legal position in the order the project is actually built up, from land to handover, to see which documents to check and which risks affect price or deal terms in an acquisition.",
+          "vi": "Mục đích: Rà soát pháp lý một dự án bất động sản theo đúng trình tự hình thành dự án, từ quỹ đất đến bàn giao, để xác định hồ sơ cần kiểm tra và rủi ro ảnh hưởng đến giá hoặc điều khoản khi nhận chuyển nhượng."
         },
         {
           "id": "headline",
@@ -393,63 +393,88 @@
           "vi": "Phạm vi: áp dụng cho dự án đang phát triển. Với tài sản đang khai thác như tòa nhà văn phòng, trọng tâm rà soát là hợp đồng thuê, tình trạng kỹ thuật và giấy chứng nhận."
         },
         {
+          "id": "how_to_read",
+          "en": "How to read: check the documents of the stage the project has reached and of every earlier stage. Stages not yet reached are work the buyer will have to complete, so they go into the timeline and costs of the valuation model.",
+          "vi": "Cách đọc: dự án đang ở giai đoạn nào thì rà soát hồ sơ của giai đoạn đó và toàn bộ các giai đoạn trước. Các giai đoạn chưa tới là phần việc bên mua phải tự hoàn thành, cần đưa vào tiến độ và chi phí trong mô hình định giá."
+        },
+        {
           "id": "step0",
           "en": "Step 0 – Deal structure: a share acquisition keeps licences and land rights in place but inherits all liabilities; a project transfer starts clean but must meet the conditions of the Law on Real Estate Business 29/2023, Articles 39–42. The structure sets the scope of the review.",
           "vi": "Bước 0 – Cấu trúc giao dịch: mua cổ phần hoặc phần vốn góp của công ty dự án giữ nguyên giấy phép và quyền sử dụng đất nhưng kế thừa toàn bộ nghĩa vụ; nhận chuyển nhượng dự án không kế thừa nghĩa vụ cũ nhưng phải đáp ứng điều kiện tại Luật Kinh doanh bất động sản 29/2023, Điều 39–42. Cấu trúc giao dịch quyết định phạm vi thẩm định."
         },
         {
           "id": "check1",
-          "en": "1. Project approvals: investment policy approval and investor selection, approved 1/500 plan, project timeline still valid or formally extended; for a project transfer, compensation and site clearance finished for the part sold, no dispute or seizure. Basis: Luật Đầu tư 143/2025; Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Kinh doanh bất động sản 29/2023, Article 40.",
-          "vi": "1. Pháp lý dự án: chấp thuận chủ trương đầu tư và lựa chọn chủ đầu tư, quy hoạch 1/500 đã duyệt, tiến độ dự án còn hiệu lực hoặc đã được gia hạn; nếu chuyển nhượng dự án thì phần chuyển nhượng đã xong bồi thường, giải phóng mặt bằng, không tranh chấp, không bị kê biên. Căn cứ: Luật Đầu tư 143/2025; Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Kinh doanh bất động sản 29/2023, Điều 40.",
+          "en": "1. Land and developer: how the land was obtained (land-use right auction, investor tender, negotiated acquisition of residential land, or the pilot on other land under Resolution 171/2024); the investment policy approval that also approves the investor; the project timeline still valid or extended; the developer's equity meeting the legal minimum. Basis: Luật Đất đai 31/2024, Articles 126–127; Nghị quyết 171/2024/QH15; Luật Đầu tư 143/2025; Luật Nhà ở 27/2023; Luật Kinh doanh bất động sản 29/2023, Article 9.",
+          "vi": "1. Quỹ đất và chủ đầu tư: cách có đất (đấu giá quyền sử dụng đất, đấu thầu lựa chọn nhà đầu tư, thỏa thuận nhận quyền sử dụng đất ở, hoặc thí điểm trên đất khác theo Nghị quyết 171/2024); quyết định chấp thuận chủ trương đầu tư đồng thời chấp thuận nhà đầu tư; tiến độ dự án còn hiệu lực hoặc đã gia hạn; chủ đầu tư đủ điều kiện về vốn chủ sở hữu. Căn cứ: Luật Đất đai 31/2024, Điều 126–127; Nghị quyết 171/2024/QH15; Luật Đầu tư 143/2025; Luật Nhà ở 27/2023; Luật Kinh doanh bất động sản 29/2023, Điều 9.",
           "flags": [
-            2,
             3
           ]
         },
         {
           "id": "check2",
-          "en": "2. Land: origin of the land, allocation or lease decision, one-off or annual rent (annual rent limits what can be transferred), land-use term, whether the land use fee is final and paid or still open to reassessment, remaining clearance, mortgages, and the 20% social-housing land obligation or the cash paid instead. Basis: Luật Đất đai 31/2024; Nghị định 100/2024, amended by Nghị định 261/2025.",
-          "vi": "2. Đất đai: nguồn gốc đất, quyết định giao hoặc cho thuê, trả tiền một lần hay hằng năm (trả hằng năm thì hạn chế chuyển nhượng), thời hạn sử dụng, tiền sử dụng đất đã chốt và đã nộp hay còn có thể bị tính lại, phần mặt bằng chưa giải phóng, thế chấp, nghĩa vụ 20% quỹ đất nhà ở xã hội hoặc khoản tiền nộp thay. Căn cứ: Luật Đất đai 31/2024; Nghị định 100/2024, sửa đổi bởi Nghị định 261/2025.",
+          "en": "2. Planning and design: approved 1/500 detailed plan or master layout and any amendments; density, floor-area ratio, height and unit count against the business plan; appraised feasibility study; fire-safety design approval; environmental impact assessment or environmental permit. Basis: Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020.",
+          "vi": "2. Quy hoạch và thiết kế: quy hoạch chi tiết 1/500 hoặc tổng mặt bằng đã duyệt và các lần điều chỉnh; chỉ tiêu mật độ, hệ số sử dụng đất, tầng cao, số căn so với phương án kinh doanh; báo cáo nghiên cứu khả thi đã thẩm định; thẩm duyệt thiết kế phòng cháy, chữa cháy; báo cáo đánh giá tác động môi trường hoặc giấy phép môi trường. Căn cứ: Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020.",
           "flags": [
-            1,
-            5
+            7
           ]
         },
         {
           "id": "check3",
-          "en": "3. Technical, fire safety and environment: building permit or permit exemption, fire-safety design approval and acceptance, environmental permit; site condition against approved drawings; contractor contracts and cost to complete. Basis: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020.",
-          "vi": "3. Kỹ thuật, PCCC và môi trường: giấy phép xây dựng hoặc diện miễn phép, thẩm duyệt và nghiệm thu PCCC, giấy phép môi trường; hiện trạng thi công so với hồ sơ duyệt; hợp đồng nhà thầu và chi phí còn lại để hoàn thành. Căn cứ: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020."
+          "en": "3. Land, clearance and land charges: compensation and clearance progress; allocation or lease decision, one-off or annual rent, land-use term; whether the land use fee is final and paid or open to reassessment (from 01/01/2026 it is based on the land price table); the certificate issued for the project; mortgages; the 20% social-housing land obligation or the cash paid instead. Basis: Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Nghị định 100/2024, amended by Nghị định 261/2025.",
+          "vi": "3. Giao đất, bồi thường, tiền sử dụng đất: tiến độ bồi thường, giải phóng mặt bằng; quyết định giao đất hoặc cho thuê đất, trả tiền một lần hay hằng năm, thời hạn sử dụng; tiền sử dụng đất đã xác định và đã nộp hay còn có thể bị tính lại (từ 01/01/2026 tính theo bảng giá đất); giấy chứng nhận cấp cho dự án; thế chấp; nghĩa vụ 20% quỹ đất nhà ở xã hội hoặc khoản tiền nộp thay. Căn cứ: Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Nghị định 100/2024, sửa đổi bởi Nghị định 261/2025.",
+          "flags": [
+            1,
+            2,
+            5,
+            6
+          ]
         },
         {
           "id": "check4",
-          "en": "4. Signed sales contracts: signed buyer contracts, deposits and instalments collected against the legal caps (5% deposit, 30% first payment, 70% before handover, 95% before the certificate), bank guarantees for off-plan units, promised handover dates, buyer complaints, co-investment (BCC) and agency contracts. Basis: Luật Kinh doanh bất động sản 29/2023, Articles 23–26.",
-          "vi": "4. Hợp đồng mua bán đã ký: hợp đồng đã ký với khách, tiền cọc và tiền đã thu so với trần luật định (cọc 5%, lần đầu 30%, trước bàn giao 70%, trước khi có giấy chứng nhận 95%), bảo lãnh ngân hàng cho nhà hình thành trong tương lai, cam kết bàn giao, khiếu nại của khách, hợp đồng hợp tác đầu tư (BCC) và hợp đồng đại lý. Căn cứ: Luật Kinh doanh bất động sản 29/2023, Điều 23–26.",
+          "en": "4. Construction: building permit, or the permit exemption where the feasibility study has been appraised; notice of commencement; site progress against the approved design; general and main contractor contracts and the cost to complete. Basis: Luật Xây dựng 135/2025.",
+          "vi": "4. Xây dựng: giấy phép xây dựng, hoặc diện miễn phép khi báo cáo nghiên cứu khả thi đã được thẩm định; thông báo khởi công; hiện trạng thi công so với thiết kế được duyệt; hợp đồng tổng thầu, nhà thầu chính và chi phí còn lại để hoàn thành. Căn cứ: Luật Xây dựng 135/2025.",
+          "flags": [
+            8
+          ]
+        },
+        {
+          "id": "check5",
+          "en": "5. Off-plan sales launch: the provincial real estate authority's letter confirming the units are eligible for sale; foundation acceptance; the bank guarantee; signed buyer contracts, deposits and instalments against the legal caps (5% deposit, 30% first payment, 70% before handover, 95% before the certificate); co-investment and agency contracts. Basis: Luật Kinh doanh bất động sản 29/2023, Articles 23–26; Nghị định 96/2024.",
+          "vi": "5. Mở bán nhà ở hình thành trong tương lai: văn bản của cơ quan quản lý kinh doanh bất động sản cấp tỉnh xác nhận nhà ở đủ điều kiện bán; phần móng đã nghiệm thu; bảo lãnh ngân hàng; hợp đồng đã ký với khách hàng, tiền cọc và tiền đã thu so với trần luật định (cọc 5%, lần đầu 30%, trước bàn giao 70%, trước khi có giấy chứng nhận 95%); hợp đồng hợp tác đầu tư và hợp đồng đại lý. Căn cứ: Luật Kinh doanh bất động sản 29/2023, Điều 23–26; Nghị định 96/2024.",
           "flags": [
             4
           ]
         },
         {
-          "id": "check5",
-          "en": "5. Finance and tax (share deal): audited accounts, loans and collateral, contingent and related-party liabilities, leverage per project (bank loans plus bonds no more than 4 times equity for projects under 20 ha and 5.67 times from 20 ha, i.e. equity of at least about 20% and 15% of debt plus equity), tax finalisation and past tax inspections. Basis: Luật Kinh doanh bất động sản 29/2023, Article 9; Nghị định 96/2024, Article 5, amended by Nghị định 54/2026; Luật Thuế GTGT 48/2024, amended by Luật 149/2025; Luật Thuế TNDN 67/2025.",
-          "vi": "5. Tài chính và thuế (khi mua cổ phần): báo cáo tài chính kiểm toán, khoản vay và tài sản bảo đảm, nghĩa vụ tiềm tàng và giao dịch với bên liên quan, đòn bẩy của từng dự án (dư nợ vay và trái phiếu không quá 4 lần vốn chủ sở hữu với dự án dưới 20 ha, 5,67 lần với dự án từ 20 ha, tức vốn chủ sở hữu ít nhất khoảng 20% và 15% trên tổng nợ vay cộng vốn chủ sở hữu), quyết toán thuế và các lần thanh tra thuế. Căn cứ: Luật Kinh doanh bất động sản 29/2023, Điều 9; Nghị định 96/2024, Điều 5, sửa đổi bởi Nghị định 54/2026; Luật Thuế GTGT 48/2024, sửa đổi bởi Luật 149/2025; Luật Thuế TNDN 67/2025."
+          "id": "check6",
+          "en": "6. Completion, handover and certificates: fire-safety acceptance and completion acceptance; handover records, promised handover dates and buyer complaints; certificate applications for buyers; final tax settlement of the project. Basis: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Đất đai 31/2024.",
+          "vi": "6. Nghiệm thu, bàn giao, cấp giấy chứng nhận: nghiệm thu phòng cháy, chữa cháy và nghiệm thu hoàn thành công trình; biên bản bàn giao, cam kết tiến độ bàn giao và khiếu nại của khách hàng; hồ sơ cấp giấy chứng nhận cho người mua; quyết toán thuế dự án. Căn cứ: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Đất đai 31/2024.",
+          "flags": [
+            8
+          ]
         },
         {
-          "id": "check6",
-          "en": "6. Corporate and deal approvals: ownership chain, pledged shares, pre-emption rights, litigation and penalties; foreign buyers registering the share purchase where the land is on islands, border or coastal areas; merger filing if thresholds are met (from 01/07/2026: VND 6,000bn assets or revenue, VND 2,000bn deal value). Basis: Luật Đầu tư 143/2025, Article 21; Luật Cạnh tranh 2018; Nghị quyết 66.18/2026/NQ-CP.",
-          "vi": "6. Doanh nghiệp và phê duyệt giao dịch: chuỗi sở hữu, cổ phần đang cầm cố, quyền ưu tiên mua, tranh chấp và xử phạt; nhà đầu tư nước ngoài đăng ký góp vốn nếu đất ở đảo, biên giới, ven biển; thông báo tập trung kinh tế nếu vượt ngưỡng (từ 01/7/2026: tài sản hoặc doanh thu 6.000 tỷ, giá trị giao dịch 2.000 tỷ). Căn cứ: Luật Đầu tư 143/2025, Điều 21; Luật Cạnh tranh 2018; Nghị quyết 66.18/2026/NQ-CP.",
+          "id": "check7",
+          "en": "7. Company, finance and tax (share deal): ownership chain, pledged shares, pre-emption rights; audited accounts, loans, bonds and collateral, contingent and related-party liabilities; leverage per project (loans plus bonds no more than 4 times equity for projects under 20 ha, 5.67 times from 20 ha); tax finalisation; foreign investors' share-purchase registration and merger filing above the thresholds. Basis: Nghị định 96/2024, Article 5, amended by Nghị định 54/2026; Luật Đầu tư 143/2025; Luật Cạnh tranh 2018; Nghị quyết 66.18/2026/NQ-CP.",
+          "vi": "7. Doanh nghiệp, tài chính và thuế: áp dụng khi mua cổ phần; rà soát chuỗi sở hữu, cổ phần đang cầm cố, quyền ưu tiên mua; báo cáo tài chính kiểm toán, khoản vay, trái phiếu và tài sản bảo đảm, nghĩa vụ tiềm tàng và giao dịch với bên liên quan; đòn bẩy của từng dự án (dư nợ vay và trái phiếu không quá 4 lần vốn chủ sở hữu với dự án dưới 20 ha, 5,67 lần với dự án từ 20 ha); quyết toán thuế; đăng ký góp vốn của nhà đầu tư nước ngoài và thông báo tập trung kinh tế khi vượt ngưỡng. Căn cứ: Nghị định 96/2024, Điều 5, sửa đổi bởi Nghị định 54/2026; Luật Đầu tư 143/2025; Luật Cạnh tranh 2018; Nghị quyết 66.18/2026/NQ-CP.",
           "flags": [
             6
           ]
         },
         {
           "id": "red_flags",
-          "en": "Key risks (red flags): (1) land use fee not yet final, or an inspection conclusion asking for it to be recalculated; (2) clearance described as 'nearly done'; (3) project timeline expired without an extension, which risks land recovery; (4) money taken from buyers above the caps or before the project was eligible for sale, or without a bank guarantee; (5) annual-rent land in a deal structured as a project transfer; (6) shares or land pledged, or the 20% social-housing obligation unresolved.",
-          "vi": "Rủi ro trọng yếu (red flags): (1) tiền sử dụng đất chưa chốt, hoặc có kết luận thanh tra yêu cầu tính lại; (2) giải phóng mặt bằng chưa hoàn tất nhưng được báo cáo là \"gần xong\"; (3) dự án quá tiến độ mà chưa được gia hạn, có nguy cơ bị thu hồi đất; (4) thu tiền khách vượt trần, thu khi dự án chưa đủ điều kiện bán, hoặc không có bảo lãnh; (5) đất thuê trả tiền hằng năm nhưng giao dịch lại là chuyển nhượng dự án; (6) cổ phần hoặc đất đang cầm cố, thế chấp, hoặc nghĩa vụ 20% nhà ở xã hội chưa xử lý."
+          "en": "Key risks (red flags): (1) land use fee not yet final, or an inspection conclusion asking for it to be recalculated; (2) clearance described as 'nearly done'; (3) project timeline expired without an extension, which risks land recovery; (4) money taken from buyers above the caps, before the units were eligible for sale, or without a bank guarantee; (5) annual-rent land in a deal structured as a project transfer; (6) shares or land pledged, or the 20% social-housing obligation unresolved; (7) plan amendments that cut floor area or unit count against the business plan; (8) construction outside the permit or design, or no fire-safety acceptance, so units cannot be handed over or certified.",
+          "vi": "Rủi ro trọng yếu (red flags): (1) tiền sử dụng đất chưa xác định xong, hoặc có kết luận thanh tra yêu cầu tính lại; (2) giải phóng mặt bằng chưa hoàn tất nhưng được báo cáo là \"gần xong\"; (3) dự án quá tiến độ mà chưa được gia hạn, có nguy cơ bị thu hồi đất; (4) thu tiền khách vượt trần, thu khi chưa đủ điều kiện bán, hoặc không có bảo lãnh; (5) đất thuê trả tiền hằng năm nhưng giao dịch lại là chuyển nhượng dự án; (6) cổ phần hoặc đất đang cầm cố, thế chấp, hoặc nghĩa vụ 20% nhà ở xã hội chưa xử lý; (7) quy hoạch đã điều chỉnh làm giảm diện tích sàn hoặc số căn so với phương án kinh doanh; (8) xây dựng sai giấy phép hoặc thiết kế, chưa nghiệm thu phòng cháy, chữa cháy nên chưa bàn giao và cấp giấy chứng nhận được."
         },
         {
           "id": "into_price",
           "en": "Pricing the risks: each open issue is either quantified in the model (additional land use fee, cost to complete, months of delay) or turned into a deal term (price reduction, retention, specific indemnity from the seller).",
           "vi": "Phản ánh vào giá giao dịch: mỗi vấn đề chưa xử lý được lượng hóa trong mô hình (tiền sử dụng đất phát sinh, chi phí hoàn thành, thời gian chậm tiến độ) hoặc chuyển thành điều khoản giao dịch (giảm giá, giữ lại một phần giá trị thanh toán, cam kết bồi hoàn của bên chuyển nhượng)."
+        },
+        {
+          "id": "practice",
+          "en": "In practice: in project M&A the buyer usually hires a law firm for legal due diligence and an audit firm for financial and tax due diligence. The output is a due diligence report that ranks issues by severity; material issues become conditions precedent, price adjustments or indemnities in the purchase agreement. This checklist follows the same order, at the level an investment analyst needs to read that report and carry the risks into the model.",
+          "vi": "Thực tế áp dụng: trong giao dịch mua bán, sáp nhập dự án, bên mua thường thuê công ty luật thẩm định pháp lý và công ty kiểm toán thẩm định tài chính, thuế. Kết quả là báo cáo thẩm định phân loại vấn đề theo mức độ nghiêm trọng; các vấn đề trọng yếu được chuyển thành điều kiện tiên quyết, điều chỉnh giá hoặc cam kết bồi hoàn trong hợp đồng mua bán. Danh mục này đi theo cùng trình tự đó, ở mức người phân tích đầu tư cần nắm để đọc báo cáo thẩm định và đưa rủi ro vào mô hình."
         },
         {
           "id": "from_practice",
@@ -469,18 +494,18 @@
         },
         {
           "id": "dkra",
-          "en": "Real Estate Sales Consultant, DKRA Vega Joint Stock Company | 08/2025 – 04/2026 | Reviewed each project's legal file before its sales launch (1/500 plan, building permit, conditions for selling off-plan housing); analysed location, product, pricing and sales policy. Worked with partner banks on buyers' loan plans (up to 80% of the unit price): loan dossiers, payment and repayment schedules. Closed the project's highest-value contract at the time; named Outstanding Sales Executive across the agency network; selected for training with PropNex in Singapore.",
-          "vi": "Chuyên viên tư vấn kinh doanh bất động sản, Công ty Cổ phần DKRA Vega | 08/2025 – 04/2026 | Nghiên cứu hồ sơ pháp lý từng dự án trước khi mở bán (quy hoạch 1/500, giấy phép xây dựng, điều kiện kinh doanh nhà ở hình thành trong tương lai); phân tích vị trí, sản phẩm, giá bán và chính sách bán hàng. Phối hợp ngân hàng đối tác lập phương án vay cho khách hàng (đến 80% giá trị căn hộ): hồ sơ vay, lịch thanh toán và lịch trả nợ. Chốt hợp đồng có giá trị cao nhất dự án tại thời điểm giao dịch; vinh danh Chuyên viên kinh doanh xuất sắc toàn hệ thống đại lý; được chọn tham gia đào tạo cùng PropNex tại Singapore."
+          "en": "Real Estate Sales Consultant, DKRA Vega Joint Stock Company | 08/2025 – 04/2026 | Reviewed each project's legal file before its sales launch (1/500 plan, building permit, conditions for selling off-plan housing); analysed location, product, pricing and sales policy. Worked with partner banks on buyers' loan plans: loan dossiers, payment and repayment schedules. Closed the project's highest-value contract at the time; named Outstanding Sales Executive across the agency network; selected for training with PropNex in Singapore.",
+          "vi": "Chuyên viên tư vấn kinh doanh bất động sản, Công ty Cổ phần DKRA Vega | 08/2025 – 04/2026 | Nghiên cứu hồ sơ pháp lý từng dự án trước khi mở bán (quy hoạch 1/500, giấy phép xây dựng, điều kiện kinh doanh nhà ở hình thành trong tương lai); phân tích vị trí, sản phẩm, giá bán và chính sách bán hàng. Phối hợp ngân hàng đối tác lập phương án vay cho khách hàng: hồ sơ vay, lịch thanh toán và lịch trả nợ. Chốt hợp đồng có giá trị cao nhất dự án tại thời điểm giao dịch; vinh danh Chuyên viên kinh doanh xuất sắc toàn hệ thống đại lý; được chọn tham gia đào tạo cùng PropNex tại Singapore."
         },
         {
           "id": "em",
-          "en": "Sales Executive, EM Vietnam Jewelry Joint Stock Company | 07/2024 – 06/2025 | Advised domestic and international customers in English and Chinese; compiled daily revenue and prepared daily and weekly sales reports. Helped train new sales staff. Best Sales of the Month three times; Top 2–7 in the remaining months among 15–20 staff across four branches.",
-          "vi": "Chuyên viên kinh doanh, Công ty Cổ phần EM Vietnam Jewelry | 07/2024 – 06/2025 | Tư vấn khách hàng trong nước và quốc tế bằng tiếng Anh, tiếng Trung; tổng hợp doanh thu và lập báo cáo bán hàng theo ngày, theo tuần. Tham gia đào tạo nhân viên kinh doanh mới. 3 lần đạt Best Sales of the Month; các tháng còn lại duy trì Top 2–7 trên 15–20 nhân viên tại 4 chi nhánh."
+          "en": "Sales Executive, EM Vietnam Jewelry Joint Stock Company | 07/2024 – 06/2025 | Advised domestic and international customers in English and Chinese; prepared daily and weekly revenue reports. Wrote the training materials for new sales staff and delivered the training; the company kept the materials for internal training. Best Sales of the Month three times; Top 2–7 in the remaining months among 15–20 staff across four branches.",
+          "vi": "Chuyên viên kinh doanh, Công ty Cổ phần EM Vietnam Jewelry | 07/2024 – 06/2025 | Tư vấn khách hàng trong nước và quốc tế bằng tiếng Anh, tiếng Trung; lập báo cáo doanh thu theo ngày, theo tuần. Soạn tài liệu và trực tiếp đào tạo nhân viên kinh doanh mới; tài liệu được công ty lưu giữ để đào tạo nội bộ. 3 lần đạt Best Sales of the Month; các tháng còn lại duy trì Top 2–7 trên 15–20 nhân viên tại 4 chi nhánh."
         },
         {
           "id": "skl",
-          "en": "Business Support Assistant, Saigon King Land Joint Stock Company | 11/2022 – 09/2023 | Supported the sales consultants: liaised with valuation firms to obtain clients' valuation reports and tracked file progress. Sourced clients and advised them on real estate investment options.",
-          "vi": "Trợ lý hỗ trợ kinh doanh, Công ty Cổ phần Saigon King Land | 11/2022 – 09/2023 | Hỗ trợ các chuyên viên kinh doanh: làm đầu mối với đơn vị thẩm định giá để nhận báo cáo cho khách hàng, theo dõi tiến độ hồ sơ. Tìm kiếm khách hàng và tư vấn phương án đầu tư bất động sản."
+          "en": "Business Support Assistant, Saigon King Land Joint Stock Company | 11/2022 – 09/2023 | Supported the sales consultants: worked with valuation firms to obtain clients' valuation reports and tracked file progress. Sourced clients and advised them on real estate investment options.",
+          "vi": "Trợ lý hỗ trợ kinh doanh, Công ty Cổ phần Saigon King Land | 11/2022 – 09/2023 | Hỗ trợ các chuyên viên kinh doanh: phối hợp với đơn vị thẩm định giá để nhận báo cáo cho khách hàng, theo dõi tiến độ hồ sơ. Tìm kiếm khách hàng và tư vấn phương án đầu tư bất động sản."
         }
       ]
     },
@@ -516,8 +541,8 @@
         },
         {
           "id": "chatbot_body",
-          "en": "Second Prize, UEH Young Researcher Competition (2025). Team leader of five; processed survey data from 419 respondents in SPSS and estimated the model in SmartPLS (PLS-SEM). Finding: unbiased recommendations raise perceived fairness, transparency and accountability; perceived fairness builds trust in the chatbot, which drives intention to use it. Manuscript under peer review at an international journal.",
-          "vi": "Giải B – Nhà nghiên cứu trẻ UEH (2025). Trưởng nhóm 5 thành viên; xử lý dữ liệu khảo sát 419 người bằng SPSS, ước lượng mô hình bằng SmartPLS (PLS-SEM). Kết quả: gợi ý không thiên lệch làm tăng cảm nhận về công bằng, minh bạch và trách nhiệm giải trình; cảm nhận công bằng tạo niềm tin vào chatbot, từ đó thúc đẩy ý định sử dụng. Bản thảo đang được phản biện tại một tạp chí quốc tế."
+          "en": "Second Prize, UEH Young Researcher Competition (2025). An independent research paper outside any course, taken through the full process from model design and survey to journal submission. Team leader of five; processed survey data from 419 respondents in SPSS and estimated the model in SmartPLS (PLS-SEM). Finding: unbiased recommendations raise perceived fairness, transparency and accountability; perceived fairness builds trust in the chatbot, which drives intention to use it. Manuscript under peer review at an international journal.",
+          "vi": "Giải B – Nhà nghiên cứu trẻ UEH (2025). Công trình nghiên cứu khoa học độc lập, không thuộc học phần, thực hiện trọn quy trình từ xây dựng mô hình, khảo sát đến gửi bình duyệt tạp chí. Trưởng nhóm 5 thành viên; xử lý dữ liệu khảo sát 419 người bằng SPSS, ước lượng mô hình bằng SmartPLS (PLS-SEM). Kết quả: gợi ý không thiên lệch làm tăng cảm nhận về công bằng, minh bạch và trách nhiệm giải trình; cảm nhận công bằng tạo niềm tin vào chatbot, từ đó thúc đẩy ý định sử dụng. Bản thảo đang được phản biện tại một tạp chí quốc tế."
         },
         {
           "id": "dowjones",

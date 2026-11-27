@@ -2,7 +2,7 @@
 import Base from "../../../layouts/Base.astro";
 import Icon from "../../../components/Icon.astro";
 import CaseSummary from "../../../components/CaseSummary.astro";
-import { LANGS, type Lang, text, labelled, pipes, numbered, basis, attr } from "../../../lib/content";
+import { LANGS, type Lang, text, labelled, pipes, numbered, basis, attr, rowIds } from "../../../lib/content";
 import { ui } from "../../../lib/ui";
 
 export const getStaticPaths = () => LANGS.map((lang) => ({ params: { lang } }));
@@ -15,7 +15,7 @@ const headline = text("case4", "headline", lang);
 const scope = labelled("case4", "scope", lang);
 const step0 = labelled("case4", "step0", lang);
 const flags = numbered(text("case4", "red_flags", lang)).map((f) => cap(f.replace(/;$/, "")));
-const checks = ["check1", "check2", "check3", "check4", "check5", "check6"].map((id) => {
+const checks = rowIds("case4").filter((id) => /^check\d+$/.test(id)).map((id) => {
   const { label, body } = labelled("case4", id, lang);
   const m = label.match(/^(\d+)\. (.*)$/)!;
   const own = (attr<number[]>("case4", id, "flags") ?? []).map((n) => flags[n - 1]);
@@ -23,6 +23,8 @@ const checks = ["check1", "check2", "check3", "check4", "check5", "check6"].map(
 });
 const price = labelled("case4", "into_price", lang);
 const practice = labelled("case4", "from_practice", lang);
+const howTo = labelled("case4", "how_to_read", lang);
+const inPractice = labelled("case4", "practice", lang);
 const officeName = pipes(text("case2", "tagline", lang))[1];
 ---
 <Base lang={lang} title={`${t.checklist} – ${t.name}`} description={headline}>
@@ -45,6 +47,7 @@ const officeName = pipes(text("case2", "tagline", lang))[1];
         <p class="prose">{cap(step0.body)}</p>
       </div>
       <h2 id="checks-h" class="h2">{t.checks}</h2>
+      <div class="note"><Icon name="info" size={22} /><p><strong>{howTo.label}:</strong> {howTo.body}</p></div>
       <div class="table-box">
         <table class="ctable">
           <thead><tr><th scope="col">#</th><th scope="col">{t.checks}</th><th scope="col">{t.redFlag}</th></tr></thead>
@@ -68,6 +71,7 @@ const officeName = pipes(text("case2", "tagline", lang))[1];
       </div>
       <div class="grid">
         <div class="card card--soft"><h3 class="h3">{price.label}</h3><p class="prose">{cap(price.body)}</p></div>
+        <div class="card card--soft"><h3 class="h3">{inPractice.label}</h3><p class="prose">{cap(inPractice.body)}</p></div>
         <div class="card card--soft"><h3 class="h3">{practice.label}</h3><p class="prose">{cap(practice.body)}</p></div>
       </div>
     </div>

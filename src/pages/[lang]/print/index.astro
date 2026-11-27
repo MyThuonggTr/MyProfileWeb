@@ -24,10 +24,10 @@ const skills = rowIds("skills_map").filter((id) => id !== "headline").map((id) =
 const tagsOf = (b: string) => pipes(text(b, "tagline", lang));
 const chipsOf = (b: string) => { const tg = tagsOf(b); return [...tg.slice(0, -1), ...tg.at(-1)!.split(". ")]; };
 const flags = numbered(text("case4", "red_flags", lang)).map((f) => cap(f.replace(/;$/, "")));
-const checks = ["check1", "check2", "check3", "check4", "check5", "check6"].map((id) => {
+const checks = rowIds("case4").filter((id) => /^check\d+$/.test(id)).map((id) => {
   const { label, body } = labelled("case4", id, lang);
   const m = label.match(/^(\d+)\. (.*)$/)!;
-  return { n: m[1], title: m[2], flags: (attr<number[]>("case4", id, "flags") ?? []).map((n) => flags[n - 1]), basis: basis(body).basis };
+  return { n: m[1], title: m[2], flags: (attr<number[]>("case4", id, "flags") ?? []).map((n) => flags[n - 1]), ...basis(cap(body)) };
 });
 const chatbot = text("research", "chatbot_body", lang);
 const dow = titled(raw("research", "dowjones", lang));
@@ -36,7 +36,7 @@ const principles = ["p1", "p2", "p3"].map((id) => labelled("principles", id, lan
 const L = (b: string, id: string) => labelled(b, id, lang);
 const month = "11/2026";
 const pageLabel = lang === "vi" ? "Trang" : "Page";
-const slides = 16;
+const slides = 18;
 let n = 0;
 const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
 ---
@@ -154,34 +154,37 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   </section>
 
   <!-- 10–11 Acquisition checklist -->
-  <section class="slide">
+  <section class="slide dense">
     <ul class="chips">{tagsOf("case4").map((c, i) => <li class={i === 0 ? "chip chip--key" : "chip"}>{c}</li>)}</ul>
     <h2>{text("case4", "headline", lang)}</h2>
     <p class="lead"><strong>{t.question}:</strong> {text("case4", "question", lang)}</p>
-    <div class="box box--line"><p><strong>{L("case4", "scope").label}:</strong> {L("case4", "scope").body}</p></div>
+    <div class="box box--line"><p><strong>{L("case4", "scope").label}:</strong> {L("case4", "scope").body} <strong>{L("case4", "how_to_read").label}:</strong> {L("case4", "how_to_read").body}</p></div>
     <div class="row2">
       <div class="box"><h3>{cap(L("case4", "step0").label)}</h3><p>{cap(L("case4", "step0").body)}</p></div>
-      <div class="box"><h3>{L("case4", "into_price").label}</h3><p>{cap(L("case4", "into_price").body)}</p></div>
+      <div class="box"><h3>{L("case4", "practice").label}</h3><p>{cap(L("case4", "practice").body)}</p></div>
     </div>
     <footer>{foot()}</footer>
   </section>
-  <section class="slide dense">
-    <h2>{t.checks}</h2>
-    <table class="ctable">
-      <thead><tr><th>#</th><th>{t.checks}</th><th>{t.redFlag}</th><th>{t.basis}</th></tr></thead>
-      <tbody>
-        {checks.map((c) => (
-          <tr>
-            <td class="n num">{c.n.padStart(2, "0")}</td>
-            <th>{c.title}</th>
-            <td>{c.flags.length ? <ul class="list">{c.flags.map((f) => <li>{f}</li>)}</ul> : "–"}</td>
-            <td class="small">{c.basis}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-    <footer>{foot()}</footer>
-  </section>
+  {[[0, 2], [2, 5], [5, 7]].map(([a, b], k, all) => (
+    <section class="slide dense">
+      <h2>{t.checks}</h2>
+      <table class="ctable">
+        <thead><tr><th>#</th><th>{t.checks}</th><th>{t.details}</th><th>{t.redFlag}</th></tr></thead>
+        <tbody>
+          {checks.slice(a, b).map((c) => (
+            <tr>
+              <td class="n num">{c.n.padStart(2, "0")}</td>
+              <th>{c.title}</th>
+              <td class="body">{c.body}{c.basis && <p class="small">{t.basis}: {c.basis}</p>}</td>
+              <td>{c.flags.length ? <ul class="list">{c.flags.map((f) => <li>{f}</li>)}</ul> : "–"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {k === all.length - 1 && <div class="box box--line"><p><strong>{L("case4", "into_price").label}:</strong> {cap(L("case4", "into_price").body)}</p></div>}
+      <footer>{foot()}</footer>
+    </section>
+  ))}
 
   <!-- 12 Research -->
   <section class="slide dense">
@@ -194,14 +197,12 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <footer>{foot()}</footer>
   </section>
 
-  <!-- Experience (every point of every role), education, credentials -->
+  <!-- Experience (every point of every role); education, credentials and activities -->
   <section class="slide dense">
     <div class="row-exp">
       <div>
         <h3>{text("experience", "headline", lang)}</h3>
         {jobs.map((j) => <div class="job"><p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p><ul class="list small">{j.points.map((p) => <li>{p}</li>)}</ul></div>)}
-        <h3 style="margin-top:8px">{text("activities", "headline", lang)}</h3>
-        {acts.map((j) => <p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p>)}
       </div>
       <div>
         <h3>{t.education}</h3>
@@ -209,6 +210,8 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
         <ul class="list small">{eduPoints.map((p) => <li>{p}</li>)}</ul>
         <h3 style="margin-top:8px">{t.credentials}</h3>
         <ul class="list small">{creds.map((c) => <li>{c}</li>)}</ul>
+        <h3 style="margin-top:8px">{text("activities", "headline", lang)}</h3>
+        {acts.map((j) => <p><strong>{j.role}</strong> · {j.org} <span class="muted num">· {j.period}</span></p>)}
       </div>
     </div>
     <footer>{foot()}</footer>
@@ -289,8 +292,9 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   .ctable { border-collapse: collapse; width: 100%; font-size: 15px; }
   .ctable th, .ctable td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--border); }
   .ctable thead th { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); background: var(--bg); }
-  .ctable tbody th { color: var(--primary); font-family: var(--font-head); font-size: 17px; width: 20%; }
-  .ctable .small { font-size: 12.5px; color: var(--text-muted); width: 34%; }
+  .ctable tbody th { color: var(--primary); font-family: var(--font-head); font-size: 17px; width: 17%; }
+  .ctable .body { font-size: 14px; width: 48%; }
+  .ctable .small { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
   .ctable .list { font-size: 14.5px; gap: 3px; }
   .body { font-size: 17px; }
   .ftable th, .ftable td { padding: 4px 10px; font-size: 13px; }
