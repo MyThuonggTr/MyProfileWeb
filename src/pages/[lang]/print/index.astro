@@ -4,7 +4,7 @@
 import "@fontsource-variable/inter";
 import "@fontsource-variable/source-serif-4";
 import "../../../styles/global.css";
-import { LANGS, type Lang, raw, text, labelled, pipes, numbered, clauses, items, titled, basis, attr, card, job, rowIds } from "../../../lib/content";
+import { LANGS, type Lang, raw, text, labelled, pipes, numbered, clauses, items, titled, basis, attr, card, job, rowIds, rich } from "../../../lib/content";
 import { ui, EMAIL, PHONE, CASES, FILES, fileOf } from "../../../lib/ui";
 
 export const getStaticPaths = () => LANGS.map((lang) => ({ params: { lang } }));
@@ -23,12 +23,11 @@ const creds = ["valuation", "english", "chinese", "ic3"].map((id) => raw("creden
 const skills = rowIds("skills_map").filter((id) => id !== "headline").map((id) => raw("skills_map", id, lang).split(" | "));
 const tagsOf = (b: string) => pipes(text(b, "tagline", lang));
 const chipsOf = (b: string) => { const tg = tagsOf(b); return [...tg.slice(0, -1), ...tg.at(-1)!.split(". ")]; };
-const flags = numbered(text("case4", "red_flags", lang)).map((f) => cap(f.replace(/;$/, "")));
-const checks = rowIds("case4").filter((id) => /^check\d+$/.test(id)).map((id) => {
-  const { label, body } = labelled("case4", id, lang);
-  const m = label.match(/^(\d+)\. (.*)$/)!;
-  return { n: m[1], title: m[2], flags: (attr<number[]>("case4", id, "flags") ?? []).map((n) => flags[n - 1]), ...basis(cap(body)) };
-});
+type Step = { phase: number; title: string; review: string; risk: string; basis: string };
+const steps = rich<Step>("case4", "steps", lang).map((x, k) => ({ ...x, n: k + 1 }));
+const phaseNames = pipes(text("case4", "phases", lang));
+const lenses = rich<{ role: string; question: string; points: string[] }>("case4", "lenses", lang);
+const scenarios = rich<{ scenario: string; irr: string; npv: string; peak: string }>("case4", "example", lang);
 const chatbot = text("research", "chatbot_body", lang);
 const dow = titled(raw("research", "dowjones", lang));
 const ebib = titled(raw("research", "ebib", lang));
@@ -36,7 +35,7 @@ const principles = ["p1", "p2", "p3"].map((id) => labelled("principles", id, lan
 const L = (b: string, id: string) => labelled(b, id, lang);
 const month = "11/2026";
 const pageLabel = lang === "vi" ? "Trang" : "Page";
-const slides = 18;
+const slides = 19;
 let n = 0;
 const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
 ---
@@ -153,38 +152,56 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
     <footer>{foot()}</footer>
   </section>
 
-  <!-- 10–11 Acquisition checklist -->
+  <!-- Legal review across the project life cycle -->
   <section class="slide dense">
     <ul class="chips">{tagsOf("case4").map((c, i) => <li class={i === 0 ? "chip chip--key" : "chip"}>{c}</li>)}</ul>
     <h2>{text("case4", "headline", lang)}</h2>
     <p class="lead"><strong>{t.question}:</strong> {text("case4", "question", lang)}</p>
-    <div class="box box--line"><p><strong>{L("case4", "scope").label}:</strong> {L("case4", "scope").body} <strong>{L("case4", "how_to_read").label}:</strong> {L("case4", "how_to_read").body}</p></div>
-    <div class="row2">
-      <div class="box"><h3>{cap(L("case4", "step0").label)}</h3><p>{cap(L("case4", "step0").body)}</p></div>
-      <div class="box"><h3>{L("case4", "practice").label}</h3><p>{cap(L("case4", "practice").body)}</p></div>
+    <div class="box box--line"><p><strong>{L("case4", "thesis").label}:</strong> {L("case4", "thesis").body}</p></div>
+    <div class="pflow">
+      {phaseNames.map((name, k) => (
+        <div class="pflow__phase">
+          <p class="pflow__name">{String(k + 1).padStart(2, "0")} · {name}</p>
+          <ol class="pflow__steps">{steps.filter((x) => x.phase === k + 1).map((x) => <li><span class="pflow__dot">{x.n}</span>{x.title}</li>)}</ol>
+        </div>
+      ))}
     </div>
+    <p class="small muted"><strong>{L("case4", "how_to_read").label}:</strong> {L("case4", "how_to_read").body}</p>
     <footer>{foot()}</footer>
   </section>
-  {[[0, 2], [2, 5], [5, 7]].map(([a, b], k, all) => (
+  {[[0, 3], [3, 6], [6, 9]].map(([a, b], k, all) => (
     <section class="slide dense">
-      <h2>{t.checks}</h2>
+      <h2>{t.process}</h2>
       <table class="ctable">
-        <thead><tr><th>#</th><th>{t.checks}</th><th>{t.details}</th><th>{t.redFlag}</th></tr></thead>
+        <thead><tr><th>#</th><th>{t.stepWord}</th><th>{t.review}</th><th>{t.risk}</th></tr></thead>
         <tbody>
-          {checks.slice(a, b).map((c) => (
+          {steps.slice(a, b).map((x) => (
             <tr>
-              <td class="n num">{c.n.padStart(2, "0")}</td>
-              <th>{c.title}</th>
-              <td class="body">{c.body}{c.basis && <p class="small">{t.basis}: {c.basis}</p>}</td>
-              <td>{c.flags.length ? <ul class="list">{c.flags.map((f) => <li>{f}</li>)}</ul> : "–"}</td>
+              <td class="n num">{String(x.n).padStart(2, "0")}</td>
+              <th>{x.title}</th>
+              <td class="body">{x.review}<p class="small">{t.basis}: {x.basis}</p></td>
+              <td class="risk">{x.risk}</td>
             </tr>
           ))}
         </tbody>
       </table>
-      {k === all.length - 1 && <div class="box box--line"><p><strong>{L("case4", "into_price").label}:</strong> {cap(L("case4", "into_price").body)}</p></div>}
+      {k === all.length - 1 && (
+        <div class="ex">
+          <h3>{text("case4", "example_headline", lang)}</h3>
+          <table class="ctable etable">
+            <thead><tr><th>{t.exScenario}</th><th>{t.exIrr}</th><th>{t.exNpv}</th><th>{t.exPeak}</th></tr></thead>
+            <tbody>{scenarios.map((x) => <tr><th>{x.scenario}</th><td class="num">{x.irr}</td><td class="num">{x.npv}</td><td class="num">{x.peak}</td></tr>)}</tbody>
+          </table>
+        </div>
+      )}
       <footer>{foot()}</footer>
     </section>
   ))}
+  <section class="slide dense">
+    <h2>{text("case4", "lenses_headline", lang)}</h2>
+    <div class="row3">{lenses.map((l) => <div class="box"><h3>{l.role}</h3><p class="muted"><em>{l.question}</em></p><ul class="list small">{l.points.map((x) => <li>{x}</li>)}</ul></div>)}</div>
+    <footer>{foot()}</footer>
+  </section>
 
   <!-- 12 Research -->
   <section class="slide dense">
@@ -295,6 +312,18 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   .ctable tbody th { color: var(--primary); font-family: var(--font-head); font-size: 17px; width: 17%; }
   .ctable .body { font-size: 14px; width: 48%; }
   .ctable .small { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .ctable .risk { font-size: 13.5px; color: var(--text-2); width: 30%; }
+  .etable td, .etable th { font-size: 14px; }
+  .ex { margin-top: 4px; }
+  .ex h3 { font-size: 16px; margin-bottom: 2px; }
+  .ex .ctable th, .ex .ctable td { padding: 5px 10px; }
+  .pflow { display: grid; grid-template-columns: 4fr 3fr 2fr; gap: 12px; }
+  .pflow__phase { border: 1px solid var(--border); border-top: 4px solid var(--primary); border-radius: 8px; padding: 10px 12px; }
+  .pflow__phase:nth-child(3) { border-top-color: var(--accent-decor); }
+  .pflow__name { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+  .pflow__steps { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; }
+  .pflow__steps li { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; font-size: 13px; line-height: 1.3; }
+  .pflow__dot { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 13px; }
   .ctable .list { font-size: 14.5px; gap: 3px; }
   .body { font-size: 17px; }
   .ftable th, .ftable td { padding: 4px 10px; font-size: 13px; }

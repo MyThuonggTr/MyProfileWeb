@@ -64,6 +64,9 @@ export function titled(s: string): { title: string; meta: string; body: string }
 
 export const items = (block: string, id: string, lang: Lang): Item[] => row(block, id).items?.[lang] ?? [];
 
+/** Structured items of any shape (process steps, reading lenses, scenario rows). */
+export const rich = <T,>(block: string, id: string, lang: Lang): T[] => ((row(block, id).items?.[lang] ?? []) as unknown) as T[];
+
 /** A project card: one key number plus tools and chart name. */
 export type Card = Item & { tools: string; chart: string };
 export const card = (block: string, lang: Lang) => items(block, "card", lang)[0] as Card;

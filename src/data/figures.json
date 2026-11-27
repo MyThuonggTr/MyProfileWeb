@@ -600,5 +600,40 @@
     "value": "1097.1",
     "unit": "VND bn",
     "on_page": false
+  },
+  {
+    "case": "case4",
+    "key": "delay2_irr",
+    "value": "16.9",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case4",
+    "key": "delay2_npv",
+    "value": "122.1",
+    "unit": "VND bn",
+    "on_page": true
+  },
+  {
+    "case": "case4",
+    "key": "delay2_peak",
+    "value": "2085",
+    "unit": "VND bn",
+    "on_page": true
+  },
+  {
+    "case": "case4",
+    "key": "delay4_irr",
+    "value": "13.5",
+    "unit": "%",
+    "on_page": true
+  },
+  {
+    "case": "case4",
+    "key": "delay4_npv",
+    "value": "-15.3",
+    "unit": "VND bn",
+    "on_page": false
   }
 ]

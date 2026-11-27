@@ -351,27 +351,27 @@
       "rows": [
         {
           "id": "tagline",
-          "en": "Tag line: Legal due diligence | Residential and mixed-use development projects | Self-initiated, legal basis updated to 11/2026",
-          "vi": "Dòng thẻ: Thẩm định pháp lý | Dự án nhà ở và hỗn hợp đang phát triển | Tự xây dựng, căn cứ pháp lý cập nhật đến 11/2026"
+          "en": "Tag line: Legal review | Commercial housing projects | Self-initiated, legal basis updated to 11/2026",
+          "vi": "Dòng thẻ: Thẩm định pháp lý | Dự án nhà ở thương mại | Tự xây dựng, căn cứ pháp lý cập nhật đến 11/2026"
         },
         {
           "id": "card",
-          "en": "Card: 6 project stages, 8 key risks | Tools: legal and document review",
-          "vi": "Thẻ: 6 giai đoạn, 8 rủi ro trọng yếu | Công cụ: rà soát pháp lý và hồ sơ",
+          "en": "Card: IRR down 4.1 points if sales start 2 quarters late | Tools: legal review, Excel",
+          "vi": "Thẻ: IRR giảm 4,1 điểm khi chậm mở bán 2 quý | Công cụ: rà soát pháp lý, Excel",
           "items": {
-            "en": [
+            "vi": [
               {
-                "value": "6 + 8",
-                "label": "project stages and key risks",
-                "tools": "Legal and document review",
+                "value": "−4,1 điểm",
+                "label": "IRR dự án Riverside nếu chậm đủ điều kiện mở bán 2 quý",
+                "tools": "Rà soát pháp lý · Excel",
                 "chart": ""
               }
             ],
-            "vi": [
+            "en": [
               {
-                "value": "6 + 8",
-                "label": "giai đoạn pháp lý và rủi ro trọng yếu",
-                "tools": "Rà soát pháp lý và hồ sơ",
+                "value": "−4.1 pts",
+                "label": "Riverside project IRR if sales eligibility comes 2 quarters late",
+                "tools": "Legal review · Excel",
                 "chart": ""
               }
             ]
@@ -379,107 +379,292 @@
         },
         {
           "id": "question",
-          "en": "Purpose: Review a development project's legal position in the order the project is actually built up, from land to handover, to see which documents to check and which risks affect price or deal terms in an acquisition.",
-          "vi": "Mục đích: Rà soát pháp lý một dự án bất động sản theo đúng trình tự hình thành dự án, từ quỹ đất đến bàn giao, để xác định hồ sơ cần kiểm tra và rủi ro ảnh hưởng đến giá hoặc điều khoản khi nhận chuyển nhượng."
+          "en": "Purpose: Set out, for each stage of a project, which approvals must exist, which legal risks can arise, and how they affect timing, cost and value.",
+          "vi": "Mục đích: Xác định ở từng bước của dự án cần có văn bản gì, rủi ro pháp lý nào có thể xảy ra, và rủi ro đó ảnh hưởng thế nào đến tiến độ, chi phí và giá trị."
         },
         {
           "id": "headline",
-          "en": "Headline: Legal Due Diligence Checklist for Development Project Acquisitions",
-          "vi": "Tiêu đề: Danh mục thẩm định pháp lý khi nhận chuyển nhượng dự án bất động sản"
+          "en": "Headline: Legal Review Across a Development Project's Life Cycle",
+          "vi": "Tiêu đề: Rà soát pháp lý dự án bất động sản theo vòng đời dự án"
         },
         {
-          "id": "scope",
-          "en": "Scope: development projects only. For standing income assets such as office buildings, the review centres on leases, building condition and the land-use certificate.",
-          "vi": "Phạm vi: áp dụng cho dự án đang phát triển. Với tài sản đang khai thác như tòa nhà văn phòng, trọng tâm rà soát là hợp đồng thuê, tình trạng kỹ thuật và giấy chứng nhận."
+          "id": "thesis",
+          "en": "Approach: The legal position decides three things about a project: whether it can be built, whether it can be sold, and how long and how much it takes to get there. At every stage I ask three questions: what is already approved, what is still missing, and if something stalls, how much later the cash comes and how much more it costs.",
+          "vi": "Cách tiếp cận: Pháp lý quyết định ba điều của một dự án: có được làm không, có được bán không, và mất bao lâu, tốn bao nhiêu để đi đến đó. Ở mỗi bước, tôi rà bằng ba câu hỏi: đã có văn bản gì, còn thiếu gì, và nếu vướng thì dòng tiền chậm bao lâu, tốn thêm bao nhiêu."
         },
         {
           "id": "how_to_read",
-          "en": "How to read: check the documents of the stage the project has reached and of every earlier stage. Stages not yet reached are work the buyer will have to complete, so they go into the timeline and costs of the valuation model.",
-          "vi": "Cách đọc: dự án đang ở giai đoạn nào thì rà soát hồ sơ của giai đoạn đó và toàn bộ các giai đoạn trước. Các giai đoạn chưa tới là phần việc bên mua phải tự hoàn thành, cần đưa vào tiến độ và chi phí trong mô hình định giá."
+          "en": "How to read: review the stage the project has reached and every stage before it. Stages not yet reached are work still to be done, so they go into the model's timeline and costs.",
+          "vi": "Cách đọc: dự án đang ở bước nào thì rà soát bước đó và mọi bước trước. Các bước chưa tới là việc bên mua hoặc chủ đầu tư còn phải làm, cần đưa vào tiến độ và chi phí trong mô hình."
         },
         {
-          "id": "step0",
-          "en": "Step 0 – Deal structure: a share acquisition keeps licences and land rights in place but inherits all liabilities; a project transfer starts clean but must meet the conditions of the Law on Real Estate Business 29/2023, Articles 39–42. The structure sets the scope of the review.",
-          "vi": "Bước 0 – Cấu trúc giao dịch: mua cổ phần hoặc phần vốn góp của công ty dự án giữ nguyên giấy phép và quyền sử dụng đất nhưng kế thừa toàn bộ nghĩa vụ; nhận chuyển nhượng dự án không kế thừa nghĩa vụ cũ nhưng phải đáp ứng điều kiện tại Luật Kinh doanh bất động sản 29/2023, Điều 39–42. Cấu trúc giao dịch quyết định phạm vi thẩm định."
+          "id": "phases",
+          "en": "Phases: Pre-investment | Implementation | Completion",
+          "vi": "Giai đoạn: Chuẩn bị đầu tư | Thực hiện đầu tư | Kết thúc đầu tư"
         },
         {
-          "id": "check1",
-          "en": "1. Land and developer: how the land was obtained (land-use right auction, investor tender, negotiated acquisition of residential land, or the pilot on other land under Resolution 171/2024); the investment policy approval that also approves the investor; the project timeline still valid or extended; the developer's equity meeting the legal minimum. Basis: Luật Đất đai 31/2024, Articles 126–127; Nghị quyết 171/2024/QH15; Luật Đầu tư 143/2025; Luật Nhà ở 27/2023; Luật Kinh doanh bất động sản 29/2023, Article 9.",
-          "vi": "1. Quỹ đất và chủ đầu tư: cách có đất (đấu giá quyền sử dụng đất, đấu thầu lựa chọn nhà đầu tư, thỏa thuận nhận quyền sử dụng đất ở, hoặc thí điểm trên đất khác theo Nghị quyết 171/2024); quyết định chấp thuận chủ trương đầu tư đồng thời chấp thuận nhà đầu tư; tiến độ dự án còn hiệu lực hoặc đã gia hạn; chủ đầu tư đủ điều kiện về vốn chủ sở hữu. Căn cứ: Luật Đất đai 31/2024, Điều 126–127; Nghị quyết 171/2024/QH15; Luật Đầu tư 143/2025; Luật Nhà ở 27/2023; Luật Kinh doanh bất động sản 29/2023, Điều 9.",
-          "flags": [
-            3
-          ]
+          "id": "steps",
+          "en": "Nine legal steps, from land selection to handover and certificates.",
+          "vi": "Chín bước pháp lý của dự án, từ chọn quỹ đất đến bàn giao và cấp giấy chứng nhận.",
+          "items": {
+            "vi": [
+              {
+                "phase": 1,
+                "title": "Chọn quỹ đất",
+                "review": "Quy hoạch sử dụng đất và quy hoạch phân khu 1/2000 cho phép làm nhà ở không; loại đất, nguồn gốc, giấy chứng nhận; tranh chấp, kê biên, thế chấp.",
+                "risk": "Không phải đất ở và không thuộc danh mục thí điểm; quy hoạch đang điều chỉnh.",
+                "basis": "Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Đất đai 31/2024"
+              },
+              {
+                "phase": 1,
+                "title": "Đưa quỹ đất vào doanh nghiệp",
+                "review": "Con đường có đất: thỏa thuận nhận quyền sử dụng đất ở, đấu giá, đấu thầu lựa chọn nhà đầu tư, nhận chuyển nhượng dự án, hoặc mua cổ phần công ty dự án; điều kiện riêng của từng con đường.",
+                "risk": "Đất khác không thuộc thí điểm; dự án chưa xong nghĩa vụ tài chính về đất nên chưa được chuyển nhượng.",
+                "basis": "Luật Đất đai 31/2024, Điều 126–127; Nghị quyết 171/2024/QH15; Luật Kinh doanh bất động sản 29/2023, Điều 39–42"
+              },
+              {
+                "phase": 1,
+                "title": "Chấp thuận chủ trương đầu tư",
+                "review": "Quyết định chấp thuận chủ trương, đồng thời chấp thuận nhà đầu tư; quy mô, tổng vốn, tiến độ; vốn chủ sở hữu tối thiểu 20% (dự án dưới 20 ha) hoặc 15% (từ 20 ha).",
+                "risk": "Quá tiến độ mà chưa gia hạn, có nguy cơ chấm dứt dự án và thu hồi đất.",
+                "basis": "Luật Đầu tư 143/2025; Luật Kinh doanh bất động sản 29/2023, Điều 9"
+              },
+              {
+                "phase": 1,
+                "title": "Quy hoạch 1/500 và thiết kế",
+                "review": "Quy hoạch chi tiết 1/500 và các lần điều chỉnh; báo cáo nghiên cứu khả thi đã thẩm định; thẩm duyệt phòng cháy, chữa cháy; giấy phép môi trường.",
+                "risk": "Quy hoạch điều chỉnh làm giảm diện tích sàn hoặc số căn so với phương án kinh doanh.",
+                "basis": "Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020"
+              },
+              {
+                "phase": 2,
+                "title": "Giao đất và tiền sử dụng đất",
+                "review": "Tiến độ bồi thường, giải phóng mặt bằng; quyết định giao hoặc cho thuê đất, trả tiền một lần hay hằng năm; tiền sử dụng đất đã nộp hay còn bị tính lại (theo bảng giá đất từ 01/01/2026); 20% quỹ đất nhà ở xã hội hoặc tiền nộp thay; thế chấp.",
+                "risk": "Tiền sử dụng đất chưa chốt; mặt bằng được báo \"gần xong\"; đất trả tiền thuê hằng năm bị hạn chế chuyển nhượng, thế chấp.",
+                "basis": "Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Nghị định 100/2024, sửa bởi Nghị định 261/2025 và 54/2026"
+              },
+              {
+                "phase": 2,
+                "title": "Giấy phép xây dựng và thi công",
+                "review": "Giấy phép xây dựng hoặc diện miễn phép; thông báo khởi công; thi công đúng thiết kế; hợp đồng thầu và chi phí còn lại; khoản vay, thế chấp dự án.",
+                "risk": "Xây sai giấy phép; dự án đang thế chấp mà vẫn bán; dư nợ vay và trái phiếu vượt 4 lần vốn chủ sở hữu.",
+                "basis": "Luật Xây dựng 135/2025; Luật Nhà ở 27/2023; Nghị định 96/2024, Điều 5"
+              },
+              {
+                "phase": 2,
+                "title": "Mở bán nhà ở hình thành trong tương lai",
+                "review": "Văn bản của cơ quan quản lý cấp tỉnh xác nhận đủ điều kiện bán; nghiệm thu móng; bảo lãnh ngân hàng; tiền đã thu so với trần: cọc 5%, lần đầu 30%, trước bàn giao 70%, chưa có sổ 95%.",
+                "risk": "Thu tiền giữ chỗ, ký hợp tác chia sản phẩm trước khi đủ điều kiện; thu vượt trần; không có bảo lãnh.",
+                "basis": "Luật Kinh doanh bất động sản 29/2023, Điều 23–26; Nghị định 96/2024; Luật Nhà ở 27/2023"
+              },
+              {
+                "phase": 3,
+                "title": "Nghiệm thu",
+                "review": "Nghiệm thu phòng cháy, chữa cháy; nghiệm thu hoàn thành và kết quả kiểm tra của cơ quan chuyên môn; hồ sơ hoàn công.",
+                "risk": "Chưa nghiệm thu phòng cháy, chữa cháy nên chưa được bàn giao, chưa thu đợt tiền khi bàn giao.",
+                "basis": "Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024"
+              },
+              {
+                "phase": 3,
+                "title": "Bàn giao và cấp giấy chứng nhận",
+                "review": "Biên bản bàn giao, khiếu nại; hồ sơ cấp giấy chứng nhận cho người mua (nộp trong 50 ngày từ khi bàn giao); kinh phí bảo trì 2% chuyển cho Ban quản trị; quyết toán thuế.",
+                "risk": "Chậm cấp giấy chứng nhận nên chưa thu được 5% cuối; tranh chấp quỹ bảo trì.",
+                "basis": "Luật Nhà ở 27/2023; Luật Kinh doanh bất động sản 29/2023; Luật Đất đai 31/2024"
+              }
+            ],
+            "en": [
+              {
+                "phase": 1,
+                "title": "Land selection",
+                "review": "Whether the land-use plan and the 1/2000 zoning plan allow housing; land type, origin and certificate; disputes, seizures, mortgages.",
+                "risk": "Non-residential land outside the pilot list; zoning under revision.",
+                "basis": "Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Đất đai 31/2024"
+              },
+              {
+                "phase": 1,
+                "title": "Bringing the land into the company",
+                "review": "The route to the land: negotiated purchase of residential land, auction, investor tender, project transfer, or buying the project company; the conditions of each route.",
+                "risk": "Other land outside the pilot; land charges unpaid, so the project cannot yet be transferred.",
+                "basis": "Luật Đất đai 31/2024, Articles 126–127; Nghị quyết 171/2024/QH15; Luật Kinh doanh bất động sản 29/2023, Articles 39–42"
+              },
+              {
+                "phase": 1,
+                "title": "Investment policy approval",
+                "review": "Investment policy approval that also approves the investor; scale, total capital, timeline; developer equity of at least 20% (projects under 20 ha) or 15% (20 ha and above).",
+                "risk": "Timeline expired without extension, risking termination and land recovery.",
+                "basis": "Luật Đầu tư 143/2025; Luật Kinh doanh bất động sản 29/2023, Article 9"
+              },
+              {
+                "phase": 1,
+                "title": "1/500 plan and design",
+                "review": "1/500 detailed plan and amendments; appraised feasibility study; fire-safety design approval; environmental permit.",
+                "risk": "Plan amendments that cut floor area or unit count against the business plan.",
+                "basis": "Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020"
+              },
+              {
+                "phase": 2,
+                "title": "Land allocation and land use fee",
+                "review": "Compensation and clearance progress; allocation or lease, one-off or annual rent; land use fee paid or open to reassessment (land price table from 01/01/2026); 20% social-housing land or cash instead; mortgages.",
+                "risk": "Land use fee not final; clearance 'nearly done'; annual-rent land limits transfer and mortgage.",
+                "basis": "Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Nghị định 100/2024, amended by Nghị định 261/2025 and 54/2026"
+              },
+              {
+                "phase": 2,
+                "title": "Building permit and construction",
+                "review": "Building permit or exemption; notice of commencement; works built to the approved design; contractor contracts and cost to complete; loans and project mortgages.",
+                "risk": "Works outside the permit; mortgaged project still being sold; loans plus bonds above 4 times equity.",
+                "basis": "Luật Xây dựng 135/2025; Luật Nhà ở 27/2023; Nghị định 96/2024, Article 5"
+              },
+              {
+                "phase": 2,
+                "title": "Off-plan sales launch",
+                "review": "Provincial authority's letter confirming eligibility for sale; foundation acceptance; bank guarantee; cash collected against the caps: 5% deposit, 30% first payment, 70% before handover, 95% before the certificate.",
+                "risk": "Booking fees or product-sharing deals before eligibility; collections above the caps; no guarantee.",
+                "basis": "Luật Kinh doanh bất động sản 29/2023, Articles 23–26; Nghị định 96/2024; Luật Nhà ở 27/2023"
+              },
+              {
+                "phase": 3,
+                "title": "Completion acceptance",
+                "review": "Fire-safety acceptance; completion acceptance and the authority's inspection result; as-built records.",
+                "risk": "No fire-safety acceptance, so no handover and no handover payment.",
+                "basis": "Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024"
+              },
+              {
+                "phase": 3,
+                "title": "Handover and certificates",
+                "review": "Handover records and complaints; buyers' certificate applications (filed within 50 days of handover); 2% maintenance fund passed to the owners' board; tax finalisation.",
+                "risk": "Late certificates, so the last 5% is not collected; maintenance fund disputes.",
+                "basis": "Luật Nhà ở 27/2023; Luật Kinh doanh bất động sản 29/2023; Luật Đất đai 31/2024"
+              }
+            ]
+          }
         },
         {
-          "id": "check2",
-          "en": "2. Planning and design: approved 1/500 detailed plan or master layout and any amendments; density, floor-area ratio, height and unit count against the business plan; appraised feasibility study; fire-safety design approval; environmental impact assessment or environmental permit. Basis: Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020.",
-          "vi": "2. Quy hoạch và thiết kế: quy hoạch chi tiết 1/500 hoặc tổng mặt bằng đã duyệt và các lần điều chỉnh; chỉ tiêu mật độ, hệ số sử dụng đất, tầng cao, số căn so với phương án kinh doanh; báo cáo nghiên cứu khả thi đã thẩm định; thẩm duyệt thiết kế phòng cháy, chữa cháy; báo cáo đánh giá tác động môi trường hoặc giấy phép môi trường. Căn cứ: Luật Quy hoạch đô thị và nông thôn 47/2024; Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Bảo vệ môi trường 72/2020.",
-          "flags": [
-            7
-          ]
+          "id": "lenses_headline",
+          "en": "Headline: One legal file, three readings",
+          "vi": "Tiêu đề: Cùng một bộ hồ sơ, ba cách đọc"
         },
         {
-          "id": "check3",
-          "en": "3. Land, clearance and land charges: compensation and clearance progress; allocation or lease decision, one-off or annual rent, land-use term; whether the land use fee is final and paid or open to reassessment (from 01/01/2026 it is based on the land price table); the certificate issued for the project; mortgages; the 20% social-housing land obligation or the cash paid instead. Basis: Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Nghị định 100/2024, amended by Nghị định 261/2025.",
-          "vi": "3. Giao đất, bồi thường, tiền sử dụng đất: tiến độ bồi thường, giải phóng mặt bằng; quyết định giao đất hoặc cho thuê đất, trả tiền một lần hay hằng năm, thời hạn sử dụng; tiền sử dụng đất đã xác định và đã nộp hay còn có thể bị tính lại (từ 01/01/2026 tính theo bảng giá đất); giấy chứng nhận cấp cho dự án; thế chấp; nghĩa vụ 20% quỹ đất nhà ở xã hội hoặc khoản tiền nộp thay. Căn cứ: Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Nghị định 100/2024, sửa đổi bởi Nghị định 261/2025.",
-          "flags": [
-            1,
-            2,
-            5,
-            6
-          ]
+          "id": "lenses",
+          "en": "Three readings: valuation, investment analysis, project M&A.",
+          "vi": "Ba góc nhìn: thẩm định giá, phân tích đầu tư, M&A dự án.",
+          "items": {
+            "vi": [
+              {
+                "role": "Thẩm định giá",
+                "question": "Đang định giá quyền gì, trong tình trạng pháp lý nào?",
+                "points": [
+                  "Xác định đúng quyền được định giá: giao hay thuê đất, trả tiền một lần hay hằng năm, thời hạn còn lại, có thế chấp không.",
+                  "Pháp lý chưa đủ thì ghi rõ giả thiết đặc biệt trong chứng thư, như bài văn phòng hạng B với hợp đồng thuê nguyên tòa.",
+                  "Pháp lý đi vào phương pháp: thời điểm được bán và các khoản phải nộp cho Nhà nước nằm trong dòng tiền; chênh lệch pháp lý là một yếu tố điều chỉnh khi so sánh."
+                ]
+              },
+              {
+                "role": "Phân tích đầu tư",
+                "question": "Pháp lý đặt mốc thời gian và chi phí nào cho mô hình?",
+                "points": [
+                  "Quy hoạch 1/500 quyết định diện tích sàn, số căn, tức nền của doanh thu.",
+                  "Tiền sử dụng đất và nghĩa vụ nhà ở xã hội là khoản chi lớn đầu dự án.",
+                  "Ngày đủ điều kiện mở bán là mốc sớm nhất được thu tiền khách; trần thu tiền và giới hạn vay quyết định nhu cầu vốn."
+                ]
+              },
+              {
+                "role": "M&A dự án",
+                "question": "Có nên mua không, mua theo cấu trúc nào, giá và điều khoản đổi ra sao?",
+                "points": [
+                  "Chọn cấu trúc trước: mua cổ phần kế thừa mọi nghĩa vụ cũ; nhận chuyển nhượng dự án phải đủ điều kiện và được chấp thuận.",
+                  "Rà soát đến bước dự án đã đạt, cùng hồ sơ doanh nghiệp, tài chính và thuế; luật sư và kiểm toán thực hiện, người phân tích đọc và lượng hóa.",
+                  "Xếp vấn đề ba mức: chặn giao dịch, định giá lại, hoặc xử lý bằng hợp đồng (điều kiện tiên quyết, giữ lại tiền, bồi hoàn)."
+                ]
+              }
+            ],
+            "en": [
+              {
+                "role": "Valuation",
+                "question": "Which interest is being valued, and in what legal state?",
+                "points": [
+                  "Define the interest correctly: allocated or leased land, one-off or annual rent, remaining term, any mortgage.",
+                  "Where the legal position is incomplete, state a special assumption in the certificate, as in the Grade-B office case with its whole-building lease.",
+                  "Legal status enters the method: when units can be sold and what is owed to the State sit in the cash flow; legal differences are an adjustment factor in comparisons."
+                ]
+              },
+              {
+                "role": "Investment analysis",
+                "question": "Which dates and costs does the legal path set for the model?",
+                "points": [
+                  "The 1/500 plan fixes floor area and unit count, the base of revenue.",
+                  "Land use fees and the social-housing obligation are the largest early costs.",
+                  "The date of eligibility for sale is the earliest buyer cash; collection caps and borrowing limits set the funding need."
+                ]
+              },
+              {
+                "role": "Project M&A",
+                "question": "Buy or not, under which structure, and how do price and terms change?",
+                "points": [
+                  "Pick the structure first: a share deal inherits all past liabilities; a project transfer must meet the conditions and be approved.",
+                  "Review up to the stage the project has reached, plus company, finance and tax records; lawyers and auditors do the work, the analyst reads and quantifies it.",
+                  "Rank issues in three tiers: deal-breaker, re-price, or handle in the contract (conditions precedent, retention, indemnity)."
+                ]
+              }
+            ]
+          }
         },
         {
-          "id": "check4",
-          "en": "4. Construction: building permit, or the permit exemption where the feasibility study has been appraised; notice of commencement; site progress against the approved design; general and main contractor contracts and the cost to complete. Basis: Luật Xây dựng 135/2025.",
-          "vi": "4. Xây dựng: giấy phép xây dựng, hoặc diện miễn phép khi báo cáo nghiên cứu khả thi đã được thẩm định; thông báo khởi công; hiện trạng thi công so với thiết kế được duyệt; hợp đồng tổng thầu, nhà thầu chính và chi phí còn lại để hoàn thành. Căn cứ: Luật Xây dựng 135/2025.",
-          "flags": [
-            8
-          ]
+          "id": "example_headline",
+          "en": "Headline: Example: a late sales launch at Riverside Residences",
+          "vi": "Tiêu đề: Ví dụ: chậm đủ điều kiện mở bán ở dự án Riverside Residences"
         },
         {
-          "id": "check5",
-          "en": "5. Off-plan sales launch: the provincial real estate authority's letter confirming the units are eligible for sale; foundation acceptance; the bank guarantee; signed buyer contracts, deposits and instalments against the legal caps (5% deposit, 30% first payment, 70% before handover, 95% before the certificate); co-investment and agency contracts. Basis: Luật Kinh doanh bất động sản 29/2023, Articles 23–26; Nghị định 96/2024.",
-          "vi": "5. Mở bán nhà ở hình thành trong tương lai: văn bản của cơ quan quản lý kinh doanh bất động sản cấp tỉnh xác nhận nhà ở đủ điều kiện bán; phần móng đã nghiệm thu; bảo lãnh ngân hàng; hợp đồng đã ký với khách hàng, tiền cọc và tiền đã thu so với trần luật định (cọc 5%, lần đầu 30%, trước bàn giao 70%, trước khi có giấy chứng nhận 95%); hợp đồng hợp tác đầu tư và hợp đồng đại lý. Căn cứ: Luật Kinh doanh bất động sản 29/2023, Điều 23–26; Nghị định 96/2024.",
-          "flags": [
-            4
-          ]
-        },
-        {
-          "id": "check6",
-          "en": "6. Completion, handover and certificates: fire-safety acceptance and completion acceptance; handover records, promised handover dates and buyer complaints; certificate applications for buyers; final tax settlement of the project. Basis: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Đất đai 31/2024.",
-          "vi": "6. Nghiệm thu, bàn giao, cấp giấy chứng nhận: nghiệm thu phòng cháy, chữa cháy và nghiệm thu hoàn thành công trình; biên bản bàn giao, cam kết tiến độ bàn giao và khiếu nại của khách hàng; hồ sơ cấp giấy chứng nhận cho người mua; quyết toán thuế dự án. Căn cứ: Luật Xây dựng 135/2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ 55/2024; Luật Đất đai 31/2024.",
-          "flags": [
-            8
-          ]
-        },
-        {
-          "id": "check7",
-          "en": "7. Company, finance and tax (share deal): ownership chain, pledged shares, pre-emption rights; audited accounts, loans, bonds and collateral, contingent and related-party liabilities; leverage per project (loans plus bonds no more than 4 times equity for projects under 20 ha, 5.67 times from 20 ha); tax finalisation; foreign investors' share-purchase registration and merger filing above the thresholds. Basis: Nghị định 96/2024, Article 5, amended by Nghị định 54/2026; Luật Đầu tư 143/2025; Luật Cạnh tranh 2018; Nghị quyết 66.18/2026/NQ-CP.",
-          "vi": "7. Doanh nghiệp, tài chính và thuế: áp dụng khi mua cổ phần; rà soát chuỗi sở hữu, cổ phần đang cầm cố, quyền ưu tiên mua; báo cáo tài chính kiểm toán, khoản vay, trái phiếu và tài sản bảo đảm, nghĩa vụ tiềm tàng và giao dịch với bên liên quan; đòn bẩy của từng dự án (dư nợ vay và trái phiếu không quá 4 lần vốn chủ sở hữu với dự án dưới 20 ha, 5,67 lần với dự án từ 20 ha); quyết toán thuế; đăng ký góp vốn của nhà đầu tư nước ngoài và thông báo tập trung kinh tế khi vượt ngưỡng. Căn cứ: Nghị định 96/2024, Điều 5, sửa đổi bởi Nghị định 54/2026; Luật Đầu tư 143/2025; Luật Cạnh tranh 2018; Nghị quyết 66.18/2026/NQ-CP.",
-          "flags": [
-            6
-          ]
-        },
-        {
-          "id": "red_flags",
-          "en": "Key risks (red flags): (1) land use fee not yet final, or an inspection conclusion asking for it to be recalculated; (2) clearance described as 'nearly done'; (3) project timeline expired without an extension, which risks land recovery; (4) money taken from buyers above the caps, before the units were eligible for sale, or without a bank guarantee; (5) annual-rent land in a deal structured as a project transfer; (6) shares or land pledged, or the 20% social-housing obligation unresolved; (7) plan amendments that cut floor area or unit count against the business plan; (8) construction outside the permit or design, or no fire-safety acceptance, so units cannot be handed over or certified.",
-          "vi": "Rủi ro trọng yếu (red flags): (1) tiền sử dụng đất chưa xác định xong, hoặc có kết luận thanh tra yêu cầu tính lại; (2) giải phóng mặt bằng chưa hoàn tất nhưng được báo cáo là \"gần xong\"; (3) dự án quá tiến độ mà chưa được gia hạn, có nguy cơ bị thu hồi đất; (4) thu tiền khách vượt trần, thu khi chưa đủ điều kiện bán, hoặc không có bảo lãnh; (5) đất thuê trả tiền hằng năm nhưng giao dịch lại là chuyển nhượng dự án; (6) cổ phần hoặc đất đang cầm cố, thế chấp, hoặc nghĩa vụ 20% nhà ở xã hội chưa xử lý; (7) quy hoạch đã điều chỉnh làm giảm diện tích sàn hoặc số căn so với phương án kinh doanh; (8) xây dựng sai giấy phép hoặc thiết kế, chưa nghiệm thu phòng cháy, chữa cháy nên chưa bàn giao và cấp giấy chứng nhận được."
-        },
-        {
-          "id": "into_price",
-          "en": "Pricing the risks: each open issue is either quantified in the model (additional land use fee, cost to complete, months of delay) or turned into a deal term (price reduction, retention, specific indemnity from the seller).",
-          "vi": "Phản ánh vào giá giao dịch: mỗi vấn đề chưa xử lý được lượng hóa trong mô hình (tiền sử dụng đất phát sinh, chi phí hoàn thành, thời gian chậm tiến độ) hoặc chuyển thành điều khoản giao dịch (giảm giá, giữ lại một phần giá trị thanh toán, cam kết bồi hoàn của bên chuyển nhượng)."
-        },
-        {
-          "id": "practice",
-          "en": "In practice: in project M&A the buyer usually hires a law firm for legal due diligence and an audit firm for financial and tax due diligence. The output is a due diligence report that ranks issues by severity; material issues become conditions precedent, price adjustments or indemnities in the purchase agreement. This checklist follows the same order, at the level an investment analyst needs to read that report and carry the risks into the model.",
-          "vi": "Thực tế áp dụng: trong giao dịch mua bán, sáp nhập dự án, bên mua thường thuê công ty luật thẩm định pháp lý và công ty kiểm toán thẩm định tài chính, thuế. Kết quả là báo cáo thẩm định phân loại vấn đề theo mức độ nghiêm trọng; các vấn đề trọng yếu được chuyển thành điều kiện tiên quyết, điều chỉnh giá hoặc cam kết bồi hoàn trong hợp đồng mua bán. Danh mục này đi theo cùng trình tự đó, ở mức người phân tích đầu tư cần nắm để đọc báo cáo thẩm định và đưa rủi ro vào mô hình."
+          "id": "example",
+          "en": "Worked example: Using the Riverside Residences feasibility model itself, assume the letter confirming eligibility for sale arrives late: buyer collections (with the VAT and income tax tied to them) move later, while land, construction and operating costs keep their schedule. A two-quarter delay cuts project IRR from 21.0% to 16.9%, NPV from VND 236bn to VND 122bn, and lifts peak funding from VND 1,728bn to VND 2,085bn. At four quarters IRR falls to 13.5%, below the 13.87% WACC, and the project no longer creates value. Extra interest is not included, so the effect on equity is larger.",
+          "vi": "Ví dụ áp dụng: Dùng chính mô hình FS của dự án Riverside Residences, giả định văn bản đủ điều kiện mở bán đến muộn: tiền thu từ khách hàng (cùng thuế GTGT và thuế TNDN đi kèm) lùi lại, còn chi phí đất, xây dựng và vận hành giữ nguyên lịch. Chậm 2 quý làm IRR dự án giảm từ 21,0% xuống 16,9%, NPV từ 236 còn 122 tỷ đồng, nhu cầu vốn tối đa tăng từ 1.728 lên 2.085 tỷ đồng. Chậm 4 quý thì IRR còn 13,5%, thấp hơn WACC 13,87%, dự án không còn tạo giá trị. Kết quả chưa tính lãi vay phát sinh thêm, nên tác động lên vốn chủ sở hữu còn lớn hơn.",
+          "items": {
+            "vi": [
+              {
+                "scenario": "Phương án cơ sở",
+                "irr": "21,0%",
+                "npv": "236",
+                "peak": "1.728"
+              },
+              {
+                "scenario": "Chậm 2 quý",
+                "irr": "16,9%",
+                "npv": "122",
+                "peak": "2.085"
+              },
+              {
+                "scenario": "Chậm 4 quý",
+                "irr": "13,5%",
+                "npv": "âm khoảng 15",
+                "peak": "2.348"
+              }
+            ],
+            "en": [
+              {
+                "scenario": "Base case",
+                "irr": "21.0%",
+                "npv": "236",
+                "peak": "1,728"
+              },
+              {
+                "scenario": "2 quarters late",
+                "irr": "16.9%",
+                "npv": "122",
+                "peak": "2,085"
+              },
+              {
+                "scenario": "4 quarters late",
+                "irr": "13.5%",
+                "npv": "about −15",
+                "peak": "2,348"
+              }
+            ]
+          }
         },
         {
           "id": "from_practice",
-          "en": "Background: developed from reviewing each project's legal file before its sales launch at DKRA, and checked against current legislation.",
-          "vi": "Cơ sở xây dựng: phát triển từ kinh nghiệm nghiên cứu hồ sơ pháp lý của từng dự án trước khi mở bán tại DKRA, đối chiếu với văn bản pháp luật hiện hành."
+          "en": "Background: developed from reviewing each project's legal file before its sales launch at DKRA; the process is checked against current legislation, including consolidated texts from the Ministry of Construction and the National Assembly Office.",
+          "vi": "Cơ sở xây dựng: phát triển từ kinh nghiệm nghiên cứu hồ sơ pháp lý từng dự án trước khi mở bán tại DKRA; khung quy trình đối chiếu với văn bản pháp luật hiện hành, trong đó có các văn bản hợp nhất của Bộ Xây dựng và Văn phòng Quốc hội."
         }
       ]
     },

@@ -70,7 +70,7 @@ for (const s of sources) {
 
 // --- confirmed figures must appear on their page, formatted per language
 const figures = JSON.parse(fs.readFileSync(path.join(root, "src/data/figures.json"), "utf8"));
-const pageOf = { case3: "cases/grade-b-office/index.html", case2: "cases/riverside-residences/index.html", about: "index.html" };
+const pageOf = { case3: "cases/grade-b-office/index.html", case2: "cases/riverside-residences/index.html", case4: "cases/acquisition-checklist/index.html", about: "index.html" };
 const fmt = (n, lang, d) => n.toLocaleString(lang === "vi" ? "vi-VN" : "en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
 const decimals = (v) => (String(v).split(".")[1] ?? "").length;
 function expected(f, lang) {
