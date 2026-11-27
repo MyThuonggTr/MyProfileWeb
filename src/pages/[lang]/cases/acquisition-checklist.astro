@@ -10,7 +10,7 @@ const lang = Astro.params.lang as Lang;
 const t = ui(lang);
 
 type Step = { phase: number; title: string; review: string; risk: string; basis: string };
-type Lens = { role: string; question: string; points: string[] };
+type Lens = { role: string; points: string[] };
 type Scenario = { scenario: string; irr: string; npv: string; peak: string };
 
 const tags = pipes(text("case4", "tagline", lang));
@@ -85,7 +85,6 @@ const prevName = pipes(text("case2", "tagline", lang))[1];
         {lenses.map((l) => (
           <div class="card lens">
             <h3 class="h3">{l.role}</h3>
-            <p class="lens__q">{l.question}</p>
             <ul class="lens__list">{l.points.map((x) => <li>{x}</li>)}</ul>
           </div>
         ))}

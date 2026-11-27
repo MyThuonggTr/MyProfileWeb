@@ -26,7 +26,7 @@ const chipsOf = (b: string) => { const tg = tagsOf(b); return [...tg.slice(0, -1
 type Step = { phase: number; title: string; review: string; risk: string; basis: string };
 const steps = rich<Step>("case4", "steps", lang).map((x, k) => ({ ...x, n: k + 1 }));
 const phaseNames = pipes(text("case4", "phases", lang));
-const lenses = rich<{ role: string; question: string; points: string[] }>("case4", "lenses", lang);
+const lenses = rich<{ role: string; points: string[] }>("case4", "lenses", lang);
 const scenarios = rich<{ scenario: string; irr: string; npv: string; peak: string }>("case4", "example", lang);
 const chatbot = text("research", "chatbot_body", lang);
 const dow = titled(raw("research", "dowjones", lang));
@@ -199,7 +199,7 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   ))}
   <section class="slide dense">
     <h2>{text("case4", "lenses_headline", lang)}</h2>
-    <div class="row3">{lenses.map((l) => <div class="box"><h3>{l.role}</h3><p class="muted"><em>{l.question}</em></p><ul class="list small">{l.points.map((x) => <li>{x}</li>)}</ul></div>)}</div>
+    <div class="row3">{lenses.map((l) => <div class="box"><h3>{l.role}</h3><ul class="list small">{l.points.map((x) => <li>{x}</li>)}</ul></div>)}</div>
     <footer>{foot()}</footer>
   </section>
 

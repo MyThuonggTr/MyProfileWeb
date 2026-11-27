@@ -439,9 +439,9 @@
               {
                 "phase": 2,
                 "title": "Giao đất và tiền sử dụng đất",
-                "review": "Tiến độ bồi thường, giải phóng mặt bằng; quyết định giao hoặc cho thuê đất, trả tiền một lần hay hằng năm; tiền sử dụng đất đã nộp hay còn bị tính lại (theo bảng giá đất từ 01/01/2026); 20% quỹ đất nhà ở xã hội hoặc tiền nộp thay; thế chấp.",
+                "review": "Tiến độ bồi thường, giải phóng mặt bằng; quyết định giao hoặc cho thuê đất, trả tiền một lần hay hằng năm; tiền sử dụng đất đã nộp hay còn bị tính lại (theo bảng giá đất từ 01/01/2026); 20% quỹ đất nhà ở xã hội hoặc tiền nộp thay; ký quỹ hoặc bảo lãnh ngân hàng bảo đảm thực hiện dự án; thế chấp.",
                 "risk": "Tiền sử dụng đất chưa chốt; mặt bằng được báo \"gần xong\"; đất trả tiền thuê hằng năm bị hạn chế chuyển nhượng, thế chấp.",
-                "basis": "Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Nghị định 100/2024, sửa bởi Nghị định 261/2025 và 54/2026"
+                "basis": "Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Luật Đầu tư 143/2025, Điều 30; Nghị định 100/2024, sửa bởi Nghị định 261/2025 và 54/2026"
               },
               {
                 "phase": 2,
@@ -453,7 +453,7 @@
               {
                 "phase": 2,
                 "title": "Mở bán nhà ở hình thành trong tương lai",
-                "review": "Văn bản của cơ quan quản lý cấp tỉnh xác nhận đủ điều kiện bán; nghiệm thu móng; bảo lãnh ngân hàng; tiền đã thu so với trần: cọc 5%, lần đầu 30%, trước bàn giao 70%, chưa có sổ 95%.",
+                "review": "Văn bản của cơ quan quản lý cấp tỉnh xác nhận đủ điều kiện bán; nghiệm thu móng; thỏa thuận cấp bảo lãnh với ngân hàng và thư bảo lãnh cho từng khách hàng; tiền đã thu so với trần: cọc 5%, lần đầu 30%, trước bàn giao 70%, chưa có sổ 95%.",
                 "risk": "Thu tiền giữ chỗ, ký hợp tác chia sản phẩm trước khi đủ điều kiện; thu vượt trần; không có bảo lãnh.",
                 "basis": "Luật Kinh doanh bất động sản 29/2023, Điều 23–26; Nghị định 96/2024; Luật Nhà ở 27/2023"
               },
@@ -504,9 +504,9 @@
               {
                 "phase": 2,
                 "title": "Land allocation and land use fee",
-                "review": "Compensation and clearance progress; allocation or lease, one-off or annual rent; land use fee paid or open to reassessment (land price table from 01/01/2026); 20% social-housing land or cash instead; mortgages.",
+                "review": "Compensation and clearance progress; allocation or lease, one-off or annual rent; land use fee paid or open to reassessment (land price table from 01/01/2026); 20% social-housing land or cash instead; deposit or bank guarantee securing project performance; mortgages.",
                 "risk": "Land use fee not final; clearance 'nearly done'; annual-rent land limits transfer and mortgage.",
-                "basis": "Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Nghị định 100/2024, amended by Nghị định 261/2025 and 54/2026"
+                "basis": "Luật Đất đai 31/2024; Nghị quyết 254/2025/QH15; Luật Đầu tư 143/2025, Article 30; Nghị định 100/2024, amended by Nghị định 261/2025 and 54/2026"
               },
               {
                 "phase": 2,
@@ -518,7 +518,7 @@
               {
                 "phase": 2,
                 "title": "Off-plan sales launch",
-                "review": "Provincial authority's letter confirming eligibility for sale; foundation acceptance; bank guarantee; cash collected against the caps: 5% deposit, 30% first payment, 70% before handover, 95% before the certificate.",
+                "review": "Provincial authority's letter confirming eligibility for sale; foundation acceptance; the bank's guarantee agreement and a guarantee letter for each buyer; cash collected against the caps: 5% deposit, 30% first payment, 70% before handover, 95% before the certificate.",
                 "risk": "Booking fees or product-sharing deals before eligibility; collections above the caps; no guarantee.",
                 "basis": "Luật Kinh doanh bất động sản 29/2023, Articles 23–26; Nghị định 96/2024; Luật Nhà ở 27/2023"
               },
@@ -541,69 +541,63 @@
         },
         {
           "id": "lenses_headline",
-          "en": "Headline: One legal file, three readings",
-          "vi": "Tiêu đề: Cùng một bộ hồ sơ, ba cách đọc"
+          "en": "Headline: Legal review in valuation, investment analysis and M&A work",
+          "vi": "Tiêu đề: Pháp lý trong công việc thẩm định giá, phân tích đầu tư và M&A"
         },
         {
           "id": "lenses",
-          "en": "Three readings: valuation, investment analysis, project M&A.",
-          "vi": "Ba góc nhìn: thẩm định giá, phân tích đầu tư, M&A dự án.",
+          "en": "Legal review in valuation, investment analysis and M&A work.",
+          "vi": "Pháp lý trong công việc thẩm định giá, phân tích đầu tư và M&A.",
           "items": {
             "vi": [
               {
-                "role": "Thẩm định giá",
-                "question": "Đang định giá quyền gì, trong tình trạng pháp lý nào?",
+                "role": "Khi thẩm định giá",
                 "points": [
-                  "Xác định đúng quyền được định giá: giao hay thuê đất, trả tiền một lần hay hằng năm, thời hạn còn lại, có thế chấp không.",
-                  "Pháp lý chưa đủ thì ghi rõ giả thiết đặc biệt trong chứng thư, như bài văn phòng hạng B với hợp đồng thuê nguyên tòa.",
-                  "Pháp lý đi vào phương pháp: thời điểm được bán và các khoản phải nộp cho Nhà nước nằm trong dòng tiền; chênh lệch pháp lý là một yếu tố điều chỉnh khi so sánh."
+                  "Đối chiếu giấy chứng nhận, quyết định giao đất hoặc cho thuê đất với hiện trạng khi khảo sát: diện tích, mục đích sử dụng, thời hạn, hình thức trả tiền thuê đất. Các thông tin này được ghi vào mục đặc điểm pháp lý của chứng thư.",
+                  "Hồ sơ còn thiếu, như chưa có quy hoạch 1/500 hoặc chưa nộp tiền sử dụng đất, thì không tự coi là đã có. Nếu khách hàng cần giá trị theo kịch bản pháp lý đã hoàn thiện, đó là giả thiết đặc biệt và phải ghi rõ trong chứng thư, như bài văn phòng hạng B với giả thiết tòa nhà không bị ràng buộc bởi hợp đồng thuê nguyên tòa.",
+                  "Trong phương pháp thặng dư và dòng tiền chiết khấu, tiền sử dụng đất còn phải nộp và nghĩa vụ nhà ở xã hội được trừ như chi phí; thời điểm bắt đầu có doanh thu lấy theo mốc dự kiến đủ điều kiện bán, không lấy theo kế hoạch của chủ đầu tư khi chưa có căn cứ."
                 ]
               },
               {
-                "role": "Phân tích đầu tư",
-                "question": "Pháp lý đặt mốc thời gian và chi phí nào cho mô hình?",
+                "role": "Khi phân tích đầu tư",
                 "points": [
-                  "Quy hoạch 1/500 quyết định diện tích sàn, số căn, tức nền của doanh thu.",
-                  "Tiền sử dụng đất và nghĩa vụ nhà ở xã hội là khoản chi lớn đầu dự án.",
-                  "Ngày đủ điều kiện mở bán là mốc sớm nhất được thu tiền khách; trần thu tiền và giới hạn vay quyết định nhu cầu vốn."
+                  "Lập lịch pháp lý trước khi lập dòng tiền: thủ tục nào còn lại, cơ quan nào giải quyết, mất khoảng bao lâu. Mốc đủ điều kiện mở bán quan trọng nhất, vì trước mốc này không được thu tiền khách hàng.",
+                  "Kiểm tra mô hình không dùng chỉ tiêu cao hơn quy hoạch đã duyệt, và tiền thu từ khách hàng không vượt trần luật định ở từng mốc thanh toán.",
+                  "Luôn chạy kịch bản chậm tiến độ pháp lý. Với dự án Riverside, chậm 2 quý làm IRR giảm từ 21,0% xuống 16,9% (xem phần ví dụ)."
                 ]
               },
               {
-                "role": "M&A dự án",
-                "question": "Có nên mua không, mua theo cấu trúc nào, giá và điều khoản đổi ra sao?",
+                "role": "Khi tham gia M&A dự án",
                 "points": [
-                  "Chọn cấu trúc trước: mua cổ phần kế thừa mọi nghĩa vụ cũ; nhận chuyển nhượng dự án phải đủ điều kiện và được chấp thuận.",
-                  "Rà soát đến bước dự án đã đạt, cùng hồ sơ doanh nghiệp, tài chính và thuế; luật sư và kiểm toán thực hiện, người phân tích đọc và lượng hóa.",
-                  "Xếp vấn đề ba mức: chặn giao dịch, định giá lại, hoặc xử lý bằng hợp đồng (điều kiện tiên quyết, giữ lại tiền, bồi hoàn)."
+                  "Xác định cấu trúc giao dịch trước khi đọc hồ sơ: mua cổ phần thì kế thừa mọi nghĩa vụ cũ của công ty; nhận chuyển nhượng dự án thì dự án phải đủ điều kiện và được cơ quan có thẩm quyền chấp thuận.",
+                  "Báo cáo thẩm định pháp lý do công ty luật lập. Phần việc của chuyên viên là đọc báo cáo, lượng hóa từng vấn đề thành số tiền và thời gian chậm, rồi đưa vào định giá.",
+                  "Mỗi vấn đề được xử lý theo một trong ba cách: dừng giao dịch, giảm giá mua, hoặc ghi vào hợp đồng (điều kiện trước khi thanh toán, giữ lại một phần tiền, bên bán cam kết bồi hoàn)."
                 ]
               }
             ],
             "en": [
               {
-                "role": "Valuation",
-                "question": "Which interest is being valued, and in what legal state?",
+                "role": "In valuation",
                 "points": [
-                  "Define the interest correctly: allocated or leased land, one-off or annual rent, remaining term, any mortgage.",
-                  "Where the legal position is incomplete, state a special assumption in the certificate, as in the Grade-B office case with its whole-building lease.",
-                  "Legal status enters the method: when units can be sold and what is owed to the State sit in the cash flow; legal differences are an adjustment factor in comparisons."
+                  "Check the land-use certificate and the allocation or lease decision against the site: area, permitted use, term, how land rent is paid. These go into the legal description in the certificate.",
+                  "Missing approvals, such as no 1/500 plan or an unpaid land use fee, are not treated as obtained. If the client needs a value as if the legal position were complete, that is a special assumption and is stated in the certificate, as in the Grade-B office case, valued as if free of the whole-building lease.",
+                  "In the residual and discounted cash flow methods, land use fees still owed and the social-housing obligation are deducted as costs; revenue starts at the expected date of eligibility for sale, not at the developer's planned date when there is no basis for it."
                 ]
               },
               {
-                "role": "Investment analysis",
-                "question": "Which dates and costs does the legal path set for the model?",
+                "role": "In investment analysis",
                 "points": [
-                  "The 1/500 plan fixes floor area and unit count, the base of revenue.",
-                  "Land use fees and the social-housing obligation are the largest early costs.",
-                  "The date of eligibility for sale is the earliest buyer cash; collection caps and borrowing limits set the funding need."
+                  "Build the legal timetable before the cash flow: which procedures remain, which authority handles them, roughly how long. The date of eligibility for sale matters most, because no buyer money can be taken before it.",
+                  "Check that the model uses no planning figures above the approved plan, and that buyer collections stay within the legal caps at each payment stage.",
+                  "Always run a legal-delay scenario. For Riverside, a two-quarter delay cuts IRR from 21.0% to 16.9% (see the worked example)."
                 ]
               },
               {
-                "role": "Project M&A",
-                "question": "Buy or not, under which structure, and how do price and terms change?",
+                "role": "In project M&A",
                 "points": [
-                  "Pick the structure first: a share deal inherits all past liabilities; a project transfer must meet the conditions and be approved.",
-                  "Review up to the stage the project has reached, plus company, finance and tax records; lawyers and auditors do the work, the analyst reads and quantifies it.",
-                  "Rank issues in three tiers: deal-breaker, re-price, or handle in the contract (conditions precedent, retention, indemnity)."
+                  "Settle the deal structure before reading the file: a share deal inherits every past liability of the company; a project transfer requires an eligible project and approval from the competent authority.",
+                  "The legal due diligence report is written by the law firm. The analyst's job is to read it, turn each issue into an amount and a delay, and carry it into the valuation.",
+                  "Each issue is handled in one of three ways: walk away, cut the price, or write it into the contract (conditions before payment, a retention, an indemnity from the seller)."
                 ]
               }
             ]
