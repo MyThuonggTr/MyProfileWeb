@@ -98,8 +98,8 @@
         },
         {
           "id": "legal",
-          "en": "Project legal due diligence | Legal due diligence checklist; project file reviews at DKRA",
-          "vi": "Thẩm định pháp lý dự án | Danh mục thẩm định pháp lý; rà soát hồ sơ dự án tại DKRA",
+          "en": "Project legal review | Study of a housing project's legal path; project file reviews at DKRA",
+          "vi": "Rà soát pháp lý dự án | Nghiên cứu lộ trình pháp lý dự án nhà ở; rà soát hồ sơ dự án tại DKRA",
           "link": "case4"
         },
         {
@@ -351,46 +351,46 @@
       "rows": [
         {
           "id": "tagline",
-          "en": "Tag line: Legal review | Commercial housing projects | Self-initiated, legal basis updated to 11/2026",
-          "vi": "Dòng thẻ: Thẩm định pháp lý | Dự án nhà ở thương mại | Tự xây dựng, căn cứ pháp lý cập nhật đến 11/2026"
+          "en": "Tag line: Applied research | Legal path of housing projects | Self-initiated, updated to 11/2026",
+          "vi": "Dòng thẻ: Nghiên cứu chuyên đề | Pháp lý dự án nhà ở thương mại | Tự thực hiện, cập nhật đến 11/2026"
         },
         {
           "id": "card",
-          "en": "Card: IRR down 4.1 points if sales start 2 quarters late | Tools: legal review, Excel",
-          "vi": "Thẻ: IRR giảm 4,1 điểm khi chậm mở bán 2 quý | Công cụ: rà soát pháp lý, Excel",
+          "en": "Card: 9 legal steps in 3 phases | Tools: current legislation, Excel",
+          "vi": "Thẻ: 9 bước pháp lý trong 3 giai đoạn | Công cụ: văn bản pháp luật hiện hành, Excel",
           "items": {
             "vi": [
               {
-                "value": "−4,1 điểm",
-                "label": "IRR dự án Riverside nếu chậm đủ điều kiện mở bán 2 quý",
-                "tools": "Rà soát pháp lý · Excel",
-                "chart": ""
+                "value": "9 bước",
+                "label": "pháp lý trong 3 giai đoạn; áp dụng vào dự án Riverside: chậm mở bán 2 quý làm IRR giảm 4,1 điểm",
+                "tools": "Văn bản pháp luật hiện hành · Excel",
+                "chart": "case4-legal-process"
               }
             ],
             "en": [
               {
-                "value": "−4.1 pts",
-                "label": "Riverside project IRR if sales eligibility comes 2 quarters late",
-                "tools": "Legal review · Excel",
-                "chart": ""
+                "value": "9 steps",
+                "label": "across 3 phases; applied to Riverside: a 2-quarter sales delay cuts IRR by 4.1 points",
+                "tools": "Current legislation · Excel",
+                "chart": "case4-legal-process"
               }
             ]
           }
         },
         {
           "id": "question",
-          "en": "Purpose: Set out, for each stage of a project, which approvals must exist, which legal risks can arise, and how they affect timing, cost and value.",
-          "vi": "Mục đích: Xác định ở từng bước của dự án cần có văn bản gì, rủi ro pháp lý nào có thể xảy ra, và rủi ro đó ảnh hưởng thế nào đến tiến độ, chi phí và giá trị."
+          "en": "Purpose: Map the legal steps of a commercial housing project, from land selection to buyers' certificates, and show how one legal delay changes the project's value.",
+          "vi": "Mục đích: Hệ thống hóa các bước pháp lý của một dự án nhà ở thương mại, từ chọn quỹ đất đến cấp giấy chứng nhận, và cho thấy một vướng mắc pháp lý làm thay đổi giá trị dự án ra sao."
         },
         {
           "id": "headline",
-          "en": "Headline: Legal Review Across a Development Project's Life Cycle",
-          "vi": "Tiêu đề: Rà soát pháp lý dự án bất động sản theo vòng đời dự án"
+          "en": "Headline: The Legal Path of a Housing Project and Its Effect on Value",
+          "vi": "Tiêu đề: Lộ trình pháp lý dự án nhà ở thương mại và tác động lên giá trị"
         },
         {
           "id": "thesis",
-          "en": "Approach: The legal position decides three things about a project: whether it can be built, whether it can be sold, and how long and how much it takes to get there. At every stage I ask three questions: what is already approved, what is still missing, and if something stalls, how much later the cash comes and how much more it costs.",
-          "vi": "Cách tiếp cận: Pháp lý quyết định ba điều của một dự án: có được làm không, có được bán không, và mất bao lâu, tốn bao nhiêu để đi đến đó. Ở mỗi bước, tôi rà bằng ba câu hỏi: đã có văn bản gì, còn thiếu gì, và nếu vướng thì dòng tiền chậm bao lâu, tốn thêm bao nhiêu."
+          "en": "Background: At DKRA I read each project's legal file before its sales launch. This study puts that work in the order a housing project is actually formed, checks it against current law, and links each legal step to the cash flow of a valuation model. At every step I ask three questions: what is already approved, what is still missing, and if something stalls, how much later the cash comes and how much more it costs.",
+          "vi": "Bối cảnh: Khi làm tại DKRA, tôi đọc hồ sơ pháp lý của từng dự án trước khi mở bán. Nghiên cứu này sắp xếp lại các nội dung đó theo đúng trình tự hình thành một dự án nhà ở, đối chiếu với luật hiện hành, và nối từng bước pháp lý với dòng tiền trong mô hình định giá. Ở mỗi bước, tôi rà bằng ba câu hỏi: đã có văn bản gì, còn thiếu gì, và nếu vướng thì dòng tiền chậm bao lâu, tốn thêm bao nhiêu."
         },
         {
           "id": "how_to_read",
@@ -540,73 +540,9 @@
           }
         },
         {
-          "id": "lenses_headline",
-          "en": "Headline: Legal review in valuation, investment analysis and M&A work",
-          "vi": "Tiêu đề: Pháp lý trong công việc thẩm định giá, phân tích đầu tư và M&A"
-        },
-        {
-          "id": "lenses",
-          "en": "Legal review in valuation, investment analysis and M&A work.",
-          "vi": "Pháp lý trong công việc thẩm định giá, phân tích đầu tư và M&A.",
-          "items": {
-            "vi": [
-              {
-                "role": "Khi thẩm định giá",
-                "points": [
-                  "Đối chiếu giấy chứng nhận, quyết định giao đất hoặc cho thuê đất với hiện trạng khi khảo sát: diện tích, mục đích sử dụng, thời hạn, hình thức trả tiền thuê đất. Các thông tin này được ghi vào mục đặc điểm pháp lý của chứng thư.",
-                  "Hồ sơ còn thiếu, như chưa có quy hoạch 1/500 hoặc chưa nộp tiền sử dụng đất, thì không tự coi là đã có. Nếu khách hàng cần giá trị theo kịch bản pháp lý đã hoàn thiện, đó là giả thiết đặc biệt và phải ghi rõ trong chứng thư, như bài văn phòng hạng B với giả thiết tòa nhà không bị ràng buộc bởi hợp đồng thuê nguyên tòa.",
-                  "Trong phương pháp thặng dư và dòng tiền chiết khấu, tiền sử dụng đất còn phải nộp và nghĩa vụ nhà ở xã hội được trừ như chi phí; thời điểm bắt đầu có doanh thu lấy theo mốc dự kiến đủ điều kiện bán, không lấy theo kế hoạch của chủ đầu tư khi chưa có căn cứ."
-                ]
-              },
-              {
-                "role": "Khi phân tích đầu tư",
-                "points": [
-                  "Lập lịch pháp lý trước khi lập dòng tiền: thủ tục nào còn lại, cơ quan nào giải quyết, mất khoảng bao lâu. Mốc đủ điều kiện mở bán quan trọng nhất, vì trước mốc này không được thu tiền khách hàng.",
-                  "Kiểm tra mô hình không dùng chỉ tiêu cao hơn quy hoạch đã duyệt, và tiền thu từ khách hàng không vượt trần luật định ở từng mốc thanh toán.",
-                  "Luôn chạy kịch bản chậm tiến độ pháp lý. Với dự án Riverside, chậm 2 quý làm IRR giảm từ 21,0% xuống 16,9% (xem phần ví dụ)."
-                ]
-              },
-              {
-                "role": "Khi tham gia M&A dự án",
-                "points": [
-                  "Xác định cấu trúc giao dịch trước khi đọc hồ sơ: mua cổ phần thì kế thừa mọi nghĩa vụ cũ của công ty; nhận chuyển nhượng dự án thì dự án phải đủ điều kiện và được cơ quan có thẩm quyền chấp thuận.",
-                  "Báo cáo thẩm định pháp lý do công ty luật lập. Phần việc của chuyên viên là đọc báo cáo, lượng hóa từng vấn đề thành số tiền và thời gian chậm, rồi đưa vào định giá.",
-                  "Mỗi vấn đề được xử lý theo một trong ba cách: dừng giao dịch, giảm giá mua, hoặc ghi vào hợp đồng (điều kiện trước khi thanh toán, giữ lại một phần tiền, bên bán cam kết bồi hoàn)."
-                ]
-              }
-            ],
-            "en": [
-              {
-                "role": "In valuation",
-                "points": [
-                  "Check the land-use certificate and the allocation or lease decision against the site: area, permitted use, term, how land rent is paid. These go into the legal description in the certificate.",
-                  "Missing approvals, such as no 1/500 plan or an unpaid land use fee, are not treated as obtained. If the client needs a value as if the legal position were complete, that is a special assumption and is stated in the certificate, as in the Grade-B office case, valued as if free of the whole-building lease.",
-                  "In the residual and discounted cash flow methods, land use fees still owed and the social-housing obligation are deducted as costs; revenue starts at the expected date of eligibility for sale, not at the developer's planned date when there is no basis for it."
-                ]
-              },
-              {
-                "role": "In investment analysis",
-                "points": [
-                  "Build the legal timetable before the cash flow: which procedures remain, which authority handles them, roughly how long. The date of eligibility for sale matters most, because no buyer money can be taken before it.",
-                  "Check that the model uses no planning figures above the approved plan, and that buyer collections stay within the legal caps at each payment stage.",
-                  "Always run a legal-delay scenario. For Riverside, a two-quarter delay cuts IRR from 21.0% to 16.9% (see the worked example)."
-                ]
-              },
-              {
-                "role": "In project M&A",
-                "points": [
-                  "Settle the deal structure before reading the file: a share deal inherits every past liability of the company; a project transfer requires an eligible project and approval from the competent authority.",
-                  "The legal due diligence report is written by the law firm. The analyst's job is to read it, turn each issue into an amount and a delay, and carry it into the valuation.",
-                  "Each issue is handled in one of three ways: walk away, cut the price, or write it into the contract (conditions before payment, a retention, an indemnity from the seller)."
-                ]
-              }
-            ]
-          }
-        },
-        {
           "id": "example_headline",
-          "en": "Headline: Example: a late sales launch at Riverside Residences",
-          "vi": "Tiêu đề: Ví dụ: chậm đủ điều kiện mở bán ở dự án Riverside Residences"
+          "en": "Headline: Applied: a late sales launch at Riverside Residences",
+          "vi": "Tiêu đề: Áp dụng: chậm đủ điều kiện mở bán ở dự án Riverside Residences"
         },
         {
           "id": "example",
@@ -656,9 +592,67 @@
           }
         },
         {
-          "id": "from_practice",
-          "en": "Background: developed from reviewing each project's legal file before its sales launch at DKRA; the process is checked against current legislation, including consolidated texts from the Ministry of Construction and the National Assembly Office.",
-          "vi": "Cơ sở xây dựng: phát triển từ kinh nghiệm nghiên cứu hồ sơ pháp lý từng dự án trước khi mở bán tại DKRA; khung quy trình đối chiếu với văn bản pháp luật hiện hành, trong đó có các văn bản hợp nhất của Bộ Xây dựng và Văn phòng Quốc hội."
+          "id": "lenses_headline",
+          "en": "Headline: Legal review in valuation, investment analysis and M&A work",
+          "vi": "Tiêu đề: Pháp lý trong công việc thẩm định giá, phân tích đầu tư và M&A"
+        },
+        {
+          "id": "lenses_note",
+          "vi": "Lưu ý: Tôi là người mới vào ngành. Phần này được chắt lọc từ văn bản pháp luật hiện hành, tài liệu của các công ty luật, đơn vị tư vấn và trải nghiệm thực tế tại DKRA; nội dung mang tính tham khảo, không thay thế ý kiến tư vấn pháp lý.",
+          "en": "Note: I am new to the industry. This section distils current legislation, material from law and advisory firms, and my own experience at DKRA; it is for reference and is not legal advice."
+        },
+        {
+          "id": "lenses",
+          "en": "Legal review in valuation, investment analysis and M&A work.",
+          "vi": "Pháp lý trong công việc thẩm định giá, phân tích đầu tư và M&A.",
+          "items": {
+            "vi": [
+              {
+                "role": "Khi thẩm định giá",
+                "points": [
+                  "Đối chiếu giấy chứng nhận, quyết định giao hoặc cho thuê đất với hiện trạng, rồi ghi vào mục đặc điểm pháp lý của chứng thư.",
+                  "Hồ sơ còn thiếu thì không coi là đã có; nếu cần giá trị theo kịch bản pháp lý đã hoàn thiện thì ghi giả thiết đặc biệt, như bài văn phòng hạng B."
+                ]
+              },
+              {
+                "role": "Khi phân tích đầu tư",
+                "points": [
+                  "Lập lịch pháp lý trước khi lập dòng tiền; mốc đủ điều kiện mở bán là mốc sớm nhất được thu tiền khách hàng.",
+                  "Kiểm tra chỉ tiêu không vượt quy hoạch đã duyệt, tiền thu không vượt trần luật định, và luôn chạy kịch bản chậm tiến độ pháp lý."
+                ]
+              },
+              {
+                "role": "Khi tham gia M&A dự án",
+                "points": [
+                  "Xác định cấu trúc giao dịch trước: mua cổ phần thì kế thừa nghĩa vụ cũ; nhận chuyển nhượng dự án thì dự án phải đủ điều kiện và được chấp thuận.",
+                  "Đọc báo cáo thẩm định pháp lý của công ty luật, lượng hóa từng vấn đề thành tiền và thời gian chậm, rồi xử lý bằng giá hoặc điều khoản hợp đồng."
+                ]
+              }
+            ],
+            "en": [
+              {
+                "role": "In valuation",
+                "points": [
+                  "Check the land-use certificate and the allocation or lease decision against the site, then record them in the certificate's legal description.",
+                  "Missing approvals are not treated as obtained; a value as if the legal position were complete is a stated special assumption, as in the Grade-B office case."
+                ]
+              },
+              {
+                "role": "In investment analysis",
+                "points": [
+                  "Build the legal timetable before the cash flow; eligibility for sale is the earliest date buyer money can come in.",
+                  "Check planning figures against the approved plan and collections against the legal caps, and always run a legal-delay scenario."
+                ]
+              },
+              {
+                "role": "In project M&A",
+                "points": [
+                  "Settle the structure first: a share deal inherits past liabilities; a project transfer needs an eligible project and approval.",
+                  "Read the law firm's due diligence report, turn each issue into money and months of delay, and handle it through price or contract terms."
+                ]
+              }
+            ]
+          }
         }
       ]
     },

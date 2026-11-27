@@ -33,6 +33,8 @@ fs.writeFileSync(path.join(root, "src/data/figures.json"), JSON.stringify(figure
 const copies = [
   ["charts/case3-sensitivity-heatmap-en.png", "public/images/case3-sensitivity-heatmap-en.png"],
   ["charts/case3-sensitivity-heatmap-vi.png", "public/images/case3-sensitivity-heatmap-vi.png"],
+  ["charts/case4-legal-process-en.png", "public/images/case4-legal-process-en.png"],
+  ["charts/case4-legal-process-vi.png", "public/images/case4-legal-process-vi.png"],
   ...["model-map", "funding-and-sensitivity"].flatMap((n) =>
     ["en", "vi"].map((l) => [`charts/case2-${n}-${l}.png`, `public/images/case2-${n}-${l}.png`]),
   ),

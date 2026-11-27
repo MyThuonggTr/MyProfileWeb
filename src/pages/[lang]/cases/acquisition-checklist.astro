@@ -23,7 +23,7 @@ const phases = phaseNames.map((name, i) => ({ n: i + 1, name, steps: steps.filte
 const lenses = rich<Lens>("case4", "lenses", lang);
 const example = labelled("case4", "example", lang);
 const scenarios = rich<Scenario>("case4", "example", lang);
-const practice = labelled("case4", "from_practice", lang);
+const lensNote = labelled("case4", "lenses_note", lang);
 const prevName = pipes(text("case2", "tagline", lang))[1];
 ---
 <Base lang={lang} title={`${t.checklist} – ${t.name}`} description={headline}>
@@ -78,21 +78,7 @@ const prevName = pipes(text("case2", "tagline", lang))[1];
     </div>
   </section>
 
-  <section aria-labelledby="lenses-h" class="section section--white section--rule">
-    <div class="wrap stack">
-      <h2 id="lenses-h" class="h2">{text("case4", "lenses_headline", lang)}</h2>
-      <div class="grid lenses">
-        {lenses.map((l) => (
-          <div class="card lens">
-            <h3 class="h3">{l.role}</h3>
-            <ul class="lens__list">{l.points.map((x) => <li>{x}</li>)}</ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section aria-labelledby="example-h" class="section section--rule">
+  <section aria-labelledby="example-h" class="section section--white section--rule">
     <div class="wrap stack">
       <h2 id="example-h" class="h2">{text("case4", "example_headline", lang)}</h2>
       <p class="prose" style="max-width:860px">{example.body}</p>
@@ -102,7 +88,21 @@ const prevName = pipes(text("case2", "tagline", lang))[1];
           <tbody>{scenarios.map((s, i) => <tr class={i === 0 ? "base" : ""}><th scope="row">{s.scenario}</th><td class="num">{s.irr}</td><td class="num">{s.npv}</td><td class="num">{s.peak}</td></tr>)}</tbody>
         </table>
       </div>
-      <div class="card card--soft"><p class="prose"><strong>{practice.label}:</strong> {practice.body}</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="lenses-h" class="section section--rule">
+    <div class="wrap stack">
+      <h2 id="lenses-h" class="h2">{text("case4", "lenses_headline", lang)}</h2>
+      <div class="note"><Icon name="info" size={22} /><p><strong>{lensNote.label}:</strong> {lensNote.body}</p></div>
+      <div class="grid lenses">
+        {lenses.map((l) => (
+          <div class="card lens">
+            <h3 class="h3">{l.role}</h3>
+            <ul class="lens__list">{l.points.map((x) => <li>{x}</li>)}</ul>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 

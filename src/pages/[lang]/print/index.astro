@@ -199,6 +199,7 @@ const foot = () => `${t.name} · ${target} · ${pageLabel} ${++n}/${slides}`;
   ))}
   <section class="slide dense">
     <h2>{text("case4", "lenses_headline", lang)}</h2>
+    <p class="small muted"><strong>{L("case4", "lenses_note").label}:</strong> {L("case4", "lenses_note").body}</p>
     <div class="row3">{lenses.map((l) => <div class="box"><h3>{l.role}</h3><ul class="list small">{l.points.map((x) => <li>{x}</li>)}</ul></div>)}</div>
     <footer>{foot()}</footer>
   </section>
