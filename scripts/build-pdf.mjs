@@ -1,4 +1,5 @@
-// Print /en/print/ and /vi/print/ from the built site (dist/) into public/downloads/*.pdf.
+// Print /en/print/ and /vi/print/ from the built site (dist/client) into public/downloads/*.pdf
+// (override the output folder with PDF_OUT_DIR).
 // Uses the installed Google Chrome through playwright-core; fails if any slide overflows its 16:9 frame.
 import fs from "node:fs";
 import http from "node:http";
@@ -7,8 +8,10 @@ import { fileURLToPath } from "node:url";
 import { chromium } from "playwright-core";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const dist = path.join(root, "dist");
-if (!fs.existsSync(path.join(dist, "en/print/index.html"))) throw new Error("run astro build first");
+const dist = path.join(root, "dist/client");
+const outDir = path.resolve(process.env.PDF_OUT_DIR ?? path.join(root, "public/downloads"));
+if (!fs.existsSync(path.join(dist, "en/print/index.html"))) throw new Error("run npm run build first");
+fs.mkdirSync(outDir, { recursive: true });
 
 const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".png": "image/png", ".svg": "image/svg+xml", ".woff2": "font/woff2", ".woff": "font/woff" };
 const server = http.createServer((req, res) => {
@@ -28,7 +31,7 @@ try {
   for (const lang of ["en", "vi"]) {
     const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
     await page.goto(`${base}/${lang}/print/`, { waitUntil: "networkidle" });
-    await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(() => document.fonts.ready); // slides are measured only after the fonts are loaded
     const overflow = await page.$$eval(".slide", (els) =>
       els.map((el, i) => ({ i: i + 1, over: el.scrollHeight - el.clientHeight })).filter((x) => x.over > 0),
     );
@@ -43,7 +46,7 @@ try {
       failed = true;
       console.error(`${lang}: footer page numbers do not match ${footers.length} slides`, bad.slice(0, 2));
     }
-    const out = path.join(root, `public/downloads/trinh-thi-my-thuong-real-estate-valuation-portfolio-${lang}.pdf`);
+    const out = path.join(outDir, `trinh-thi-my-thuong-real-estate-valuation-portfolio-${lang}.pdf`);
     await page.pdf({ path: out, preferCSSPageSize: true, printBackground: true });
     console.log(`${lang}: ${out}`);
     await page.close();
