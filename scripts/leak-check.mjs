@@ -94,6 +94,7 @@ for (const f of figures) {
   }
 }
 
-console.log(`sources=${sources.length} (html=${files.filter((f) => f.endsWith(".html")).length}, pdf=${files.filter((f) => f.endsWith(".pdf")).length}, xlsx=${files.filter((f) => f.endsWith(".xlsx")).length})`);
+const count = (ext) => files.filter((f) => f.endsWith(ext)).length;
+console.log(`sources=${sources.length} (html=${count(".html")}, pdf=${count(".pdf")}, xlsx=${count(".xlsx")}, js=${count(".js")}, css=${count(".css")})`);
 console.log(`leaks=${leaks} missing=${JSON.stringify(missing)} crosscheck_sheet=${crosscheckSheet ? "True" : "False"}`);
 process.exit(leaks || missing.length || crosscheckSheet ? 1 : 0);
