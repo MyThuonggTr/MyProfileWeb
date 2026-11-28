@@ -1,5 +1,5 @@
 /* Legal study: overview strip and vertical roadmap. Each phase sets --c through data-phase.
-   White on all three phase colours is at least 5.5:1; the colours as text on paper at least 4.9:1. */
+   White on all three phase colours is at least 5.9:1; the colours as text on paper at least 5.5:1. */
 .stripPhase[data-phase="1"], .roadPhase[data-phase="1"] { --c: var(--accent); }
 .stripPhase[data-phase="2"], .roadPhase[data-phase="2"] { --c: var(--accent-2); }
 .stripPhase[data-phase="3"], .roadPhase[data-phase="3"] { --c: var(--highlight-text); }
@@ -50,13 +50,13 @@
 .step:target .stepBody, .check:target .checkBody { outline: 3px solid var(--highlight); outline-offset: 2px; }
 
 .checkMark { z-index: 1; display: grid; place-items: center; flex: none; width: 48px; color: var(--highlight); font-size: 22px; }
-.checkBody { flex: 1; min-width: 0; margin-left: var(--sp-5); padding: var(--sp-4) 20px; background: #fbf6ea; border: 1px solid #e6d6b4; border-left: 4px solid var(--highlight); border-radius: var(--radius); }
+.checkBody { flex: 1; min-width: 0; margin-left: var(--sp-5); padding: var(--sp-4) 20px; background: var(--surface); border: 1px solid var(--rule-strong); border-left: 4px solid var(--highlight); border-radius: var(--radius); }
 .checkLabel { font-size: var(--fs-xs); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--highlight-text); }
 .checkBody h5 { margin: 2px 0 10px; font-family: var(--f-head); font-size: 19px; font-weight: 600; line-height: 1.25; color: var(--ink); }
 .checkCols { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--sp-4); }
 .checkCols p:last-child { margin-top: 3px; font-size: 15px; color: var(--ink-2); }
-.risk { padding: 10px var(--sp-3); background: #f8ebe0; border-radius: var(--radius); }
-.risk p:last-child { color: #7a3e10; }
+.risk { padding: 10px var(--sp-3); background: var(--risk-tint); border-radius: var(--radius); }
+.risk p:last-child { color: var(--risk); }
 .basis { margin-top: 10px; font-size: var(--fs-sm); color: var(--muted); }
 
 @container (max-width: 680px) {

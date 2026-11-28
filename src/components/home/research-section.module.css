@@ -13,7 +13,7 @@
   background: var(--surface);
 }
 
-/* Award badge: white on accent (9.6:1). */
+/* Award badge: white on accent (11.5:1). */
 .award {
   display: inline-block;
   margin-bottom: var(--sp-3);

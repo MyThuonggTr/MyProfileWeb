@@ -1,36 +1,51 @@
-/* Editorial Finance design tokens (approved preview, 28/11/2026).
+/* Site design tokens: the original navy + gold identity (primary #1f3a5f, Source Serif 4 +
+   Inter, cool neutrals) re-harmonised for the editorial layout. Token names are shared by
+   the components; only the values carry the brand.
    Loaded only by the site layout route; the print route keeps its own legacy tokens.
-   Contrast checked against --paper (#f7f4ee) unless noted:
-   ink 17+:1, ink-2 9.3:1, muted 4.97:1 (4.55:1 on paper-2), accent 8.8:1, white on accent 9.6:1,
-   highlight-text 4.97:1. --highlight (3.06:1) is for rules and decoration only, never body text. */
+
+   Contrast (WCAG 2.x relative luminance, computed; text needs 4.5, focus ring 3):
+     on --paper #f6f7f9   ink 14.58, ink-2 10.73, muted 7.05, accent 10.71, accent-hover 13.85,
+                          accent-2 6.15, highlight-text 5.51
+     on --surface #fff    ink 15.62, ink-2 11.50, muted 7.56, accent 11.48, accent-2 6.60, highlight-text 5.91
+     on --paper-2 #e9edf2 ink 13.29, accent 9.77, highlight-text 5.03, muted 6.43
+     on --accent-tint     accent 9.56, ink-2 9.58     on --risk-tint   risk 6.41, muted 6.43
+     white on accent 11.48, accent-hover 14.85, accent-2 6.60, highlight-text 5.91, risk 7.53;
+     paper on ink 14.58
+     footer band on --accent: on-ink 11.48, on-ink-muted 8.39, its focus ring --highlight 4.31
+     focus ring --highlight-text: 5.51 on paper, 5.91 on surface
+   --highlight (gold, 2.48:1 on paper) and the rules are decoration only, never text. */
 :root {
   /* surfaces */
-  --paper: #f7f4ee;
-  --paper-2: #efeae0;
-  --surface: #fffdf9;
+  --paper: #f6f7f9;
+  --paper-2: #e9edf2;
+  --surface: #ffffff;
 
   /* text */
-  --ink: #14181f;
-  --ink-2: #3a4150;
-  --muted: #626a78;
-  --on-ink: #f1ede4;
-  --on-ink-muted: #b9b2a5;
+  --ink: #1a2433;
+  --ink-2: #2e3a4c;
+  --muted: #4a5565;
+  --on-ink: #ffffff;
+  --on-ink-muted: #d5dde8;
 
   /* lines */
-  --rule: #ddd5c6;
-  --rule-strong: #bfb4a0;
+  --rule: #dde2ea;
+  --rule-strong: #c5cdd8;
 
   /* brand */
-  --accent: #1e4d3a;
-  --accent-hover: #163a2c;
-  --accent-2: #2f6b52;
-  --accent-tint: #e3ece6;
-  --highlight: #b5832f;
-  --highlight-text: #8a6220;
+  --accent: #1f3a5f;
+  --accent-hover: #142843;
+  --accent-2: #3a5f8a;
+  --accent-tint: #e4ebf4;
+  --highlight: #c8963e;
+  --highlight-text: #8a5a14;
   --focus-ring: var(--highlight-text);
 
+  /* semantic: downside scenario and risk notes */
+  --risk: #9b2c2c;
+  --risk-tint: #f6eaea;
+
   /* type: the metric-matched fallback (font-fallbacks.css) paints until the web font swaps in */
-  --f-head: "Fraunces Variable", "Fraunces Fallback", Georgia, "Times New Roman", serif;
+  --f-head: "Source Serif 4 Variable", "Source Serif 4 Fallback", Georgia, "Times New Roman", serif;
   --f-body: "Inter Variable", "Inter Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
   --fs-xs: 12px;
   --fs-sm: 13.5px;
@@ -39,7 +54,7 @@
   --fs-lg: clamp(18px, 2vw, 22px);
   --fs-h3: 23px;
   --fs-h2: clamp(28px, 3.4vw, 40px);
-  --fs-h1: clamp(40px, 6.4vw, 76px);
+  --fs-h1: clamp(40px, 6vw, 72px);
   --lh-tight: 1.1;
   --lh-head: 1.2;
   --lh-body: 1.6;

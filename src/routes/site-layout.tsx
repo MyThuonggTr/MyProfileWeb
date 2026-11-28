@@ -1,12 +1,12 @@
-// Pathless layout for the home and case pages: Editorial Finance fonts and CSS,
+// Pathless layout for the home and case pages: site fonts and CSS,
 // skip link, sticky header and contact footer. The print route is outside this layout.
 import "../styles/site-web-fonts.css";
 import "../styles/font-fallbacks.css";
 import "../styles/tokens.css";
 import "../styles/base.css";
 // Exact (hashed) URLs of the subset files site-web-fonts.css references, for preloading.
-import frauncesLatin from "@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2?url";
-import frauncesVietnamese from "@fontsource-variable/fraunces/files/fraunces-vietnamese-opsz-normal.woff2?url";
+import serifLatin from "@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2?url";
+import serifVietnamese from "@fontsource-variable/source-serif-4/files/source-serif-4-vietnamese-wght-normal.woff2?url";
 import interLatin from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 import interVietnamese from "@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2?url";
 import { preload } from "react-dom";
@@ -22,7 +22,7 @@ const FONT_PRELOAD = { as: "font", type: "font/woff2", crossOrigin: "anonymous" 
 
 /** Latin subsets: every page (en and vi) renders its first screen with these two files. */
 export const links: Route.LinksFunction = () => [
-  { rel: "preload", href: frauncesLatin, ...FONT_PRELOAD },
+  { rel: "preload", href: serifLatin, ...FONT_PRELOAD },
   { rel: "preload", href: interLatin, ...FONT_PRELOAD },
 ];
 
@@ -34,7 +34,7 @@ export const links: Route.LinksFunction = () => [
  */
 const LANG_FONT_PRELOADS: Record<Lang, readonly string[]> = {
   en: [],
-  vi: [frauncesVietnamese, interVietnamese],
+  vi: [serifVietnamese, interVietnamese],
 };
 
 export default function SiteLayout() {

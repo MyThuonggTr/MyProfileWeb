@@ -1,4 +1,4 @@
-// Dark ink contact band closing every site page (anchor #contact), with both PDF versions.
+// Navy contact band closing every site page (anchor #contact), with both PDF versions.
 import { raw, type Lang } from "../../lib/content";
 import { DOWNLOADS, EMAIL, PHONE, ui } from "../../lib/ui";
 import { DownloadLink } from "../ui/download-link";

@@ -1,5 +1,5 @@
 // HTML shell shared by every route. Deliberately loads no stylesheet: the site
-// layout route brings the Editorial Finance CSS, the print route its own legacy CSS.
+// layout route brings the site CSS, the print route its own legacy CSS.
 import type { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useMatches, useParams } from "react-router";
 import type { Route } from "./+types/root";
