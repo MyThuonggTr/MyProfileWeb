@@ -9,7 +9,7 @@ export function CoverSlide({ m, foot, page }: Props) {
   const { lang, t, title, target, site } = m;
   return (
     <section className="slide cover">
-      <div className="eyebrow eyebrow--line" style={{ color: "var(--accent-decor)" }}>{`${title} · 11/2026`}</div>
+      <div className="eyebrow eyebrow--line" style={{ color: "var(--accent-decor)" }}>{`${title} · ${t.printDate}`}</div>
       <h1>{t.name}</h1>
       <p className="cover__target">{target}</p>
       <p className="cover__mail">{`${EMAIL} · ${PHONE.display}${site ? ` · ${site.replace(/^https?:\/\//, "")}` : ""}`}</p>
@@ -75,7 +75,7 @@ export function DownloadsSlide({ m, foot, page }: Props) {
       <p className="muted">{t.personalNote}</p>
       <table className="ptable ftable">
         <colgroup><col style={{ width: "44%" }} /><col style={{ width: "10%" }} /><col style={{ width: "46%" }} /></colgroup>
-        <thead><tr><th>{t.file}</th><th>{t.fileType}</th><th>File</th></tr></thead>
+        <thead><tr><th>{t.file}</th><th>{t.fileType}</th><th>{t.fileName}</th></tr></thead>
         <tbody>
           {FILES.map((f) => (
             <tr key={f.key}>

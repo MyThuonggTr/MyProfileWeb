@@ -30,8 +30,7 @@ const SLIDES = 22;
 export default function Print() {
   const lang = useLang();
   const m = printModel(lang);
-  const pageLabel = lang === "vi" ? "Trang" : "Page";
-  const foot = (page: number) => `${m.t.name} · ${m.target} · ${pageLabel} ${page}/${SLIDES}`;
+  const foot = (page: number) => `${m.t.name} · ${m.target} · ${m.t.pageWord} ${page}/${SLIDES}`;
   return (
     <>
       <CoverSlide m={m} foot={foot} page={1} />
