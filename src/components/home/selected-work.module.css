@@ -36,7 +36,8 @@
 }
 .kpiLabel { font-size: 14px; color: var(--muted); }
 
-.meta { margin: 10px 0 var(--sp-1); }
+/* Role, tools and context on their own lines: tools already use "·" between items. */
+.meta { display: grid; gap: 2px; margin: 10px 0 var(--sp-1); padding: 0; list-style: none; }
 
 .media {
   align-self: start;

@@ -1,5 +1,5 @@
 // One row of the selected work list: index, kind, linked title, purpose, key number,
-// role · tools · context, links (case page and any files) and the chart on the right.
+// role, tools and context (one line each, as on the old project card), links (case page and any files) and the chart on the right.
 import type { Lang } from "../../lib/content";
 import { ui } from "../../lib/ui";
 import { Icon } from "../ui/icon";
@@ -28,7 +28,11 @@ export function WorkItem({ caseKey, index, lang }: WorkItemProps) {
         <p className={s.kpi}>
           <span className={`num ${s.kpiValue}`}>{w.value}</span> <span className={s.kpiLabel}>{w.valueLabel}</span>
         </p>
-        <p className={`${c.meta} ${s.meta}`}>{w.meta.join(" · ")}</p>
+        <ul className={`${c.meta} ${s.meta}`}>
+          {w.meta.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
         <div className={c.links}>
           <a className={c.link} href={w.href}>
             {t.readCase}

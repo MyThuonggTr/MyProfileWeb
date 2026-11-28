@@ -1,7 +1,8 @@
 // Everything one selected-work row shows for a case, read from content.json.
-// The tag line "Kind | Subject | Context. Role: X" feeds the eyebrow and the meta line.
+// The tag line "Kind | Subject | Context. Role: X" feeds the eyebrow and the meta line, which
+// reads like the old project card: "Role: X", "Tools: Y", then the context.
 import { card, pipes, text, type Lang } from "../../lib/content";
-import { CASES, FILES, caseHref } from "../../lib/ui";
+import { CASES, FILES, caseHref, ui } from "../../lib/ui";
 import type { FileKey } from "./home-file-link";
 
 export type CaseKey = (typeof CASES)[number]["key"];
@@ -17,7 +18,9 @@ export function workCase(key: CaseKey, lang: Lang) {
   // First tag loses its "(…)" aside, as on the old project card; the last tag is context + role.
   const kinds = [tags[0].replace(/\s*\(.*\)$/, ""), ...tags.slice(1, -1)];
   const tail = (tags.at(-1) ?? "").split(". ");
-  const role = tail.find((x) => ROLE_LABEL.test(x))?.replace(ROLE_LABEL, "");
+  // Role keeps the tag line's own "Role:" / "Vai trò:" label; tools get the interface label.
+  const role = tail.find((x) => ROLE_LABEL.test(x));
+  const tools = c.tools ? `${ui(lang).tools}: ${c.tools}` : undefined;
   const context = tail.filter((x) => !ROLE_LABEL.test(x)).join(". ");
   const files = [key, `${key}Report`].filter(isFileKey);
 
@@ -28,7 +31,7 @@ export function workCase(key: CaseKey, lang: Lang) {
     purpose: text(key, "question", lang),
     value: c.value,
     valueLabel: c.label,
-    meta: [role, c.tools, context].filter((x): x is string => Boolean(x)),
+    meta: [role, tools, context].filter((x): x is string => Boolean(x)),
     chart: `/images/${c.chart}-${lang}.png`,
     files,
   };
