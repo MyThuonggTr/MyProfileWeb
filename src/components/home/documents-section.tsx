@@ -24,39 +24,43 @@ export function DocumentsSection({ lang, n }: { lang: Lang; n: number }) {
   const groupTitle = (g: GroupTitle) => (g === "portfolio" ? h.portfolioFiles : t[g]);
 
   return (
-    <section id="documents" className="sec sec--surface" aria-labelledby="documents-title">
-      <div className="wrap">
-        <SectionHeading n={n} id="documents-title" title={t.downloads} />
-        {GROUPS.map((g, i) => (
-          <details key={g.title} className={s.group} open={i === 0}>
-            <summary className={s.summary}>
-              <span className={s.groupTitle}>{groupTitle(g.title)}</span>
-              <span className={`num ${s.count}`}>
-                {g.files.length} {h.filesWord}
-              </span>
-            </summary>
-            <ul className={s.rows}>
-              {g.files.map((key) => {
-                const f = fileEntry(key);
-                return (
-                  <li key={key} className={s.row}>
-                    <span className={s.label}>{f[lang]}</span>
-                    <span className={s.type}>
-                      <span className="visually-hidden">{t.fileType}: </span>
-                      {f.type}
-                    </span>
-                    <DownloadLink file={fileOf(key)} className={c.link}>
-                      {h.download}
-                      <span className="visually-hidden"> – {f[lang]}</span>
-                    </DownloadLink>
-                  </li>
-                );
-              })}
-            </ul>
-          </details>
-        ))}
-        <p className={c.note}>{t.personalNote}</p>
-      </div>
-    </section>
+    <>
+      {/* Old links to /{lang}/#downloads land here, right where the section starts. */}
+      <span id="downloads" aria-hidden="true" />
+      <section id="documents" className="sec sec--surface" aria-labelledby="documents-title">
+        <div className="wrap">
+          <SectionHeading n={n} id="documents-title" title={t.downloads} />
+          {GROUPS.map((g, i) => (
+            <details key={g.title} className={s.group} open={i === 0}>
+              <summary className={s.summary}>
+                <span className={s.groupTitle}>{groupTitle(g.title)}</span>
+                <span className={`num ${s.count}`}>
+                  {g.files.length} {h.filesWord}
+                </span>
+              </summary>
+              <ul className={s.rows}>
+                {g.files.map((key) => {
+                  const f = fileEntry(key);
+                  return (
+                    <li key={key} className={s.row}>
+                      <span className={s.label}>{f[lang]}</span>
+                      <span className={s.type}>
+                        <span className="visually-hidden">{t.fileType}: </span>
+                        {f.type}
+                      </span>
+                      <DownloadLink file={fileOf(key)} className={c.link}>
+                        {h.download}
+                        <span className="visually-hidden"> – {f[lang]}</span>
+                      </DownloadLink>
+                    </li>
+                  );
+                })}
+              </ul>
+            </details>
+          ))}
+          <p className={c.note}>{t.personalNote}</p>
+        </div>
+      </section>
+    </>
   );
 }
