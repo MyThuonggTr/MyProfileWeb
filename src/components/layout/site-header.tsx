@@ -41,7 +41,7 @@ export function SiteHeader({ lang }: { lang: Lang }) {
 
         <DownloadLink file={DOWNLOADS.pdf[lang]} variant="solid" className={s.cta}>
           <span className={s.full}>{t.downloadPdf}</span>
-          <span className={s.short}>{t.downloadPdfShort}</span>
+          <span className={s.short} aria-hidden="true">{t.downloadPdfShort}</span>
         </DownloadLink>
       </div>
     </header>

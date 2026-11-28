@@ -23,7 +23,7 @@
   color: var(--on-ink-muted);
 }
 .list dd { margin: 0; font-size: 20px; }
-.list a { color: #fff; text-underline-offset: 3px; }
+.list a { display: inline-flex; align-items: center; min-height: var(--tap); color: #fff; text-underline-offset: 3px; }
 .list a:hover { color: var(--on-ink); }
 
 .actions { justify-content: flex-end; }
