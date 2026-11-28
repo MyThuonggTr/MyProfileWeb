@@ -24,7 +24,7 @@ export function HomeHero({ lang }: { lang: Lang }) {
           </h1>
           <p className={s.target}>{text("hero", "target", lang)}</p>
         </div>
-        {portraitUrl && <HeroPortrait src={portraitUrl} alt={t.portraitAlt} className={s.photo} />}
+        {portraitUrl && <HeroPortrait src={portraitUrl} alt={t.name} className={s.photo} />}
       </div>
 
       <ul className={s.facts}>
