@@ -1,0 +1,25 @@
+/* Numbers tables. The scroll box shows soft edge shadows only while columns are hidden
+   on that side: the paper-coloured covers scroll with the content ("local") and hide the
+   fixed shadows ("scroll") once an edge is reached. Cells stay transparent so the shadows show. */
+.wrap { display: flex; flex-direction: column; gap: var(--sp-2); padding-top: var(--sp-2); }
+
+.scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  background:
+    linear-gradient(to right, var(--paper) 30%, rgba(247, 244, 238, 0)) left center / 40px 100% no-repeat local,
+    linear-gradient(to left, var(--paper) 30%, rgba(247, 244, 238, 0)) right center / 40px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(20, 24, 31, .28), rgba(20, 24, 31, 0)) left center / 16px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(20, 24, 31, .28), rgba(20, 24, 31, 0)) right center / 16px 100% no-repeat scroll;
+}
+.scroll:focus-visible { outline-offset: 2px; }
+
+.table { width: 100%; border-collapse: collapse; font-size: 15px; white-space: nowrap; }
+.table th,
+.table td { padding: 9px 14px; text-align: right; border-bottom: 1px solid var(--rule); }
+.table thead th { border-bottom: 2px solid var(--ink); font-size: 13.5px; font-weight: 700; color: var(--ink-2); }
+.table tbody th { font-weight: 600; color: var(--ink-2); }
+.table th:first-child { text-align: left; }
+.table td.base { background: var(--accent-tint); color: var(--accent); font-weight: 700; box-shadow: inset 0 0 0 2px var(--accent); }
+
+.caption { font-size: 14px; line-height: 1.5; color: var(--muted); max-width: 70ch; }

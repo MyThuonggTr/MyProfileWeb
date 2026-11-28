@@ -1,0 +1,34 @@
+/* Legal study: IRR-by-scenario bars and the reading-lens cards. */
+.title { font-size: var(--fs-xs); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+.bars { display: flex; flex-direction: column; gap: var(--sp-5); padding-top: 22px; }
+.row { display: grid; grid-template-columns: 150px minmax(0, 1fr); column-gap: var(--sp-4); row-gap: 6px; align-items: center; }
+.label { font-weight: 600; }
+.track { position: relative; height: 40px; background: var(--paper-2); border-radius: var(--radius); }
+.fill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding-right: 10px;
+  border-radius: var(--radius);
+  background: var(--accent-2);
+  color: #fff;
+}
+.fill.isBase { background: var(--accent); }
+.fill.isLow { background: #9b2c2c; }
+.wacc { position: absolute; top: -6px; bottom: -6px; border-left: 2px dashed var(--highlight); }
+.wacc span { position: absolute; top: -24px; left: 6px; font-size: var(--fs-xs); font-weight: 600; white-space: nowrap; color: var(--highlight-text); }
+.note { grid-column: 2; font-size: 14px; color: var(--muted); }
+
+.lenses { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: var(--sp-4); }
+.lens { display: flex; flex-direction: column; gap: var(--sp-3); padding: 20px; background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: var(--radius); }
+.lens h3 { font-size: 20px; }
+.lens ul { display: flex; flex-direction: column; gap: var(--sp-2); margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 15px; }
+.lens li::marker { color: var(--highlight-text); }
+
+@container (max-width: 480px) {
+  .row { grid-template-columns: 1fr; }
+  .note { grid-column: 1; }
+  .bars { gap: var(--sp-6); }
+}

@@ -1,0 +1,59 @@
+/* "At a glance" card. Position (sticky or in flow) is set by the case page layout. */
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.title { font-size: 19px; line-height: 1.2; }
+
+.list { display: grid; gap: 10px; margin: 0; }
+.list dt {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.list dd { margin: 2px 0 0; color: var(--ink); }
+
+/* Full-width buttons; long labels wrap instead of overflowing the narrow column. */
+.actions { display: flex; flex-direction: column; gap: var(--sp-2); }
+.actions a {
+  justify-content: flex-start;
+  width: 100%;
+  padding: 8px 14px;
+  white-space: normal;
+  text-align: left;
+  font-size: 14px;
+}
+.actions a svg { flex: none; }
+
+.note {
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--rule);
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* Short label column beside each value: keeps the card short enough to stay fully visible while sticky. */
+@media (min-width: 900px) {
+  .list div { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: var(--sp-2); align-items: baseline; }
+  .list dd { margin: 0; }
+}
+
+@media (min-width: 560px) and (max-width: 899px) {
+  /* In flow under the headline: label column beside the value to keep the card short. */
+  .list div { display: grid; grid-template-columns: 120px 1fr; gap: var(--sp-3); }
+  .list dd { margin: 0; }
+  .actions { flex-direction: row; flex-wrap: wrap; }
+  .actions a { width: auto; }
+}
