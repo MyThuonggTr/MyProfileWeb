@@ -1,0 +1,93 @@
+/* Main-column blocks shared by the three case pages. The main column is a size
+   container (case-page.module.css), so these adapt to its width, not the viewport. */
+
+.section { display: flex; flex-direction: column; gap: var(--sp-5); }
+.sectionHead { display: flex; flex-direction: column; gap: var(--sp-3); }
+.h2 { font-size: clamp(26px, 3vw, 34px); max-width: 32ch; }
+.h3 { font-size: 24px; }
+
+.lead { max-width: 70ch; color: var(--ink-2); font-size: 16.5px; }
+
+.callout { display: flex; gap: var(--sp-3); align-items: flex-start; padding: var(--sp-4) var(--sp-5); background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--highlight); border-radius: var(--radius); color: var(--ink-2); }
+.callout strong { color: var(--ink); }
+.callout svg { flex: none; margin-top: 2px; color: var(--highlight-text); }
+.calloutNote { background: var(--accent-tint); border-left-color: var(--accent); }
+.calloutNote svg { color: var(--accent); }
+
+/* ---------- key figures: ruled row, big serif numbers ---------- */
+.figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+.figures li { padding: 20px 20px 20px 0; }
+.figures li:nth-child(even) { padding-left: 20px; border-left: 1px solid var(--rule); }
+.figures li:nth-child(n + 3) { border-top: 1px solid var(--rule); }
+.figureValue {
+  font-family: var(--f-head);
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.figureKey .figureValue { color: var(--accent); }
+.figureLabel { margin-top: 6px; font-size: 14px; line-height: 1.45; color: var(--muted); }
+
+/* ---------- numbered method steps ---------- */
+.steps { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+.steps li {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: var(--sp-4);
+  padding-block: var(--sp-5);
+  border-top: 1px solid var(--rule);
+}
+.steps li:last-child { border-bottom: 1px solid var(--rule); }
+.steps p { color: var(--ink-2); max-width: 70ch; }
+.stepN { font-family: var(--f-head); font-size: 30px; font-weight: 600; line-height: 1; color: var(--highlight-text); }
+
+/* ---------- chart figure + numbers disclosure ---------- */
+.figure { display: flex; flex-direction: column; gap: var(--sp-4); margin: 0; }
+.figure > p { color: var(--ink-2); max-width: 70ch; }
+.figure > p strong { color: var(--ink); }
+.chart { width: 100%; background: #fff; border: 1px solid var(--rule); }
+
+.details { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.details summary {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: var(--tap);
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+}
+.details summary::-webkit-details-marker { display: none; }
+.details summary::before { content: "+"; display: inline-grid; place-items: center; width: 20px; font-family: var(--f-head); font-size: 20px; line-height: 1; }
+.details[open] summary::before { content: "−"; }
+.details summary:hover { color: var(--accent-hover); text-decoration: underline; }
+.details[open] { padding-bottom: var(--sp-4); }
+
+/* ---------- role and lessons ---------- */
+.roleLessons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-6); padding-top: var(--sp-6); border-top: 2px solid var(--ink); }
+.roleLessons section { display: flex; flex-direction: column; gap: var(--sp-3); }
+.roleLessons p, .roleLessons ul { color: var(--ink-2); }
+.roleLessons ul { display: flex; flex-direction: column; gap: var(--sp-2); margin: 0; padding-left: 20px; }
+.roleLessons li::marker { color: var(--highlight-text); }
+
+@container (max-width: 560px) {
+  .roleLessons { grid-template-columns: 1fr; }
+  .steps li { grid-template-columns: 40px minmax(0, 1fr); gap: var(--sp-3); }
+  .stepN { font-size: 24px; }
+}
+
+@container (max-width: 380px) {
+  .figures { grid-template-columns: 1fr; }
+  .figures li:nth-child(even) { padding-left: 0; border-left: 0; }
+  .figures li + li { border-top: 1px solid var(--rule); }
+}
