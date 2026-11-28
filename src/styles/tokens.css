@@ -29,9 +29,9 @@
   --highlight-text: #8a6220;
   --focus-ring: var(--highlight-text);
 
-  /* type */
-  --f-head: "Fraunces Variable", Georgia, "Times New Roman", serif;
-  --f-body: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* type: the metric-matched fallback (font-fallbacks.css) paints until the web font swaps in */
+  --f-head: "Fraunces Variable", "Fraunces Fallback", Georgia, "Times New Roman", serif;
+  --f-body: "Inter Variable", "Inter Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
   --fs-xs: 12px;
   --fs-sm: 13.5px;
   --fs-base: 16px;
