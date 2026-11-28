@@ -1,4 +1,4 @@
-// Hero: role kicker, name, target role, four key figures, the three calls to action,
+// Hero: portfolio title kicker, name, target role, four key figures, the three calls to action,
 // then the positioning paragraph. The portrait column only exists when a photo file does.
 import { items, text, type Lang } from "../../lib/content";
 import { DOWNLOADS, EMAIL, ui } from "../../lib/ui";
@@ -18,7 +18,7 @@ export function HomeHero({ lang }: { lang: Lang }) {
     <section className={`wrap ${s.hero}`} aria-labelledby="hero-name">
       <div className={portraitUrl ? s.top : undefined}>
         <div>
-          <p className="kicker">{t.role}</p>
+          <p className={`kicker ${s.kicker}`}>{text("hero", "title", lang)}</p>
           <h1 id="hero-name" className={s.name}>
             {t.name}
           </h1>

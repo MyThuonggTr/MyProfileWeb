@@ -47,7 +47,6 @@ export const fileOf = (key: (typeof FILES)[number]["key"]) =>
 const strings = {
   en: {
     name: "Trinh Thi My Thuong",
-    role: "Real estate valuation & investment analysis",
     nav: { projects: "Projects", research: "Research", experience: "Experience", downloads: "Downloads", contact: "Contact", skills: "Skills", education: "Education" },
     shortName: "My Thuong",
     mainNav: "Main",
@@ -146,7 +145,6 @@ const strings = {
   },
   vi: {
     name: "Trịnh Thị Mỹ Thương",
-    role: "Thẩm định giá và phân tích đầu tư bất động sản",
     nav: { projects: "Dự án", research: "Nghiên cứu", experience: "Kinh nghiệm", downloads: "Tài liệu", contact: "Liên hệ", skills: "Năng lực", education: "Học vấn" },
     shortName: "Mỹ Thương",
     mainNav: "Chính",

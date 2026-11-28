@@ -8,6 +8,11 @@
   align-items: end;
 }
 
+/* Portfolio title over the name. Long enough to wrap on phones: the gold rule stays on the
+   first line and the lines balance instead of leaving one word alone. */
+.kicker { align-items: baseline; text-wrap: balance; }
+.kicker::before { transform: translateY(-0.3em); }
+
 .name { margin: 18px 0 14px; }
 
 .target {
