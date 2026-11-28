@@ -1,43 +1,44 @@
-/* Metric-matched local fallbacks for Fraunces and Inter (font-display: swap).
+/* Metric-matched local fallbacks for Source Serif 4 and Inter (font-display: swap).
    Text first paints in these faces, then swaps to the web fonts with almost no reflow,
    so the swap no longer pushes the page down (the cause of the case-page layout shift).
 
-   Local bases: Times New Roman for Fraunces (Georgia has no Vietnamese glyphs, so vi
+   Local bases: Times New Roman for Source Serif 4 (Georgia has no Vietnamese glyphs, so vi
    headings would mix two unadjusted fonts), Arial for Inter. Both ship with Windows,
    macOS and iOS and cover Vietnamese.
 
    Vertical metrics come from the shipped woff2 files (hhea = typo, USE_TYPO_METRICS set):
-     Fraunces Variable  upm 2000, ascent 1956, descent 510, lineGap 0  -> 0.978 / 0.255 / 0
-     Inter Variable     upm 2048, ascent 1984, descent 494, lineGap 0  -> 0.96875 / 0.2412 / 0
+     Source Serif 4 Variable  upm 1000, ascent 1036, descent 335, lineGap 0  -> 1.036 / 0.335 / 0
+     Inter Variable           upm 2048, ascent 1984, descent 494, lineGap 0  -> 0.96875 / 0.2412 / 0
    size-adjust is the measured width ratio web font / local font over the real en + vi page
    text in Chrome, per weight because each family changes width with weight differently:
-     Fraunces 600 vs Times New Roman Bold  1.046-1.114 (52-16px; opsz narrows big sizes) -> 107%
-     Fraunces 400 vs Times New Roman       1.078-1.147                                  -> 112%
-     Inter 400/500 vs Arial                1.048-1.074 (short chip labels run widest)    -> 107.5%
-     Inter 600/700 vs Arial Bold           1.000-1.026                                  -> 101%
+     Source Serif 4 600 vs Times New Roman Bold  1.047-1.146 (15-76px, figures narrowest)  -> 110.5%
+     Source Serif 4 400 vs Times New Roman       1.058-1.202                              -> 116%
+     Inter 400/500 vs Arial                      1.048-1.074 (short chip labels widest)   -> 107.5%
+     Inter 600/700 vs Arial Bold                 1.000-1.026                              -> 101%
    Each override = web-font metric / size-adjust, so the line box matches the web font.
-   Values were checked by delaying the woff2 files 1.2s at 412, 900 and 1280px widths.
+   Values were checked by delaying the woff2 files 1.2s at 412, 900 and 1280px widths
+   (swap CLS at most 0.034, on the Vietnamese case pages).
    Two faces per family: weights up to 500 use the regular face, 600+ the bold face. */
 
 @font-face {
-  font-family: "Fraunces Fallback";
+  font-family: "Source Serif 4 Fallback";
   font-style: normal;
   font-weight: 400;
   src: local("Times New Roman"), local("TimesNewRomanPSMT");
-  size-adjust: 112%;
-  ascent-override: 87.3%;
-  descent-override: 22.8%;
+  size-adjust: 116%;
+  ascent-override: 89.3%;
+  descent-override: 28.9%;
   line-gap-override: 0%;
 }
 
 @font-face {
-  font-family: "Fraunces Fallback";
+  font-family: "Source Serif 4 Fallback";
   font-style: normal;
   font-weight: 700;
   src: local("Times New Roman Bold"), local("TimesNewRomanPS-BoldMT");
-  size-adjust: 107%;
-  ascent-override: 91.4%;
-  descent-override: 23.8%;
+  size-adjust: 110.5%;
+  ascent-override: 93.8%;
+  descent-override: 30.3%;
   line-gap-override: 0%;
 }
 

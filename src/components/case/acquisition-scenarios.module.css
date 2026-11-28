@@ -16,7 +16,7 @@
   color: #fff;
 }
 .fill.isBase { background: var(--accent); }
-.fill.isLow { background: #9b2c2c; }
+.fill.isLow { background: var(--risk); }
 .wacc { position: absolute; top: -6px; bottom: -6px; border-left: 2px dashed var(--highlight); }
 .wacc span { position: absolute; top: -24px; left: 6px; font-size: var(--fs-xs); font-weight: 600; white-space: nowrap; color: var(--highlight-text); }
 .note { grid-column: 2; font-size: 14px; color: var(--muted); }

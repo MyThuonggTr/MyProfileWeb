@@ -31,8 +31,9 @@ h1, h2, h3, h4 {
   line-height: var(--lh-head);
   color: var(--ink);
 }
-h1 { font-size: var(--fs-h1); line-height: 1.02; letter-spacing: -0.015em; }
-h2 { font-size: var(--fs-h2); line-height: 1.15; }
+/* Source Serif 4 ships one optical size: tighter tracking keeps the large sizes compact. */
+h1 { font-size: var(--fs-h1); line-height: 1.04; letter-spacing: -0.022em; }
+h2 { font-size: var(--fs-h2); line-height: 1.15; letter-spacing: -0.01em; }
 h3 { font-size: var(--fs-h3); line-height: 1.25; }
 p { margin: 0; }
 

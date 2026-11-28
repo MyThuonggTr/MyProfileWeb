@@ -7,10 +7,10 @@
   overflow-x: auto;
   overscroll-behavior-x: contain;
   background:
-    linear-gradient(to right, var(--paper) 30%, rgba(247, 244, 238, 0)) left center / 40px 100% no-repeat local,
-    linear-gradient(to left, var(--paper) 30%, rgba(247, 244, 238, 0)) right center / 40px 100% no-repeat local,
-    radial-gradient(farthest-side at 0 50%, rgba(20, 24, 31, .28), rgba(20, 24, 31, 0)) left center / 16px 100% no-repeat scroll,
-    radial-gradient(farthest-side at 100% 50%, rgba(20, 24, 31, .28), rgba(20, 24, 31, 0)) right center / 16px 100% no-repeat scroll;
+    linear-gradient(to right, var(--paper) 30%, transparent) left center / 40px 100% no-repeat local,
+    linear-gradient(to left, var(--paper) 30%, transparent) right center / 40px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, color-mix(in srgb, var(--ink) 28%, transparent), transparent) left center / 16px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, color-mix(in srgb, var(--ink) 28%, transparent), transparent) right center / 16px 100% no-repeat scroll;
 }
 .scroll:focus-visible { outline-offset: 2px; }
 

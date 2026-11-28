@@ -5,7 +5,7 @@ export default [
   // "/" is a static meta-refresh page pointing to /en/.
   index("routes/root-redirect.tsx"),
 
-  // Site pages share the Editorial Finance header, footer and stylesheets.
+  // Site pages share the site header, footer and stylesheets.
   layout("routes/site-layout.tsx", [
     route(":lang", "routes/home.tsx"),
     route(":lang/cases/grade-b-office", "routes/case-grade-b-office.tsx"),
