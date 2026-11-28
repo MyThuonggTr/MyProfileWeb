@@ -148,7 +148,7 @@ const strings = {
     nav: { projects: "Dự án", research: "Nghiên cứu", experience: "Kinh nghiệm", downloads: "Tài liệu", contact: "Liên hệ", skills: "Năng lực", education: "Học vấn" },
     shortName: "Mỹ Thương",
     mainNav: "Chính",
-    downloadPdfShort: "Tải PDF",
+    downloadPdfShort: "PDF",
     emailLabel: "Email",
     phoneLabel: "Điện thoại",
     notFound: "Không tìm thấy trang",
