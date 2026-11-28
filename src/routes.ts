@@ -15,4 +15,8 @@ export default [
 
   // The 16:9 print version stays outside the site layout so its CSS is isolated.
   route(":lang/print", "routes/print.tsx"),
+
+  // Crawl files, prerendered as static text/XML.
+  route("robots.txt", "routes/robots-txt.ts"),
+  route("sitemap.xml", "routes/sitemap-xml.ts"),
 ] satisfies RouteConfig;

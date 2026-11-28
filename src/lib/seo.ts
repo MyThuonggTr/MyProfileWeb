@@ -4,16 +4,18 @@ import type { MetaDescriptor } from "react-router";
 import { LANGS, type Lang } from "./content";
 import { otherLangPath } from "./ui";
 import { parseLang, withTrailingSlash } from "./route-lang";
+import { absoluteUrl } from "./site-pages";
 
 export type PageHead = { title: string; description: string };
 
-/** Meta tags for one page: title, description and one hreflang alternate per language. */
+/** Meta tags for one page: title, description, absolute hreflang alternates per language and x-default (English). */
 export function pageMeta(path: string, { title, description }: PageHead): MetaDescriptor[] {
   const p = withTrailingSlash(path);
   return [
     { title },
     { name: "description", content: description },
-    ...LANGS.map((l): MetaDescriptor => ({ tagName: "link", rel: "alternate", hrefLang: l, href: otherLangPath(p, l) })),
+    ...LANGS.map((l): MetaDescriptor => ({ tagName: "link", rel: "alternate", hrefLang: l, href: absoluteUrl(otherLangPath(p, l)) })),
+    { tagName: "link", rel: "alternate", hrefLang: "x-default", href: absoluteUrl(otherLangPath(p, "en")) },
   ];
 }
 

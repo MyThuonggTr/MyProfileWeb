@@ -3,6 +3,7 @@
 import type { Route } from "./+types/root-redirect";
 import { LANGS } from "../lib/content";
 import type { HeadHandle } from "../lib/seo";
+import { absoluteUrl } from "../lib/site-pages";
 import { ui } from "../lib/ui";
 
 const TARGET = "/en/";
@@ -12,7 +13,7 @@ export const handle: HeadHandle = { head: { robots: "noindex" } };
 export const meta: Route.MetaFunction = () => [
   { title: ui("en").name },
   { httpEquiv: "refresh", content: `0;url=${TARGET}` },
-  { tagName: "link", rel: "canonical", href: TARGET },
+  { tagName: "link", rel: "canonical", href: absoluteUrl(TARGET) },
 ];
 
 export default function RootRedirect() {
