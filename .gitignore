@@ -1,6 +1,5 @@
 node_modules/
 dist/
-.astro/
 .env
 .env.*
 .DS_Store
@@ -23,3 +22,4 @@ AGENTS.md
 ~$*
 .idea/
 .vscode/
+.react-router/

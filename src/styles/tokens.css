@@ -1,0 +1,63 @@
+/* Editorial Finance design tokens (approved preview, 28/11/2026).
+   Loaded only by the site layout route; the print route keeps its own legacy tokens.
+   Contrast checked against --paper (#f7f4ee) unless noted:
+   ink 17+:1, ink-2 9.3:1, muted 4.97:1 (4.55:1 on paper-2), accent 8.8:1, white on accent 9.6:1,
+   highlight-text 4.97:1. --highlight (3.06:1) is for rules and decoration only, never body text. */
+:root {
+  /* surfaces */
+  --paper: #f7f4ee;
+  --paper-2: #efeae0;
+  --surface: #fffdf9;
+
+  /* text */
+  --ink: #14181f;
+  --ink-2: #3a4150;
+  --muted: #626a78;
+  --on-ink: #f1ede4;
+  --on-ink-muted: #b9b2a5;
+
+  /* lines */
+  --rule: #ddd5c6;
+  --rule-strong: #bfb4a0;
+
+  /* brand */
+  --accent: #1e4d3a;
+  --accent-hover: #163a2c;
+  --accent-2: #2f6b52;
+  --accent-tint: #e3ece6;
+  --highlight: #b5832f;
+  --highlight-text: #8a6220;
+  --focus-ring: var(--highlight-text);
+
+  /* type: the metric-matched fallback (font-fallbacks.css) paints until the web font swaps in */
+  --f-head: "Fraunces Variable", "Fraunces Fallback", Georgia, "Times New Roman", serif;
+  --f-body: "Inter Variable", "Inter Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 13.5px;
+  --fs-base: 16px;
+  --fs-md: 18px;
+  --fs-lg: clamp(18px, 2vw, 22px);
+  --fs-h3: 23px;
+  --fs-h2: clamp(28px, 3.4vw, 40px);
+  --fs-h1: clamp(40px, 6.4vw, 76px);
+  --lh-tight: 1.1;
+  --lh-head: 1.2;
+  --lh-body: 1.6;
+
+  /* spacing scale (4px base) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 72px;
+
+  /* layout */
+  --wrap: 1160px;
+  --gutter: 24px;
+  --header-h: 64px;
+  --radius: 4px;
+  --tap: 44px;
+}

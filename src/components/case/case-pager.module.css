@@ -1,0 +1,24 @@
+/* Previous / next strip at the foot of a case page. */
+.pager { background: var(--surface); border-top: 1px solid var(--rule); }
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding-block: var(--sp-6);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: var(--tap);
+  font-weight: 600;
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+.link svg { flex: none; transition: transform .2s ease; }
+.link:hover svg { transform: translateX(-3px); }
+.forward { margin-left: auto; text-align: right; }
+.forward:hover svg { transform: translateX(3px); }

@@ -1,0 +1,150 @@
+/* Site-wide base: reset, typography, layout helpers, buttons, section heading.
+   Depends on tokens.css. Component-specific styles live in CSS Modules. */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 12px);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  overflow-wrap: break-word;
+}
+
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--f-head);
+  font-weight: 600;
+  line-height: var(--lh-head);
+  color: var(--ink);
+}
+h1 { font-size: var(--fs-h1); line-height: 1.02; letter-spacing: -0.015em; }
+h2 { font-size: var(--fs-h2); line-height: 1.15; }
+h3 { font-size: var(--fs-h3); line-height: 1.25; }
+p { margin: 0; }
+
+a { color: var(--accent); transition: color .2s ease, background-color .2s ease, border-color .2s ease; }
+a:hover { color: var(--accent-hover); }
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* ---------- layout helpers ---------- */
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
+.num { font-variant-numeric: tabular-nums lining-nums; }
+.serif { font-family: var(--f-head); }
+.muted { color: var(--muted); }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- sections ---------- */
+.sec { padding-block: var(--sp-8); border-top: 1px solid var(--rule); }
+.sec--surface { background: var(--surface); }
+
+/* Section heading: numbered kicker over an h2 (see components/ui/section-heading.tsx). */
+.sec__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+}
+.sec__n {
+  font-family: var(--f-head);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--highlight-text);
+}
+.sec__title { margin-top: var(--sp-1); }
+
+/* Uppercase kicker with a short highlight rule. */
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.kicker::before { content: ""; flex: none; width: 32px; height: 2px; background: var(--highlight); }
+
+/* ---------- buttons (all at least 44px tall) ---------- */
+.btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: var(--tap);
+  padding: 0 18px;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn--solid { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn--solid:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
+.btn--line { border-color: var(--ink); color: var(--ink); }
+.btn--line:hover { background: var(--paper-2); color: var(--ink); }
+.btn--text { padding-inline: var(--sp-1); color: var(--accent); }
+.btn--text:hover { text-decoration: underline; }
+
+/* ---------- skip link ---------- */
+.skip {
+  position: absolute;
+  left: var(--sp-2);
+  top: -100px;
+  z-index: 100;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 600;
+}
+.skip:focus { top: var(--sp-2); }
+/* <main tabindex="-1"> receives focus from the skip link; no ring around the whole page. */
+#main:focus { outline: none; }
+
+@media (max-width: 820px) {
+  .sec { padding-block: var(--sp-7); }
+  .kicker { font-size: 11px; letter-spacing: .1em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

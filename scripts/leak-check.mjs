@@ -1,6 +1,6 @@
 // Scan everything the public can download for real names and personal data, and check that
 // every confirmed figure shown on the site appears in its page.
-//   node scripts/leak-check.mjs --alias ../portfolio/content/alias-map.csv [--dir dist]
+//   node scripts/leak-check.mjs --alias ../portfolio/content/alias-map.csv [--dir dist/client]
 // The alias map stays outside this repo; only counts are printed, never the matched names.
 import fs from "node:fs";
 import path from "node:path";
@@ -15,7 +15,7 @@ const arg = (name, dflt) => {
 };
 const aliasPath = arg("alias");
 if (!aliasPath || !fs.existsSync(aliasPath)) throw new Error("pass --alias <path to alias-map.csv outside the repo>");
-const dir = path.resolve(arg("dir", path.join(root, "dist")));
+const dir = path.resolve(arg("dir", path.join(root, "dist/client")));
 
 // --- terms that must never appear
 const parseCsvLine = (l) => (l.match(/("([^"]|"")*"|[^,]*)(,|$)/g) ?? []).map((c) => c.replace(/,$/, "").replace(/^"|"$/g, "").replace(/""/g, '"'));
@@ -30,17 +30,19 @@ const patterns = [...reals, ...fixed].map((term) =>
 // --- collect public text
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]));
 const files = walk(dir);
+const rel = (f) => path.relative(dir, f).split(path.sep).join("/"); // same names on Windows and POSIX
 const htmlText = (s) => s.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, " ");
 const sources = [];
-for (const f of files.filter((f) => f.endsWith(".html"))) sources.push({ name: path.relative(dir, f), text: norm(htmlText(fs.readFileSync(f, "utf8"))) });
-for (const f of files.filter((f) => f.endsWith(".pdf"))) sources.push({ name: path.relative(dir, f), text: norm(execFileSync("pdftotext", ["-enc", "UTF-8", f, "-"]).toString()) });
+for (const f of files.filter((f) => f.endsWith(".html"))) sources.push({ name: rel(f), text: norm(htmlText(fs.readFileSync(f, "utf8"))) });
+for (const f of files.filter((f) => f.endsWith(".pdf"))) sources.push({ name: rel(f), text: norm(execFileSync("pdftotext", ["-enc", "UTF-8", f, "-"]).toString()) });
 for (const f of files.filter((f) => f.endsWith(".docx"))) {
   // body, headers, footers, comments and document properties
   const parts = execFileSync("unzip", ["-Z1", f]).toString().split("\n").filter((p) => /^(word\/.*\.xml|docProps\/.*\.xml)$/.test(p));
   const xml = parts.map((p) => execFileSync("unzip", ["-p", f, p]).toString()).join(" ");
-  sources.push({ name: path.relative(dir, f), text: norm(htmlText(xml)) });
+  sources.push({ name: rel(f), text: norm(htmlText(xml)) });
 }
-for (const f of files.filter((f) => /\.(R|csv|txt)$/.test(f))) sources.push({ name: path.relative(dir, f), text: norm(fs.readFileSync(f, "utf8")) });
+// JS and CSS bundles are public too: scan them as raw text (content is embedded in the route chunks)
+for (const f of files.filter((f) => /\.(R|csv|txt|js|css)$/.test(f))) sources.push({ name: rel(f), text: norm(fs.readFileSync(f, "utf8")) });
 
 let crosscheckSheet = false;
 for (const f of files.filter((f) => f.endsWith(".xlsx"))) {
@@ -58,7 +60,7 @@ for (const f of files.filter((f) => f.endsWith(".xlsx"))) {
   });
   // raw package parts too: Excel stores the save folder (absPath) and other metadata outside the cells
   const raw = execFileSync("unzip", ["-p", f], { maxBuffer: 256 * 1024 * 1024 }).toString("latin1").match(/(?:\/Users\/|file:\/\/\/|[A-Z]:\\\\)[^"<]*/g) ?? [];
-  sources.push({ name: path.relative(dir, f), text: norm([...parts.filter(Boolean), ...raw].join("\n")) });
+  sources.push({ name: rel(f), text: norm([...parts.filter(Boolean), ...raw].join("\n")) });
 }
 
 let leaks = 0;
@@ -92,6 +94,7 @@ for (const f of figures) {
   }
 }
 
-console.log(`sources=${sources.length} (html=${files.filter((f) => f.endsWith(".html")).length}, pdf=${files.filter((f) => f.endsWith(".pdf")).length}, xlsx=${files.filter((f) => f.endsWith(".xlsx")).length})`);
+const count = (ext) => files.filter((f) => f.endsWith(ext)).length;
+console.log(`sources=${sources.length} (html=${count(".html")}, pdf=${count(".pdf")}, xlsx=${count(".xlsx")}, js=${count(".js")}, css=${count(".css")})`);
 console.log(`leaks=${leaks} missing=${JSON.stringify(missing)} crosscheck_sheet=${crosscheckSheet ? "True" : "False"}`);
 process.exit(leaks || missing.length || crosscheckSheet ? 1 : 0);

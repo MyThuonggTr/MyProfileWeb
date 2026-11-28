@@ -1,0 +1,29 @@
+/* Ruled timeline: period on the left, role / organisation / points on the right. */
+.timeline { margin: 0; padding: 0; list-style: none; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 28px;
+  padding: 22px 0;
+  border-top: 1px solid var(--rule);
+}
+.timeline .entry:last-child { border-bottom: 1px solid var(--rule); }
+
+.when { padding-top: 3px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.role { font-size: 20px; }
+.org { margin: 2px 0 var(--sp-2); font-size: 14.5px; color: var(--muted); }
+
+.sub {
+  margin: var(--sp-7) 0 var(--sp-4);
+  font-family: var(--f-body);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .entry { grid-template-columns: minmax(0, 1fr); gap: var(--sp-1); }
+}
